@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import Link from "next/link"
+import { useState, useEffect } from "react";
+import Link from "next/link";
 import {
   Users,
   Building,
@@ -15,26 +15,26 @@ import {
   Eye,
   TrendingUp,
   Shield,
-} from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 
 interface Penduduk {
-  id: string
-  nama: string
-  nik: string
-  alamat: string
-  pekerjaan: string
-  umur: number
+  id: string;
+  nama: string;
+  nik: string;
+  alamat: string;
+  pekerjaan: string;
+  umur: number;
 }
 
 export default function ProfilPage() {
-  const [penduduk, setPenduduk] = useState<Penduduk[]>([])
+  const [penduduk, setPenduduk] = useState<Penduduk[]>([]);
 
   useEffect(() => {
-    const savedPenduduk = localStorage.getItem("desa-penduduk")
-    if (savedPenduduk) setPenduduk(JSON.parse(savedPenduduk))
-  }, [])
+    const savedPenduduk = localStorage.getItem("desa-penduduk");
+    if (savedPenduduk) setPenduduk(JSON.parse(savedPenduduk));
+  }, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-yellow-50 via-amber-50 to-orange-50">
@@ -49,7 +49,9 @@ export default function ProfilPage() {
               <ArrowLeft className="w-6 h-6 text-yellow-600" />
             </Link>
             <div>
-              <h1 className="text-2xl font-bold text-white drop-shadow-md">Profil Desa</h1>
+              <h1 className="text-2xl font-bold text-white drop-shadow-md">
+                Profil Desa
+              </h1>
               <p className="text-yellow-100">Mengenal Desa Maju Bersama</p>
             </div>
           </div>
@@ -64,10 +66,12 @@ export default function ProfilPage() {
               <Building className="w-10 h-10 text-white" />
             </div>
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-yellow-800 mb-6">Desa Maju Bersama</h1>
+          <h1 className="text-4xl md:text-6xl font-bold text-yellow-800 mb-6">
+            Desa Maju Bersama
+          </h1>
           <p className="text-xl text-yellow-600 max-w-3xl mx-auto leading-relaxed">
-            Sebuah desa yang berkomitmen untuk membangun masa depan yang cerah bersama masyarakat yang sejahtera,
-            mandiri, dan berbudaya
+            Sebuah desa yang berkomitmen untuk membangun masa depan yang cerah
+            bersama masyarakat yang sejahtera, mandiri, dan berbudaya
           </p>
         </section>
 
@@ -79,11 +83,15 @@ export default function ProfilPage() {
                 <div className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-amber-500 rounded-full flex items-center justify-center mr-4">
                   <Eye className="w-6 h-6 text-white" />
                 </div>
-                <h2 className="text-3xl font-bold text-yellow-800">Visi Desa</h2>
+                <h2 className="text-3xl font-bold text-yellow-800">
+                  Visi Desa
+                </h2>
               </div>
               <p className="text-yellow-700 leading-relaxed text-lg">
-                "Mewujudkan Desa Maju Bersama sebagai desa yang mandiri, sejahtera, dan berbudaya dengan memanfaatkan
-                potensi lokal secara optimal untuk kesejahteraan masyarakat yang berkelanjutan."
+                Mewujudkan Desa Maju Bersama sebagai desa yang mandiri,
+                sejahtera, dan berbudaya dengan memanfaatkan potensi lokal
+                secara optimal untuk kesejahteraan masyarakat yang
+                berkelanjutan.
               </p>
             </Card>
 
@@ -97,19 +105,29 @@ export default function ProfilPage() {
               <ul className="space-y-3 text-amber-700 text-lg">
                 <li className="flex items-start space-x-3">
                   <Star className="w-6 h-6 text-amber-500 mt-0.5 flex-shrink-0" />
-                  <span>Meningkatkan kualitas sumber daya manusia melalui pendidikan dan pelatihan</span>
+                  <span>
+                    Meningkatkan kualitas sumber daya manusia melalui pendidikan
+                    dan pelatihan
+                  </span>
                 </li>
                 <li className="flex items-start space-x-3">
                   <Star className="w-6 h-6 text-amber-500 mt-0.5 flex-shrink-0" />
-                  <span>Mengembangkan ekonomi kreatif dan UMKM berbasis potensi lokal</span>
+                  <span>
+                    Mengembangkan ekonomi kreatif dan UMKM berbasis potensi
+                    lokal
+                  </span>
                 </li>
                 <li className="flex items-start space-x-3">
                   <Star className="w-6 h-6 text-amber-500 mt-0.5 flex-shrink-0" />
-                  <span>Melestarikan budaya dan lingkungan hidup yang berkelanjutan</span>
+                  <span>
+                    Melestarikan budaya dan lingkungan hidup yang berkelanjutan
+                  </span>
                 </li>
                 <li className="flex items-start space-x-3">
                   <Star className="w-6 h-6 text-amber-500 mt-0.5 flex-shrink-0" />
-                  <span>Meningkatkan pelayanan publik yang prima dan transparan</span>
+                  <span>
+                    Meningkatkan pelayanan publik yang prima dan transparan
+                  </span>
                 </li>
               </ul>
             </Card>
@@ -119,8 +137,12 @@ export default function ProfilPage() {
         {/* Informasi Desa */}
         <section className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-yellow-800 mb-4">Informasi Desa</h2>
-            <p className="text-xl text-yellow-600">Data dan fakta tentang Desa Maju Bersama</p>
+            <h2 className="text-4xl font-bold text-yellow-800 mb-4">
+              Informasi Desa
+            </h2>
+            <p className="text-xl text-yellow-600">
+              Data dan fakta tentang Desa Maju Bersama
+            </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
@@ -131,7 +153,9 @@ export default function ProfilPage() {
                   <MapPin className="w-6 h-6" />
                   <div>
                     <p className="font-semibold">Alamat</p>
-                    <p className="text-yellow-100">Kecamatan Sejahtera, Kabupaten Makmur</p>
+                    <p className="text-yellow-100">
+                      Kecamatan Sejahtera, Kabupaten Makmur
+                    </p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-3">
@@ -165,8 +189,13 @@ export default function ProfilPage() {
                     <Leaf className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h4 className="text-xl font-bold text-green-800">Sektor Pertanian</h4>
-                    <p className="text-green-600">Sektor ekonomi utama dengan hasil padi, jagung, dan sayuran</p>
+                    <h4 className="text-xl font-bold text-green-800">
+                      Sektor Pertanian
+                    </h4>
+                    <p className="text-green-600">
+                      Sektor ekonomi utama dengan hasil padi, jagung, dan
+                      sayuran
+                    </p>
                   </div>
                 </div>
               </Card>
@@ -177,8 +206,12 @@ export default function ProfilPage() {
                     <Heart className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h4 className="text-xl font-bold text-blue-800">Kesehatan Masyarakat</h4>
-                    <p className="text-blue-600">Prioritas utama dengan fasilitas Puskesmas dan Posyandu</p>
+                    <h4 className="text-xl font-bold text-blue-800">
+                      Kesehatan Masyarakat
+                    </h4>
+                    <p className="text-blue-600">
+                      Prioritas utama dengan fasilitas Puskesmas dan Posyandu
+                    </p>
                   </div>
                 </div>
               </Card>
@@ -189,8 +222,12 @@ export default function ProfilPage() {
                     <TrendingUp className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h4 className="text-xl font-bold text-purple-800">UMKM & Ekonomi Kreatif</h4>
-                    <p className="text-purple-600">Pengembangan usaha mikro dan industri rumah tangga</p>
+                    <h4 className="text-xl font-bold text-purple-800">
+                      UMKM & Ekonomi Kreatif
+                    </h4>
+                    <p className="text-purple-600">
+                      Pengembangan usaha mikro dan industri rumah tangga
+                    </p>
                   </div>
                 </div>
               </Card>
@@ -202,23 +239,32 @@ export default function ProfilPage() {
         <section className="mb-16">
           <Card className="p-8 bg-white shadow-xl border-yellow-200">
             <div className="text-center mb-8">
-              <h2 className="text-4xl font-bold text-yellow-800 mb-4">Sejarah Singkat</h2>
-              <p className="text-xl text-yellow-600">Perjalanan Desa Maju Bersama</p>
+              <h2 className="text-4xl font-bold text-yellow-800 mb-4">
+                Sejarah Singkat
+              </h2>
+              <p className="text-xl text-yellow-600">
+                Perjalanan Desa Maju Bersama
+              </p>
             </div>
             <div className="max-w-4xl mx-auto">
               <p className="text-yellow-700 leading-relaxed text-lg mb-6">
-                Desa Maju Bersama didirikan pada tahun 1945 sebagai bagian dari semangat kemerdekaan Indonesia. Nama
-                "Maju Bersama" dipilih untuk mencerminkan tekad masyarakat untuk berkembang secara kolektif dan gotong
-                royong.
+                Desa Maju Bersama didirikan pada tahun 1945 sebagai bagian dari
+                semangat kemerdekaan Indonesia. Nama Maju Bersama dipilih untuk
+                mencerminkan tekad masyarakat untuk berkembang secara kolektif
+                dan gotong royong.
               </p>
               <p className="text-yellow-700 leading-relaxed text-lg mb-6">
-                Pada awalnya, desa ini merupakan daerah pertanian dengan mayoritas penduduk bermata pencaharian sebagai
-                petani. Seiring berjalannya waktu, desa ini berkembang menjadi pusat ekonomi mikro dengan berbagai usaha
-                kecil dan menengah yang berkembang pesat.
+                Pada awalnya, desa ini merupakan daerah pertanian dengan
+                mayoritas penduduk bermata pencaharian sebagai petani. Seiring
+                berjalannya waktu, desa ini berkembang menjadi pusat ekonomi
+                mikro dengan berbagai usaha kecil dan menengah yang berkembang
+                pesat.
               </p>
               <p className="text-yellow-700 leading-relaxed text-lg">
-                Hari ini, Desa Maju Bersama telah menjadi contoh desa mandiri yang berhasil mengintegrasikan teknologi
-                modern dengan kearifan lokal, menciptakan harmoni antara pembangunan dan pelestarian lingkungan.
+                Hari ini, Desa Maju Bersama telah menjadi contoh desa mandiri
+                yang berhasil mengintegrasikan teknologi modern dengan kearifan
+                lokal, menciptakan harmoni antara pembangunan dan pelestarian
+                lingkungan.
               </p>
             </div>
           </Card>
@@ -227,8 +273,12 @@ export default function ProfilPage() {
         {/* Prestasi */}
         <section className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-yellow-800 mb-4">Prestasi Desa</h2>
-            <p className="text-xl text-yellow-600">Pencapaian yang membanggakan</p>
+            <h2 className="text-4xl font-bold text-yellow-800 mb-4">
+              Prestasi Desa
+            </h2>
+            <p className="text-xl text-yellow-600">
+              Pencapaian yang membanggakan
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -243,7 +293,8 @@ export default function ProfilPage() {
               {
                 title: "Desa Mandiri Energi",
                 year: "2022",
-                description: "Implementasi energi terbarukan berbasis komunitas",
+                description:
+                  "Implementasi energi terbarukan berbasis komunitas",
                 icon: Leaf,
                 color: "from-green-400 to-green-500",
               },
@@ -291,8 +342,12 @@ export default function ProfilPage() {
                       {prestasi.year}
                     </span>
                   </div>
-                  <h3 className="text-lg font-bold text-yellow-800 mb-3">{prestasi.title}</h3>
-                  <p className="text-yellow-600 text-sm">{prestasi.description}</p>
+                  <h3 className="text-lg font-bold text-yellow-800 mb-3">
+                    {prestasi.title}
+                  </h3>
+                  <p className="text-yellow-600 text-sm">
+                    {prestasi.description}
+                  </p>
                 </CardContent>
               </Card>
             ))}
@@ -302,9 +357,12 @@ export default function ProfilPage() {
         {/* Call to Action */}
         <section className="text-center">
           <Card className="p-8 bg-gradient-to-r from-yellow-400 to-amber-500 text-white shadow-2xl">
-            <h2 className="text-3xl font-bold mb-4">Mari Bersama Membangun Desa</h2>
+            <h2 className="text-3xl font-bold mb-4">
+              Mari Bersama Membangun Desa
+            </h2>
             <p className="text-xl mb-6 text-yellow-100">
-              Bergabunglah dengan kami dalam membangun masa depan yang lebih baik untuk Desa Maju Bersama
+              Bergabunglah dengan kami dalam membangun masa depan yang lebih
+              baik untuk Desa Maju Bersama
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/layanan">
@@ -325,5 +383,5 @@ export default function ProfilPage() {
         </section>
       </div>
     </div>
-  )
+  );
 }

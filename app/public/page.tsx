@@ -259,9 +259,9 @@ export default function WebDesaPublic() {
                   Visi Desa
                 </h3>
                 <p className="text-yellow-700 leading-relaxed">
-                  "Mewujudkan Desa Maju Bersama sebagai desa yang mandiri,
+                  Mewujudkan Desa Maju Bersama sebagai desa yang mandiri,
                   sejahtera, dan berbudaya dengan memanfaatkan potensi lokal
-                  secara optimal."
+                  secara optimal.
                 </p>
               </Card>
 
@@ -343,7 +343,7 @@ export default function WebDesaPublic() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {berita.slice(0, 6).map((article, index) => (
+            {berita.slice(0, 6).map((article) => (
               <Card
                 key={article.id}
                 className="bg-white shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border-yellow-200 overflow-hidden group"
