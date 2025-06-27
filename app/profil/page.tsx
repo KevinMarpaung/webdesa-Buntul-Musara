@@ -396,7 +396,7 @@ export default function ProfilPage() {
                 icon: CircleUserRound,
                 color: "bg-black",
               },
-            ].map((index) => (
+            ].map((item, index) => (
               <Card
                 key={index}
                 className="bg-white shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border-yellow-200"
