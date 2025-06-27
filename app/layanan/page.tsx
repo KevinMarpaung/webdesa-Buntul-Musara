@@ -7,7 +7,6 @@ import {
   FileText,
   Users,
   Heart,
-  Building,
   Shield,
   Phone,
   Clock,
