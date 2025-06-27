@@ -21,6 +21,7 @@ interface Berita {
   konten: string;
   tanggal: string;
   penulis: string;
+  gambar?: string; // URL base64 atau link
 }
 
 interface Kegiatan {
@@ -563,6 +564,7 @@ export default function AdminPage() {
                       placeholder="Nama penulis"
                     />
                   </div>
+
                   <button
                     onClick={editingId ? updateBerita : addBerita}
                     className="w-full bg-yellow-500 text-white py-2 px-4 rounded-md hover:bg-yellow-600 transition-colors duration-200"

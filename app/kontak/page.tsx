@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useState } from "react"
-import Link from "next/link"
+import { useState } from "react";
+import Link from "next/link";
 import {
   ArrowLeft,
   Phone,
@@ -16,12 +16,12 @@ import {
   Users,
   Shield,
   Heart,
-} from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Label } from "@/components/ui/label"
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
 
 export default function KontakPage() {
   const [formData, setFormData] = useState({
@@ -30,42 +30,44 @@ export default function KontakPage() {
     telepon: "",
     subjek: "",
     pesan: "",
-  })
+  });
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
     // Handle form submission here
-    alert("Pesan Anda telah terkirim! Kami akan segera merespons.")
-    setFormData({ nama: "", email: "", telepon: "", subjek: "", pesan: "" })
-  }
+    alert("Pesan Anda telah terkirim! Kami akan segera merespons.");
+    setFormData({ nama: "", email: "", telepon: "", subjek: "", pesan: "" });
+  };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
-    })
-  }
+    });
+  };
 
   const kontakInfo = [
     {
       icon: Phone,
       title: "Telepon",
-      info: "(021) 123-4567",
-      detail: "0812-3456-7890",
+      info: "0822-7550-4940",
+      detail: "0822-1459-7289",
       color: "from-green-400 to-green-500",
     },
     {
       icon: Mail,
       title: "Email",
-      info: "info@desamajubersama.id",
-      detail: "admin@desamajubersama.id",
+      info: "desakuning44@gmail.com",
+      detail: "desakuning44@gmail.com",
       color: "from-blue-400 to-blue-500",
     },
     {
       icon: MapPin,
       title: "Alamat",
-      info: "Jl. Desa Maju No. 123",
-      detail: "Kec. Sejahtera, Kab. Makmur 12345",
+      info: "Kampung Kuning",
+      detail: "Kec. Rikit Gaib, Kab. Gayo Lues",
       color: "from-red-400 to-red-500",
     },
     {
@@ -75,42 +77,34 @@ export default function KontakPage() {
       detail: "Sabtu: 08:00 - 12:00",
       color: "from-purple-400 to-purple-500",
     },
-  ]
+  ];
 
   const perangkatDesa = [
     {
-      nama: "Budi Santoso",
-      jabatan: "Kepala Desa",
-      telepon: "0812-1111-1111",
-      email: "kepaladesa@desamajubersama.id",
+      nama: "Rajudin",
+      jabatan: "Pengulu",
       foto: "/placeholder.svg?height=150&width=150&text=Kepala+Desa",
       icon: Building,
     },
     {
-      nama: "Siti Rahayu",
-      jabatan: "Sekretaris Desa",
-      telepon: "0812-2222-2222",
-      email: "sekdes@desamajubersama.id",
+      nama: "Hari Wibowo",
+      jabatan: "Sekretaris Kampung",
       foto: "/placeholder.svg?height=150&width=150&text=Sekretaris",
       icon: Users,
     },
     {
-      nama: "Ahmad Wijaya",
-      jabatan: "Kaur Pemerintahan",
-      telepon: "0812-3333-3333",
-      email: "pemerintahan@desamajubersama.id",
+      nama: "Abu Bakar Sidik",
+      jabatan: "Kasi Pemerintahan",
       foto: "/placeholder.svg?height=150&width=150&text=Kaur+Pemerintahan",
       icon: Shield,
     },
     {
-      nama: "Dewi Lestari",
-      jabatan: "Kaur Kesejahteraan",
-      telepon: "0812-4444-4444",
-      email: "kesejahteraan@desamajubersama.id",
+      nama: "Ismail",
+      jabatan: "Kasi Pelayanan Dan Kesejahteraan",
       foto: "/placeholder.svg?height=150&width=150&text=Kaur+Kesejahteraan",
       icon: Heart,
     },
-  ]
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-yellow-50 via-amber-50 to-orange-50">
@@ -125,8 +119,12 @@ export default function KontakPage() {
               <ArrowLeft className="w-6 h-6 text-yellow-600" />
             </Link>
             <div>
-              <h1 className="text-2xl font-bold text-white drop-shadow-md">Hubungi Kami</h1>
-              <p className="text-yellow-100">Kontak dan informasi Desa Maju Bersama</p>
+              <h1 className="text-2xl font-bold text-white drop-shadow-md">
+                Hubungi Kami
+              </h1>
+              <p className="text-yellow-100">
+                Kontak dan informasi Kampung Kuning
+              </p>
             </div>
           </div>
         </div>
@@ -140,9 +138,12 @@ export default function KontakPage() {
               <Phone className="w-10 h-10 text-white" />
             </div>
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-yellow-800 mb-6">Hubungi Kami</h1>
+          <h1 className="text-4xl md:text-6xl font-bold text-yellow-800 mb-6">
+            Hubungi Kami
+          </h1>
           <p className="text-xl text-yellow-600 max-w-3xl mx-auto leading-relaxed">
-            Kami siap melayani dan membantu kebutuhan masyarakat Desa Maju Bersama dengan sepenuh hati
+            Kami siap melayani dan membantu kebutuhan masyarakat Desa Maju
+            Bersama dengan sepenuh hati
           </p>
         </section>
 
@@ -160,8 +161,12 @@ export default function KontakPage() {
                   >
                     <item.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-yellow-800 mb-2">{item.title}</h3>
-                  <p className="text-yellow-600 font-medium mb-1">{item.info}</p>
+                  <h3 className="text-xl font-bold text-yellow-800 mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-yellow-600 font-medium mb-1">
+                    {item.info}
+                  </p>
                   <p className="text-yellow-500 text-sm">{item.detail}</p>
                 </CardContent>
               </Card>
@@ -278,24 +283,41 @@ export default function KontakPage() {
               <CardHeader>
                 <CardTitle className="flex items-center text-yellow-800">
                   <MapPin className="w-6 h-6 mr-2" />
-                  Lokasi Kantor Desa
+                  Lokasi Kantor Kampung Kuning
                 </CardTitle>
               </CardHeader>
               <CardContent className="p-0">
                 <div className="h-96 relative">
-                  <img
-                    src="/placeholder.svg?height=400&width=600&text=Peta+Lokasi+Desa+Maju+Bersama"
-                    alt="Peta Lokasi Desa"
-                    className="w-full h-full object-cover"
-                    crossOrigin="anonymous"
-                  />
+                  <div className="w-full h-[400px]">
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d162473.88738541896!2d97.02223512783874!3d4.057965412084607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3039a3ce5c842567%3A0xa001f9cc8f724ddc!2sDesa%20Kuning!5e1!3m2!1sid!2sid!4v1751029333556!5m2!1sid!2sid"
+                      width="100%"
+                      height="100%"
+                      style={{ border: 0 }}
+                      allowFullScreen
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                    />
+                  </div>
+
                   <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
                   <div className="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-sm rounded-lg p-4">
-                    <h3 className="font-bold text-yellow-800 mb-2">Kantor Desa Maju Bersama</h3>
+                    <h3 className="font-bold text-yellow-800 mb-2">
+                      Kantor Kampung kuning
+                    </h3>
                     <p className="text-yellow-600 text-sm mb-2">
-                      Jl. Desa Maju No. 123, Kec. Sejahtera, Kab. Makmur 12345
+                      Kampung Kuning, Kec.Rikit Gaib, Kab. Gayo Lues
                     </p>
-                    <Button size="sm" className="bg-yellow-500 hover:bg-yellow-600 text-white">
+                    <Button
+                      size="sm"
+                      className="bg-yellow-500 hover:bg-yellow-600 text-white"
+                      onClick={() =>
+                        window.open(
+                          "https://maps.google.com/?q=Kampung+Kuning,+Rikit+Gaib,+Gayo+Lues",
+                          "_blank"
+                        )
+                      }
+                    >
                       Buka di Google Maps
                     </Button>
                   </div>
@@ -305,12 +327,14 @@ export default function KontakPage() {
           </div>
         </section>
 
-        {/* Village Officials */}
         <section className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-yellow-800 mb-4">Perangkat Desa</h2>
+            <h2 className="text-4xl font-bold text-yellow-800 mb-4">
+              Perangkat Desa
+            </h2>
             <p className="text-xl text-yellow-600 max-w-2xl mx-auto">
-              Tim perangkat desa yang siap melayani masyarakat dengan dedikasi tinggi
+              Tim perangkat desa yang siap melayani masyarakat dengan dedikasi
+              tinggi
             </p>
           </div>
 
@@ -323,8 +347,7 @@ export default function KontakPage() {
                 <CardContent className="p-6">
                   <div className="relative mb-4">
                     <img
-                      src={person.foto || "/placeholder.svg"}
-                      alt={person.nama}
+                      src={person.foto}
                       className="w-24 h-24 rounded-full mx-auto object-cover border-4 border-yellow-200 group-hover:border-yellow-400 transition-colors duration-300"
                       crossOrigin="anonymous"
                     />
@@ -335,17 +358,9 @@ export default function KontakPage() {
                   <h3 className="text-xl font-bold text-yellow-800 mb-1 group-hover:text-yellow-600 transition-colors duration-300">
                     {person.nama}
                   </h3>
-                  <p className="text-yellow-600 font-medium mb-3">{person.jabatan}</p>
-                  <div className="space-y-2 text-sm">
-                    <div className="flex items-center justify-center space-x-2 text-yellow-700">
-                      <Phone className="w-4 h-4" />
-                      <span>{person.telepon}</span>
-                    </div>
-                    <div className="flex items-center justify-center space-x-2 text-yellow-700">
-                      <Mail className="w-4 h-4" />
-                      <span className="text-xs">{person.email}</span>
-                    </div>
-                  </div>
+                  <p className="text-yellow-600 font-medium mb-3">
+                    {person.jabatan}
+                  </p>
                 </CardContent>
               </Card>
             ))}
@@ -358,7 +373,7 @@ export default function KontakPage() {
             <CardHeader>
               <CardTitle className="flex items-center text-red-800">
                 <Phone className="w-6 h-6 mr-2" />
-                Kontak Darurat
+                Kontak
               </CardTitle>
             </CardHeader>
             <CardContent>
@@ -367,22 +382,22 @@ export default function KontakPage() {
                   <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-3">
                     <Phone className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="font-bold text-red-800 mb-1">Polisi</h3>
-                  <p className="text-red-600">110</p>
+                  <h3 className="font-bold text-red-800 mb-1">Pos Kamling</h3>
+                  <p className="text-red-600">0822-312-421</p>
                 </div>
                 <div className="text-center">
                   <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-3">
                     <Heart className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="font-bold text-red-800 mb-1">Ambulans</h3>
-                  <p className="text-red-600">118</p>
+                  <h3 className="font-bold text-red-800 mb-1">Poskesdes</h3>
+                  <p className="text-red-600">0831-2412-4121</p>
                 </div>
                 <div className="text-center">
                   <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-3">
                     <Shield className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="font-bold text-red-800 mb-1">Pemadam Kebakaran</h3>
-                  <p className="text-red-600">113</p>
+                  <h3 className="font-bold text-red-800 mb-1">Kantor Desa</h3>
+                  <p className="text-red-600">0822-7550-4940</p>
                 </div>
               </div>
             </CardContent>
@@ -395,7 +410,8 @@ export default function KontakPage() {
             <CardContent className="p-8">
               <h2 className="text-3xl font-bold mb-4">Kunjungi Kantor Desa</h2>
               <p className="text-xl mb-6 text-yellow-100">
-                Datang langsung ke kantor desa untuk pelayanan yang lebih personal dan cepat
+                Datang langsung ke kantor desa untuk pelayanan yang lebih
+                personal dan cepat
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button className="bg-white text-yellow-600 hover:bg-yellow-50 px-8 py-3 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
@@ -415,5 +431,5 @@ export default function KontakPage() {
         </section>
       </div>
     </div>
-  )
+  );
 }

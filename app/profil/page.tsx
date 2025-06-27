@@ -8,7 +8,7 @@ import {
   Leaf,
   Heart,
   Star,
-  Award,
+  CircleUserRound,
   MapPin,
   ArrowLeft,
   Target,
@@ -52,7 +52,7 @@ export default function ProfilPage() {
               <h1 className="text-2xl font-bold text-white drop-shadow-md">
                 Profil Desa
               </h1>
-              <p className="text-yellow-100">Mengenal Desa Maju Bersama</p>
+              <p className="text-yellow-100">Mengenal Kampung Kuning</p>
             </div>
           </div>
         </div>
@@ -67,11 +67,11 @@ export default function ProfilPage() {
             </div>
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-yellow-800 mb-6">
-            Desa Maju Bersama
+            Kampung Kuning
           </h1>
           <p className="text-xl text-yellow-600 max-w-3xl mx-auto leading-relaxed">
-            Sebuah desa yang berkomitmen untuk membangun masa depan yang cerah
-            bersama masyarakat yang sejahtera, mandiri, dan berbudaya
+            Sebuah Desa Yang Bertujuan Mewujudkan Masyarakat Kampung Kuning Yang
+            Bersih, Maju, Adil, Transparansi, Dan Sejahtera
           </p>
         </section>
 
@@ -88,10 +88,10 @@ export default function ProfilPage() {
                 </h2>
               </div>
               <p className="text-yellow-700 leading-relaxed text-lg">
-                Mewujudkan Desa Maju Bersama sebagai desa yang mandiri,
-                sejahtera, dan berbudaya dengan memanfaatkan potensi lokal
-                secara optimal untuk kesejahteraan masyarakat yang
-                berkelanjutan.
+                Mewujudkan Kampung Kuning sebagai desa yang bersih, maju, adil,
+                transparan, dan sejahtera melalui partisipasi aktif masyarakat,
+                tata kelola pemerintahan yang baik, serta pembangunan yang
+                berkelanjutan dan berkeadilan.
               </p>
             </Card>
 
@@ -106,27 +106,29 @@ export default function ProfilPage() {
                 <li className="flex items-start space-x-3">
                   <Star className="w-6 h-6 text-amber-500 mt-0.5 flex-shrink-0" />
                   <span>
-                    Meningkatkan kualitas sumber daya manusia melalui pendidikan
-                    dan pelatihan
+                    Meningkatkan kualitas sumber daya manusia dalam pembangunan
+                    kampung yang berkelanjutan
                   </span>
                 </li>
                 <li className="flex items-start space-x-3">
                   <Star className="w-6 h-6 text-amber-500 mt-0.5 flex-shrink-0" />
                   <span>
-                    Mengembangkan ekonomi kreatif dan UMKM berbasis potensi
-                    lokal
+                    Menciptakan tranparansi anggran kampung dan mengutamakan
+                    masyarakat dan mewujudkan sumber daya aparatur kampung yang
+                    profesional dinamis dan bermoral
                   </span>
                 </li>
                 <li className="flex items-start space-x-3">
                   <Star className="w-6 h-6 text-amber-500 mt-0.5 flex-shrink-0" />
                   <span>
-                    Melestarikan budaya dan lingkungan hidup yang berkelanjutan
+                    Mengembangkan pemberdayaan masyarakat dan kemitraan dalam
+                    pelaksanaan pembangunan kampung
                   </span>
                 </li>
                 <li className="flex items-start space-x-3">
                   <Star className="w-6 h-6 text-amber-500 mt-0.5 flex-shrink-0" />
                   <span>
-                    Meningkatkan pelayanan publik yang prima dan transparan
+                    Mewujudkan pendidikan yang unggul bagi masyarakat kampung
                   </span>
                 </li>
               </ul>
@@ -141,7 +143,7 @@ export default function ProfilPage() {
               Informasi Desa
             </h2>
             <p className="text-xl text-yellow-600">
-              Data dan fakta tentang Desa Maju Bersama
+              Data dan fakta tentang Kampung Kuning
             </p>
           </div>
 
@@ -154,7 +156,7 @@ export default function ProfilPage() {
                   <div>
                     <p className="font-semibold">Alamat</p>
                     <p className="text-yellow-100">
-                      Kecamatan Sejahtera, Kabupaten Makmur
+                      Kampung Kuning Kecamatan Rikit Gaib Kabupaten Gayo Lues
                     </p>
                   </div>
                 </div>
@@ -162,21 +164,29 @@ export default function ProfilPage() {
                   <Leaf className="w-6 h-6" />
                   <div>
                     <p className="font-semibold">Luas Wilayah</p>
-                    <p className="text-yellow-100">15.5 km²</p>
+                    <p className="text-yellow-100">-</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Building className="w-6 h-6" />
                   <div>
                     <p className="font-semibold">Pembagian Wilayah</p>
-                    <p className="text-yellow-100">5 Dusun, 12 RT, 8 RW</p>
+                    <p className="text-yellow-100 ">
+                      <div>
+                        <p>-Dusun Ulung Kuning</p>
+                        <p>-Dusun Nunang</p>
+                        <p>-Dusun Durin</p>
+                      </div>
+                    </p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Users className="w-6 h-6" />
                   <div>
                     <p className="font-semibold">Jumlah Penduduk</p>
-                    <p className="text-yellow-100">{penduduk.length} Jiwa</p>
+                    <p className="text-yellow-100">307 Jiwa</p>
+                    <p className=" text-yellow-50">-Laki-Laki: 148 Jiwa</p>
+                    <p className=" text-yellow-50">-Perempuan: 159 Jiwa</p>
                   </div>
                 </div>
               </div>
@@ -193,8 +203,8 @@ export default function ProfilPage() {
                       Sektor Pertanian
                     </h4>
                     <p className="text-green-600">
-                      Sektor ekonomi utama dengan hasil padi, jagung, dan
-                      sayuran
+                      Sektor Pertanian dengan hasil padi, jagung, dan kacang
+                      tanah,kopi
                     </p>
                   </div>
                 </div>
@@ -215,22 +225,6 @@ export default function ProfilPage() {
                   </div>
                 </div>
               </Card>
-
-              <Card className="p-6 bg-gradient-to-r from-purple-100 to-purple-200 border-purple-300 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full flex items-center justify-center">
-                    <TrendingUp className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-bold text-purple-800">
-                      UMKM & Ekonomi Kreatif
-                    </h4>
-                    <p className="text-purple-600">
-                      Pengembangan usaha mikro dan industri rumah tangga
-                    </p>
-                  </div>
-                </div>
-              </Card>
             </div>
           </div>
         </section>
@@ -243,28 +237,26 @@ export default function ProfilPage() {
                 Sejarah Singkat
               </h2>
               <p className="text-xl text-yellow-600">
-                Perjalanan Desa Maju Bersama
+                Perjalanan Kampung Kuning
               </p>
             </div>
             <div className="max-w-4xl mx-auto">
               <p className="text-yellow-700 leading-relaxed text-lg mb-6">
-                Desa Maju Bersama didirikan pada tahun 1945 sebagai bagian dari
-                semangat kemerdekaan Indonesia. Nama Maju Bersama dipilih untuk
-                mencerminkan tekad masyarakat untuk berkembang secara kolektif
-                dan gotong royong.
+                pada tahun 1920 lahirlah kampung yang dipinmpin oleh Dahok yang
+                berasal dari daerah Linge, maka dengan dasar lahan kuning tadi
+                di buatlah nama daerah tadi menjadi kampung kuning
               </p>
               <p className="text-yellow-700 leading-relaxed text-lg mb-6">
-                Pada awalnya, desa ini merupakan daerah pertanian dengan
-                mayoritas penduduk bermata pencaharian sebagai petani. Seiring
-                berjalannya waktu, desa ini berkembang menjadi pusat ekonomi
-                mikro dengan berbagai usaha kecil dan menengah yang berkembang
-                pesat.
-              </p>
-              <p className="text-yellow-700 leading-relaxed text-lg">
-                Hari ini, Desa Maju Bersama telah menjadi contoh desa mandiri
-                yang berhasil mengintegrasikan teknologi modern dengan kearifan
-                lokal, menciptakan harmoni antara pembangunan dan pelestarian
-                lingkungan.
+                Dimana menurut sejarah pindahnya tempat tinggal masyarakat
+                kampung kuning dari ladang kunyit tadi, karena wilayah kuning
+                berlawan arah dengan terbitnya mata hari, sehingga ada anggapan
+                akan mendatangkan kesialan bagi masyarakat, dan tidak
+                mendatangkan rezeki, sehingga masyarakat yang masih berdomisili
+                di ladang kunyit tadi tidak akan bisa menunaikan ibadah haji,
+                sehingga tahun 1980 bermufakatlah para petuah-petuah kampung
+                untuk memindahkan tempat tinggal masyarakat ke seberang aih kul,
+                dan ini terealisasi pada tahun 1982 dengan tanah pemukiman
+                penduduk yang disediakan oleh PEMDA
               </p>
             </div>
           </Card>
@@ -274,66 +266,146 @@ export default function ProfilPage() {
         <section className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-yellow-800 mb-4">
-              Prestasi Desa
+              Daftar Kepemimpinan Pengulu
             </h2>
-            <p className="text-xl text-yellow-600">
-              Pencapaian yang membanggakan
-            </p>
+            <p className="text-xl text-yellow-600">Kampung Kuning</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-2 ">
             {[
               {
-                title: "Desa Terbaik Tingkat Kabupaten",
-                year: "2023",
-                description: "Penghargaan untuk pembangunan desa terpadu",
-                icon: Award,
-                color: "from-yellow-400 to-amber-500",
+                title: "Unus Aman Milah",
+                year: "1919-1929",
+                icon: CircleUserRound,
+                color: "bg-black",
               },
               {
-                title: "Desa Mandiri Energi",
-                year: "2022",
-                description:
-                  "Implementasi energi terbarukan berbasis komunitas",
-                icon: Leaf,
-                color: "from-green-400 to-green-500",
+                title: "Lanyut Tgk.Pisah",
+                year: "1930-1934",
+
+                icon: CircleUserRound,
+                color: "bg-black",
               },
               {
-                title: "Desa Digital Terdepan",
-                year: "2023",
-                description: "Pemanfaatan teknologi untuk pelayanan publik",
-                icon: Shield,
-                color: "from-blue-400 to-blue-500",
+                title: "Adu Am.Mat Saleh",
+                year: "1935-1939",
+
+                icon: CircleUserRound,
+                color: "bg-black",
               },
               {
-                title: "Desa Wisata Unggulan",
-                year: "2022",
-                description: "Pengembangan potensi wisata berbasis masyarakat",
-                icon: Heart,
-                color: "from-pink-400 to-pink-500",
+                title: "Hanya Aman Mamat",
+                year: "1940-1948",
+
+                icon: CircleUserRound,
+                color: "bg-black",
               },
               {
-                title: "Desa Sehat Nasional",
+                title: "jamad Aman Samdiah",
+                year: "1949-1959",
+
+                icon: CircleUserRound,
+                color: "bg-black",
+              },
+              {
+                title: "Amin Aman Mar",
+                year: "1960-1963",
+
+                icon: CircleUserRound,
+                color: "bg-black",
+              },
+              {
+                title: "Adimen aman Bantah",
+                year: "1964-1966",
+
+                icon: CircleUserRound,
+                color: "bg-black",
+              },
+              {
+                title: "kasim amn Nurmani",
+                year: "1967-1981",
+
+                icon: CircleUserRound,
+                color: "bg-black",
+              },
+              {
+                title: "Nyak Raya Aman kasim",
+                year: "1982-1990",
+
+                icon: CircleUserRound,
+                color: "bg-black",
+              },
+              {
+                title: "Abdullah Aman Jumi",
+                year: "1991-1995",
+
+                icon: CircleUserRound,
+                color: "bg-black",
+              },
+              {
+                title: "Kasim Junaidi",
+                year: "1996-1997",
+
+                icon: CircleUserRound,
+                color: "bg-black",
+              },
+              {
+                title: "Alimin Aman Adi",
+                year: "1998-2000",
+
+                icon: CircleUserRound,
+                color: "bg-black",
+              },
+              {
+                title: "MY. Samira Masa Amanudin",
+                year: "2001-2007",
+
+                icon: CircleUserRound,
+                color: "bg-black",
+              },
+              {
+                title: "Usmar",
+                year: "2007-2013",
+
+                icon: CircleUserRound,
+                color: "bg-black",
+              },
+              {
+                title: "Pj.Abdul Karim",
+                year: "2014-2015",
+
+                icon: CircleUserRound,
+                color: "bg-black",
+              },
+              {
+                title: "rahmat Ali",
+                year: "2015-2021",
+
+                icon: CircleUserRound,
+                color: "bg-black",
+              },
+              {
+                title: "Pj. Hasbullah",
                 year: "2021",
-                description: "Program kesehatan masyarakat terbaik",
-                icon: Heart,
-                color: "from-red-400 to-red-500",
+
+                icon: CircleUserRound,
+                color: "bg-black",
               },
               {
-                title: "Desa Inovatif",
-                year: "2023",
-                description: "Inovasi dalam pemberdayaan masyarakat",
-                icon: TrendingUp,
-                color: "from-purple-400 to-purple-500",
+                title: "Rajudin",
+                year: "2022-2027",
+
+                icon: CircleUserRound,
+                color: "bg-black",
               },
             ].map((prestasi, index) => (
               <Card
                 key={index}
                 className="bg-white shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border-yellow-200"
               >
-                <CardContent className="p-6 text-center">
+                <CardContent className=" text-center">
                   <div
-                    className={`w-16 h-16 bg-gradient-to-r ${prestasi.color} rounded-full flex items-center justify-center mx-auto mb-4 hover:scale-110 transition-transform duration-300`}
+                    className={`w-20 h-20 bg-gradient-to-r ${prestasi.color} rounded-full flex items-center justify-center mx-auto mb-4 hover:scale-110 transition-transform duration-300`}
                   >
                     <prestasi.icon className="w-8 h-8 text-white" />
                   </div>
@@ -362,7 +434,7 @@ export default function ProfilPage() {
             </h2>
             <p className="text-xl mb-6 text-yellow-100">
               Bergabunglah dengan kami dalam membangun masa depan yang lebih
-              baik untuk Desa Maju Bersama
+              baik untuk Kampung Kuning
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/layanan">

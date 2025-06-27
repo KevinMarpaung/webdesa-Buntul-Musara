@@ -1,142 +1,131 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Link from "next/link"
-import { ArrowLeft, Camera, X, ChevronLeft, ChevronRight, Download, Heart } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
+import { useState } from "react";
+import Link from "next/link";
+import {
+  ArrowLeft,
+  Camera,
+  X,
+  ChevronLeft,
+  ChevronRight,
+  Download,
+  Heart,
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 
 export default function GaleriPage() {
-  const [selectedCategory, setSelectedCategory] = useState("Semua")
-  const [selectedImage, setSelectedImage] = useState<number | null>(null)
+  const [selectedCategory, setSelectedCategory] = useState("Semua");
+  const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
-  const categories = ["Semua", "Kegiatan", "Pemandangan", "Fasilitas", "Budaya", "Pembangunan"]
+  const categories = ["Semua", "Kegiatan", "Pemandangan", "Fasilitas"];
 
   const galeriData = [
     {
       id: 1,
-      title: "Gotong Royong Pembersihan Desa",
+      title: "Kunjungan Ke Sekolah",
       category: "Kegiatan",
-      image: "/placeholder.svg?height=300&width=400&text=Gotong+Royong+Desa",
-      description: "Kegiatan gotong royong membersihkan lingkungan desa yang dilakukan setiap bulan",
-      date: "15 Maret 2024",
+      image: "kegiatan 3.jpeg",
+      description: "Kunjungan Ke Sekolah Untuk Sosialisasi",
     },
     {
       id: 2,
-      title: "Sawah Hijau Desa Maju Bersama",
+      title: "Bukit Kampung Kuning",
       category: "Pemandangan",
-      image: "/placeholder.svg?height=300&width=400&text=Sawah+Hijau+Desa",
-      description: "Hamparan sawah hijau yang menjadi kebanggaan desa",
-      date: "10 Maret 2024",
+      image: "bukit_kampung_kuning.jpeg",
+      description: " Pesona Bukit Di Kampung Yang Begitu Indah ",
     },
     {
       id: 3,
-      title: "Balai Desa Modern",
+      title: "Kantor Kampung Kuning",
       category: "Fasilitas",
-      image: "/placeholder.svg?height=300&width=400&text=Balai+Desa+Modern",
-      description: "Balai desa yang telah direnovasi dengan fasilitas modern",
-      date: "5 Maret 2024",
-    },
-    {
-      id: 4,
-      title: "Festival Budaya Tahunan",
-      category: "Budaya",
-      image: "/placeholder.svg?height=300&width=400&text=Festival+Budaya",
-      description: "Perayaan festival budaya tahunan dengan berbagai pertunjukan tradisional",
-      date: "1 Maret 2024",
-    },
-    {
-      id: 5,
-      title: "Pembangunan Jalan Desa",
-      category: "Pembangunan",
-      image: "/placeholder.svg?height=300&width=400&text=Pembangunan+Jalan",
-      description: "Proses pembangunan jalan desa untuk meningkatkan akses transportasi",
-      date: "25 Februari 2024",
+      image: "kantor.jpeg",
+      description:
+        "Kantor Kampung yang telah direnovasi dan di Cat Kembali Agar Terlihat Indah",
     },
     {
       id: 6,
-      title: "Posyandu Balita",
+      title: "Silaturahmi Dengan Warga Kampung",
       category: "Kegiatan",
-      image: "/placeholder.svg?height=300&width=400&text=Posyandu+Balita",
-      description: "Kegiatan posyandu untuk pemeriksaan kesehatan balita",
-      date: "20 Februari 2024",
+      image: "kegiatan 2.jpeg",
+      description: "Bersilaturahmi Dengan Warga Yang Ada Di Kampung Kuning",
     },
     {
       id: 7,
-      title: "Sunset di Perbukitan Desa",
+      title: "Sawah Kampung Kuning",
       category: "Pemandangan",
-      image: "/placeholder.svg?height=300&width=400&text=Sunset+Perbukitan",
-      description: "Pemandangan sunset yang indah dari perbukitan desa",
-      date: "15 Februari 2024",
+      image: "sawah.jpg",
+      description: "Pemandangan Sawah Yang Sangat Indah Di Kampung Kuning",
     },
     {
       id: 8,
-      title: "Perpustakaan Desa",
+      title: "Masjid",
       category: "Fasilitas",
-      image: "/placeholder.svg?height=300&width=400&text=Perpustakaan+Desa",
-      description: "Perpustakaan desa yang menyediakan berbagai buku dan fasilitas belajar",
-      date: "10 Februari 2024",
-    },
-    {
-      id: 9,
-      title: "Tarian Tradisional",
-      category: "Budaya",
-      image: "/placeholder.svg?height=300&width=400&text=Tarian+Tradisional",
-      description: "Pertunjukan tarian tradisional dalam acara adat desa",
-      date: "5 Februari 2024",
-    },
-    {
-      id: 10,
-      title: "Pembangunan Jembatan",
-      category: "Pembangunan",
-      image: "/placeholder.svg?height=300&width=400&text=Pembangunan+Jembatan",
-      description: "Pembangunan jembatan baru untuk menghubungkan antar dusun",
-      date: "1 Februari 2024",
+      image: "masjid.jpeg",
+      description: "Masjid Yang Sangat Indah Di Kampung Kuning",
     },
     {
       id: 11,
-      title: "Pelatihan UMKM",
+      title: "Belajar Membuat Tikar Menggunakan Daun Bengkuang",
       category: "Kegiatan",
-      image: "/placeholder.svg?height=300&width=400&text=Pelatihan+UMKM",
-      description: "Pelatihan kewirausahaan untuk pengembangan UMKM desa",
-      date: "28 Januari 2024",
+      image: "kegiatan 1.jpeg",
+      description:
+        "Menjemur Daun Bengkuang Untuk Proses Pembuatan Tikar Yang Sangat Khas Di Kampung Kuning",
     },
     {
       id: 12,
-      title: "Kebun Sayur Organik",
+      title: "Sunset Di Bukit Kampung Kuning",
       category: "Pemandangan",
-      image: "/placeholder.svg?height=300&width=400&text=Kebun+Sayur+Organik",
-      description: "Kebun sayur organik yang dikelola oleh kelompok tani desa",
-      date: "25 Januari 2024",
+      image: "Sunset.jpeg",
+      description:
+        "Pemandangan Sunset Yang Sangat Indah Di Antara Bukit Kampung Kuning",
     },
-  ]
+    {
+      id: 13,
+      title: "pelatihan pengembangan UMKM",
+      category: "Kegiatan",
+      image: "pelatihan-umkm.jpeg",
+      description: "Melakukan kegiatan Pengembangan UMKN",
+    },
+    {
+      id: 14,
+      title: "Proses adat pernikahan",
+      category: "Kegiatan",
+      image: "pernikahan.jpeg",
+      description: "Melakukan kegiatan Pengembangan UMKN",
+    },
+  ];
 
   const filteredImages =
-    selectedCategory === "Semua" ? galeriData : galeriData.filter((item) => item.category === selectedCategory)
+    selectedCategory === "Semua"
+      ? galeriData
+      : galeriData.filter((item) => item.category === selectedCategory);
 
   const nextImage = () => {
     if (selectedImage !== null) {
-      setSelectedImage((selectedImage + 1) % filteredImages.length)
+      setSelectedImage((selectedImage + 1) % filteredImages.length);
     }
-  }
+  };
 
   const prevImage = () => {
     if (selectedImage !== null) {
-      setSelectedImage(selectedImage === 0 ? filteredImages.length - 1 : selectedImage - 1)
+      setSelectedImage(
+        selectedImage === 0 ? filteredImages.length - 1 : selectedImage - 1
+      );
     }
-  }
+  };
 
   const getCategoryColor = (category: string) => {
     const colors = {
       Kegiatan: "bg-blue-100 text-blue-800",
       Pemandangan: "bg-green-100 text-green-800",
       Fasilitas: "bg-purple-100 text-purple-800",
-      Budaya: "bg-pink-100 text-pink-800",
-      Pembangunan: "bg-orange-100 text-orange-800",
-    }
-    return colors[category as keyof typeof colors] || "bg-gray-100 text-gray-800"
-  }
+    };
+    return (
+      colors[category as keyof typeof colors] || "bg-gray-100 text-gray-800"
+    );
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-yellow-50 via-amber-50 to-orange-50">
@@ -151,8 +140,12 @@ export default function GaleriPage() {
               <ArrowLeft className="w-6 h-6 text-yellow-600" />
             </Link>
             <div>
-              <h1 className="text-2xl font-bold text-white drop-shadow-md">Galeri Foto</h1>
-              <p className="text-yellow-100">Dokumentasi kegiatan dan keindahan desa</p>
+              <h1 className="text-2xl font-bold text-white drop-shadow-md">
+                Galeri Foto
+              </h1>
+              <p className="text-yellow-100">
+                Dokumentasi kegiatan dan keindahan kampung Kuning
+              </p>
             </div>
           </div>
         </div>
@@ -166,9 +159,12 @@ export default function GaleriPage() {
               <Camera className="w-10 h-10 text-white" />
             </div>
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-yellow-800 mb-6">Galeri Desa</h1>
+          <h1 className="text-4xl md:text-6xl font-bold text-yellow-800 mb-6">
+            Galeri Kampung Kuning
+          </h1>
           <p className="text-xl text-yellow-600 max-w-3xl mx-auto leading-relaxed">
-            Melihat keindahan dan aktivitas Desa Maju Bersama melalui dokumentasi foto yang menginspirasi
+            Melihat keindahan dan aktivitas kampung kuning melalui dokumentasi
+            foto yang menginspirasi
           </p>
         </section>
 
@@ -207,7 +203,9 @@ export default function GaleriPage() {
                 />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300"></div>
                 <div className="absolute top-2 left-2">
-                  <Badge className={getCategoryColor(item.category)}>{item.category}</Badge>
+                  <Badge className={getCategoryColor(item.category)}>
+                    {item.category}
+                  </Badge>
                 </div>
                 <div className="absolute bottom-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="w-8 h-8 bg-white/90 rounded-full flex items-center justify-center">
@@ -219,7 +217,9 @@ export default function GaleriPage() {
                 <h3 className="font-bold text-yellow-800 mb-2 line-clamp-2 group-hover:text-yellow-600 transition-colors duration-300">
                   {item.title}
                 </h3>
-                <p className="text-sm text-yellow-600 mb-2 line-clamp-2">{item.description}</p>
+                <p className="text-sm text-yellow-600 mb-2 line-clamp-2">
+                  {item.description}
+                </p>
                 <p className="text-xs text-yellow-500">{item.date}</p>
               </CardContent>
             </Card>
@@ -255,22 +255,34 @@ export default function GaleriPage() {
               {/* Image */}
               <div className="bg-white rounded-lg overflow-hidden shadow-2xl">
                 <img
-                  src={filteredImages[selectedImage].image || "/placeholder.svg"}
+                  src={
+                    filteredImages[selectedImage].image || "/placeholder.svg"
+                  }
                   alt={filteredImages[selectedImage].title}
                   className="w-full h-auto max-h-[70vh] object-contain"
                   crossOrigin="anonymous"
                 />
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-4">
-                    <Badge className={getCategoryColor(filteredImages[selectedImage].category)}>
+                    <Badge
+                      className={getCategoryColor(
+                        filteredImages[selectedImage].category
+                      )}
+                    >
                       {filteredImages[selectedImage].category}
                     </Badge>
-                    <span className="text-sm text-gray-500">{filteredImages[selectedImage].date}</span>
                   </div>
-                  <h3 className="text-2xl font-bold text-yellow-800 mb-2">{filteredImages[selectedImage].title}</h3>
-                  <p className="text-yellow-600 mb-4">{filteredImages[selectedImage].description}</p>
+                  <h3 className="text-2xl font-bold text-yellow-800 mb-2">
+                    {filteredImages[selectedImage].title}
+                  </h3>
+                  <p className="text-yellow-600 mb-4">
+                    {filteredImages[selectedImage].description}
+                  </p>
                   <div className="flex gap-2">
-                    <Button size="sm" className="bg-yellow-500 hover:bg-yellow-600 text-white">
+                    <Button
+                      size="sm"
+                      className="bg-yellow-500 hover:bg-yellow-600 text-white"
+                    >
                       <Download className="w-4 h-4 mr-1" />
                       Download
                     </Button>
@@ -301,15 +313,19 @@ export default function GaleriPage() {
               <h2 className="text-3xl font-bold mb-6">Statistik Galeri</h2>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                 <div>
-                  <div className="text-3xl font-bold mb-2">{galeriData.length}</div>
+                  <div className="text-3xl font-bold mb-2">
+                    {galeriData.length}
+                  </div>
                   <div className="text-yellow-100">Total Foto</div>
                 </div>
                 <div>
-                  <div className="text-3xl font-bold mb-2">{categories.length - 1}</div>
+                  <div className="text-3xl font-bold mb-2">
+                    {categories.length - 1}
+                  </div>
                   <div className="text-yellow-100">Kategori</div>
                 </div>
                 <div>
-                  <div className="text-3xl font-bold mb-2">2024</div>
+                  <div className="text-3xl font-bold mb-2">2025</div>
                   <div className="text-yellow-100">Tahun Aktif</div>
                 </div>
                 <div>
@@ -322,5 +338,5 @@ export default function GaleriPage() {
         </section>
       </div>
     </div>
-  )
+  );
 }

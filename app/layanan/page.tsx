@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Link from "next/link"
+import { useState } from "react";
+import Link from "next/link";
 import {
   ArrowLeft,
   FileText,
@@ -14,14 +14,14 @@ import {
   CheckCircle,
   Download,
   AlertCircle,
-} from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export default function LayananPage() {
-  const [selectedService, setSelectedService] = useState<string | null>(null)
+  const [selectedService, setSelectedService] = useState<string | null>(null);
 
   const layananKategori = [
     {
@@ -32,27 +32,38 @@ export default function LayananPage() {
       services: [
         {
           name: "Surat Keterangan Domisili",
-          description: "Surat keterangan tempat tinggal untuk berbagai keperluan",
+          description:
+            "Surat keterangan tempat tinggal untuk berbagai keperluan",
           requirements: ["KTP Asli", "KK Asli", "Surat Pengantar RT/RW"],
           duration: "1-2 hari kerja",
           cost: "Gratis",
-          image: "/placeholder.svg?height=200&width=300&text=Surat+Domisili",
+          image: "/admitrasi.jpg",
         },
         {
           name: "Surat Keterangan Usaha",
           description: "Surat keterangan untuk keperluan usaha dan bisnis",
-          requirements: ["KTP Asli", "KK Asli", "Foto Usaha", "Surat Pengantar RT/RW"],
+          requirements: [
+            "KTP Asli",
+            "KK Asli",
+            "Foto Usaha",
+            "Surat Pengantar RT/RW",
+          ],
           duration: "2-3 hari kerja",
           cost: "Gratis",
-          image: "/placeholder.svg?height=200&width=300&text=Surat+Usaha",
+          image: "admintrasiusaha.jpg",
         },
         {
           name: "Surat Keterangan Tidak Mampu",
           description: "Surat keterangan untuk bantuan sosial dan beasiswa",
-          requirements: ["KTP Asli", "KK Asli", "Surat Pengantar RT/RW", "Foto Rumah"],
+          requirements: [
+            "KTP Asli",
+            "KK Asli",
+            "Surat Pengantar RT/RW",
+            "Foto Rumah",
+          ],
           duration: "1-2 hari kerja",
           cost: "Gratis",
-          image: "/placeholder.svg?height=200&width=300&text=SKTM",
+          image: "admintrasi-tidak-mampu.jpg",
         },
       ],
     },
@@ -65,26 +76,39 @@ export default function LayananPage() {
         {
           name: "Bantuan Pengurusan KTP",
           description: "Bantuan dan pendampingan pengurusan KTP elektronik",
-          requirements: ["Surat Pengantar Desa", "Foto 3x4 (2 lembar)", "KK Asli"],
+          requirements: [
+            "Surat Pengantar Desa",
+            "Foto 3x4 (2 lembar)",
+            "KK Asli",
+          ],
           duration: "Sesuai jadwal Disdukcapil",
           cost: "Gratis",
-          image: "/placeholder.svg?height=200&width=300&text=KTP+Elektronik",
+          image: "ktp.png",
         },
         {
           name: "Bantuan Pengurusan KK",
           description: "Bantuan pengurusan Kartu Keluarga baru atau perubahan",
-          requirements: ["Surat Pengantar Desa", "Dokumen pendukung", "KTP Kepala Keluarga"],
+          requirements: [
+            "Surat Pengantar Desa",
+            "Dokumen pendukung",
+            "KTP Kepala Keluarga",
+          ],
           duration: "Sesuai jadwal Disdukcapil",
           cost: "Gratis",
-          image: "/placeholder.svg?height=200&width=300&text=Kartu+Keluarga",
+          image: "/kk2.png",
         },
         {
           name: "Surat Pindah Domisili",
           description: "Surat keterangan pindah untuk keperluan mutasi",
-          requirements: ["KTP Asli", "KK Asli", "Surat Pengantar RT/RW", "Alasan Pindah"],
+          requirements: [
+            "KTP Asli",
+            "KK Asli",
+            "Surat Pengantar RT/RW",
+            "Alasan Pindah",
+          ],
           duration: "1-2 hari kerja",
           cost: "Gratis",
-          image: "/placeholder.svg?height=200&width=300&text=Surat+Pindah",
+          image: "SKPWNI.PNG",
         },
       ],
     },
@@ -100,7 +124,7 @@ export default function LayananPage() {
           requirements: ["Buku KIA", "KMS Balita"],
           duration: "Setiap Rabu minggu ke-2",
           cost: "Gratis",
-          image: "/placeholder.svg?height=200&width=300&text=Posyandu+Balita",
+          image: "posyandubayi.png",
         },
         {
           name: "Posyandu Lansia",
@@ -108,7 +132,7 @@ export default function LayananPage() {
           requirements: ["KTP", "Buku kesehatan lansia"],
           duration: "Setiap Jumat minggu ke-3",
           cost: "Gratis",
-          image: "/placeholder.svg?height=200&width=300&text=Posyandu+Lansia",
+          image: "lansia.png",
         },
         {
           name: "Rujukan Puskesmas",
@@ -116,49 +140,17 @@ export default function LayananPage() {
           requirements: ["KTP", "KK", "Keluhan kesehatan"],
           duration: "Langsung",
           cost: "Gratis",
-          image: "/placeholder.svg?height=200&width=300&text=Rujukan+Kesehatan",
+          image: "rujukan.jpg",
         },
       ],
     },
-    {
-      id: "ekonomi",
-      title: "Ekonomi",
-      icon: Building,
-      color: "from-purple-400 to-purple-500",
-      services: [
-        {
-          name: "Surat Izin Usaha Mikro",
-          description: "Bantuan pengurusan izin untuk usaha mikro",
-          requirements: ["KTP", "KK", "Foto Usaha", "Surat Pengantar RT/RW"],
-          duration: "3-5 hari kerja",
-          cost: "Gratis",
-          image: "/placeholder.svg?height=200&width=300&text=Izin+Usaha+Mikro",
-        },
-        {
-          name: "Bantuan Modal UMKM",
-          description: "Informasi dan bantuan akses modal untuk UMKM",
-          requirements: ["Proposal Usaha", "KTP", "KK", "Surat Keterangan Usaha"],
-          duration: "Sesuai program",
-          cost: "Gratis",
-          image: "/placeholder.svg?height=200&width=300&text=Bantuan+Modal+UMKM",
-        },
-        {
-          name: "Pelatihan Kewirausahaan",
-          description: "Pelatihan dan pembinaan untuk wirausaha baru",
-          requirements: ["Pendaftaran", "KTP", "Komitmen mengikuti pelatihan"],
-          duration: "Sesuai jadwal",
-          cost: "Gratis",
-          image: "/placeholder.svg?height=200&width=300&text=Pelatihan+Wirausaha",
-        },
-      ],
-    },
-  ]
+  ];
 
   const jamLayanan = [
     { hari: "Senin - Kamis", jam: "08:00 - 15:00 WIB" },
     { hari: "Jumat", jam: "08:00 - 11:00 WIB" },
     { hari: "Sabtu - Minggu", jam: "Tutup" },
-  ]
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-yellow-50 via-amber-50 to-orange-50">
@@ -173,8 +165,12 @@ export default function LayananPage() {
               <ArrowLeft className="w-6 h-6 text-yellow-600" />
             </Link>
             <div>
-              <h1 className="text-2xl font-bold text-white drop-shadow-md">Layanan Desa</h1>
-              <p className="text-yellow-100">Pelayanan terbaik untuk masyarakat</p>
+              <h1 className="text-2xl font-bold text-white drop-shadow-md">
+                Layanan Desa
+              </h1>
+              <p className="text-yellow-100">
+                Pelayanan terbaik untuk masyarakat
+              </p>
             </div>
           </div>
         </div>
@@ -188,10 +184,13 @@ export default function LayananPage() {
               <Shield className="w-10 h-10 text-white" />
             </div>
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-yellow-800 mb-6">Layanan Desa</h1>
+          <h1 className="text-4xl md:text-6xl font-bold text-yellow-800 mb-6">
+            Layanan Desa
+          </h1>
           <p className="text-xl text-yellow-600 max-w-3xl mx-auto leading-relaxed">
-            Kami berkomitmen memberikan pelayanan terbaik untuk memenuhi kebutuhan administrasi dan pelayanan publik
-            masyarakat Desa Maju Bersama
+            Kami berkomitmen memberikan pelayanan terbaik untuk memenuhi
+            kebutuhan administrasi dan pelayanan publik masyarakat Kampung
+            Kuning
           </p>
         </section>
 
@@ -205,7 +204,10 @@ export default function LayananPage() {
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 {jamLayanan.map((jadwal, index) => (
-                  <div key={index} className="bg-white/20 backdrop-blur-sm rounded-lg p-4 text-center">
+                  <div
+                    key={index}
+                    className="bg-white/20 backdrop-blur-sm rounded-lg p-4 text-center"
+                  >
                     <h3 className="font-bold mb-2">{jadwal.hari}</h3>
                     <p className="text-yellow-100">{jadwal.jam}</p>
                   </div>
@@ -218,7 +220,7 @@ export default function LayananPage() {
         {/* Services by Category */}
         <section>
           <Tabs defaultValue="administrasi" className="w-full">
-            <TabsList className="grid w-full grid-cols-2 lg:grid-cols-4 bg-white shadow-md border border-yellow-200 mb-8">
+            <TabsList className="grid w-full grid-cols-2 lg:grid-cols-3 bg-white shadow-md border border-yellow-200 mb-8">
               {layananKategori.map((kategori) => (
                 <TabsTrigger
                   key={kategori.id}
@@ -234,9 +236,12 @@ export default function LayananPage() {
             {layananKategori.map((kategori) => (
               <TabsContent key={kategori.id} value={kategori.id}>
                 <div className="mb-8">
-                  <h2 className="text-3xl font-bold text-yellow-800 mb-4">Layanan {kategori.title}</h2>
+                  <h2 className="text-3xl font-bold text-yellow-800 mb-4">
+                    Layanan {kategori.title}
+                  </h2>
                   <p className="text-xl text-yellow-600 mb-8">
-                    Berbagai layanan {kategori.title.toLowerCase()} yang tersedia untuk masyarakat
+                    Berbagai layanan {kategori.title.toLowerCase()} yang
+                    tersedia untuk masyarakat
                   </p>
                 </div>
 
@@ -247,7 +252,9 @@ export default function LayananPage() {
                       className="bg-white shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border-yellow-200 overflow-hidden group cursor-pointer"
                       onClick={() =>
                         setSelectedService(
-                          selectedService === `${kategori.id}-${index}` ? null : `${kategori.id}-${index}`,
+                          selectedService === `${kategori.id}-${index}`
+                            ? null
+                            : `${kategori.id}-${index}`
                         )
                       }
                     >
@@ -260,7 +267,9 @@ export default function LayananPage() {
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                         <div className="absolute top-4 right-4">
-                          <Badge className="bg-green-100 text-green-800 border-green-200">{service.cost}</Badge>
+                          <Badge className="bg-green-100 text-green-800 border-green-200">
+                            {service.cost}
+                          </Badge>
                         </div>
                         <div className="absolute bottom-4 left-4">
                           <div
@@ -275,7 +284,9 @@ export default function LayananPage() {
                         <h3 className="text-xl font-bold text-yellow-800 mb-3 group-hover:text-yellow-600 transition-colors duration-300">
                           {service.name}
                         </h3>
-                        <p className="text-yellow-600 mb-4">{service.description}</p>
+                        <p className="text-yellow-600 mb-4">
+                          {service.description}
+                        </p>
 
                         <div className="space-y-3">
                           <div className="flex items-center space-x-2 text-sm text-yellow-700">
@@ -290,17 +301,25 @@ export default function LayananPage() {
 
                         {selectedService === `${kategori.id}-${index}` && (
                           <div className="mt-6 pt-6 border-t border-yellow-200 animate-fade-in">
-                            <h4 className="font-bold text-yellow-800 mb-3">Persyaratan:</h4>
+                            <h4 className="font-bold text-yellow-800 mb-3">
+                              Persyaratan:
+                            </h4>
                             <ul className="space-y-2">
                               {service.requirements.map((req, reqIndex) => (
-                                <li key={reqIndex} className="flex items-start space-x-2 text-sm text-yellow-700">
+                                <li
+                                  key={reqIndex}
+                                  className="flex items-start space-x-2 text-sm text-yellow-700"
+                                >
                                   <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
                                   <span>{req}</span>
                                 </li>
                               ))}
                             </ul>
                             <div className="mt-4 flex gap-2">
-                              <Button size="sm" className="bg-yellow-500 hover:bg-yellow-600 text-white">
+                              <Button
+                                size="sm"
+                                className="bg-yellow-500 hover:bg-yellow-600 text-white"
+                              >
                                 <Download className="w-4 h-4 mr-1" />
                                 Download Form
                               </Button>
@@ -338,7 +357,7 @@ export default function LayananPage() {
                 <div>
                   <h3 className="font-bold mb-2">Syarat Umum:</h3>
                   <ul className="space-y-1 text-sm">
-                    <li>• Warga Desa Maju Bersama</li>
+                    <li>• Warga Kampung Kuning</li>
                     <li>• Membawa dokumen asli dan fotokopi</li>
                     <li>• Mengisi formulir dengan lengkap</li>
                     <li>• Datang sesuai jam pelayanan</li>
@@ -363,7 +382,9 @@ export default function LayananPage() {
           <Card className="bg-gradient-to-r from-yellow-400 to-amber-500 text-white shadow-2xl">
             <CardContent className="p-8">
               <h2 className="text-3xl font-bold mb-4">Butuh Bantuan?</h2>
-              <p className="text-xl mb-6 text-yellow-100">Tim pelayanan kami siap membantu Anda dengan sepenuh hati</p>
+              <p className="text-xl mb-6 text-yellow-100">
+                Tim pelayanan kami siap membantu Anda dengan sepenuh hati
+              </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/kontak">
                   <Button className="bg-white text-yellow-600 hover:bg-yellow-50 px-8 py-3 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
@@ -384,5 +405,5 @@ export default function LayananPage() {
         </section>
       </div>
     </div>
-  )
+  );
 }
