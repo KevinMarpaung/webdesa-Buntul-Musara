@@ -102,10 +102,10 @@ export default function HomePage() {
     <div className="min-h-screen bg-gradient-to-br from-yellow-50 via-amber-50 to-orange-50">
       {/* Navigation */}
       <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-md shadow-lg z-50 border-b border-yellow-200">
-        <div className="container mx-10 px-1">
+        <div className="container mx-auto px-1">
           <div className="flex justify-between items-center py-4">
             <Link href="/" className="flex items-center space-x-3 group">
-              <div className="w-17 h-15 rounded-full flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300">
+              <div className="w-15 h-15 rounded-full flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300">
                 <img src="logo-gayo-lues.png" />
               </div>
               <div>
@@ -126,14 +126,20 @@ export default function HomePage() {
                   <span className="text-sm font-medium">{item.label}</span>
                 </Link>
               ))}
+              <Link
+                href="/admin"
+                className="px-4 py-2 rounded-lg bg-yellow-500 text-white hover:bg-yellow-600 transition-all duration-300 flex items-center space-x-2 shadow-md hover:shadow-lg hover:scale-105"
+              >
+                <Settings className="w-4 h-4" />
+                <span className="text-sm font-medium">Admin</span>
+              </Link>
             </div>
-            <div className="flex gap-2 ml-10 items-center ">
-              <div className="hidden lg:flex w-12 h-10   items-center justify-center sh group-hover:scale-110 transition-transform duration-300">
-                {" "}
+            <div className="flex ml-5">
+              <div className="hidden w-12 h-15 rounded-full lg:flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300">
                 <img src="unsam.png" />
               </div>
-              <div className="hidden lg:flex w-16 h-10 rounded-full  items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <img src="logo-kkn.png" />
+              <div className="hidden w-14 h-15 rounded-full lg:flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300">
+                <img src="logo-gayo-lues.png" />
               </div>
             </div>
             <button
