@@ -396,30 +396,11 @@ export default function ProfilPage() {
                 icon: CircleUserRound,
                 color: "bg-black",
               },
-            ].map((prestasi, index) => (
+            ].map((index) => (
               <Card
                 key={index}
                 className="bg-white shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border-yellow-200"
-              >
-                <CardContent className=" text-center">
-                  <div
-                    className={`w-20 h-20 bg-gradient-to-r ${prestasi.color} rounded-full flex items-center justify-center mx-auto mb-4 hover:scale-110 transition-transform duration-300`}
-                  >
-                    <prestasi.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <div className="mb-2">
-                    <span className="px-3 py-1 bg-yellow-100 text-yellow-800 text-sm rounded-full font-semibold">
-                      {prestasi.year}
-                    </span>
-                  </div>
-                  <h3 className="text-lg font-bold text-yellow-800 mb-3">
-                    {prestasi.title}
-                  </h3>
-                  <p className="text-yellow-600 text-sm">
-                    {prestasi.description}
-                  </p>
-                </CardContent>
-              </Card>
+              ></Card>
             ))}
           </div>
         </section>
