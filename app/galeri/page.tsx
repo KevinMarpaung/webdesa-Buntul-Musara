@@ -220,7 +220,6 @@ export default function GaleriPage() {
                 <p className="text-sm text-yellow-600 mb-2 line-clamp-2">
                   {item.description}
                 </p>
-                <p className="text-xs text-yellow-500">{item.date}</p>
               </CardContent>
             </Card>
           ))}
