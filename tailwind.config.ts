@@ -1,7 +1,7 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
 
 const config: Config = {
-  darkMode: ["class"],
+  darkMode: "class",
   content: [
     "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
@@ -160,7 +160,8 @@ const config: Config = {
         "count-up": "count-up 0.6s ease-out",
       },
       backgroundImage: {
-        "gradient-shimmer": "linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent)",
+        "gradient-shimmer":
+          "linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent)",
       },
       backgroundSize: {
         "200%": "200% 100%",
@@ -168,6 +169,6 @@ const config: Config = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config
+} satisfies Config;
 
-export default config
+export default config;
