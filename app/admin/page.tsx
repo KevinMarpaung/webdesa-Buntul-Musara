@@ -247,7 +247,9 @@ export default function AdminPage() {
                 <h1 className="text-2xl font-bold text-white drop-shadow-md">
                   Admin Panel
                 </h1>
-                <p className="text-yellow-100">Sistem Informasi Desa Modern</p>
+                <p className="text-yellow-100">
+                  Sistem Informasi Kampung Kuning
+                </p>
               </div>
             </div>
             <div className="text-right text-white">

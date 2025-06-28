@@ -97,7 +97,7 @@ export default function LoginPage() {
             Login Admin
           </h1>
           <p className="text-yellow-600">
-            Masuk ke panel administrasi Desa Maju Bersama
+            Masuk ke panel administrasi Kampung Kuning
           </p>
         </div>
 
@@ -211,7 +211,7 @@ export default function LoginPage() {
         {/* Footer */}
         <div className="text-center mt-8">
           <p className="text-sm text-yellow-600">
-            © 2024 Desa Maju Bersama. Sistem Admin Panel.
+            © 2025 Desa Kampung Kuning. Sistem Admin Panel.
           </p>
         </div>
       </div>
