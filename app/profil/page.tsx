@@ -399,8 +399,16 @@ export default function ProfilPage() {
             ].map((item, index) => (
               <Card
                 key={index}
-                className="bg-white shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border-yellow-200"
-              ></Card>
+                className=" text-center items-center bg-white shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border-yellow-200"
+              >
+                <div
+                  className={`w-12 h-12 ${item.color} rounded-full flex   items-center justify-center mb-2`}
+                >
+                  <item.icon className="w-6 h-6 text-white items-center text-center" />
+                </div>
+                <h4 className="font-bold text-yellow-800">{item.title}</h4>
+                <p className="text-yellow-600">{item.year}</p>
+              </Card>
             ))}
           </div>
         </section>

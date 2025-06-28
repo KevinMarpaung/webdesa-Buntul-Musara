@@ -11,7 +11,6 @@ import {
   Mail,
   MapPin,
   ChevronRight,
-  Award,
   Building,
   Shield,
   Menu,
@@ -139,7 +138,7 @@ export default function HomePage() {
                 <img src="unsam.png" />
               </div>
               <div className="hidden w-14 h-15 rounded-full lg:flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300">
-                <img src="logo-gayo-lues.png" />
+                <img src="logo-kkn.png" />
               </div>
             </div>
             <button
@@ -168,7 +167,7 @@ export default function HomePage() {
                 </Link>
               ))}
               <Link
-                href="/admin"
+                href="/login"
                 className="w-full flex items-center space-x-3 px-4 py-3 text-left bg-yellow-500 text-white hover:bg-yellow-600 transition-colors duration-200"
                 onClick={() => setMobileMenuOpen(false)}
               >

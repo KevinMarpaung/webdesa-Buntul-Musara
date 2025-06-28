@@ -1,11 +1,21 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { Users, FileText, Calendar, Home, ArrowLeft } from "lucide-react";
+import {
+  Users,
+  FileText,
+  Calendar,
+  Home,
+  ArrowLeft,
+  LogOut,
+  Clock,
+  User,
+} from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-
+import { Button } from "@/components/ui/button";
 interface Penduduk {
   id: string;
   nama: string;
@@ -34,16 +44,55 @@ interface Kegiatan {
 }
 
 export default function AdminPage() {
+  const router = useRouter();
   const [penduduk, setPenduduk] = useState<Penduduk[]>([]);
   const [berita, setBerita] = useState<Berita[]>([]);
   const [kegiatan, setKegiatan] = useState<Kegiatan[]>([]);
   const [activeTab, setActiveTab] = useState("dashboard");
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [loginTime, setLoginTime] = useState<string>("");
 
   // Form states
   const [formPenduduk, setFormPenduduk] = useState<Partial<Penduduk>>({});
   const [formBerita, setFormBerita] = useState<Partial<Berita>>({});
   const [formKegiatan, setFormKegiatan] = useState<Partial<Kegiatan>>({});
   const [editingId, setEditingId] = useState<string | null>(null);
+
+  useEffect(() => {
+    const checkAuth = () => {
+      const isLoggedIn = localStorage.getItem("isAdminLoggedIn");
+      const loginTimeStamp = localStorage.getItem("adminLoginTime");
+
+      if (!isLoggedIn || isLoggedIn !== "true") {
+        router.replace("/login"); // ganti push -> replace
+        return;
+      }
+
+      if (loginTimeStamp) {
+        const loginDate = new Date(loginTimeStamp);
+        const now = new Date();
+        const hoursDiff =
+          (now.getTime() - loginDate.getTime()) / (1000 * 60 * 60);
+
+        if (hoursDiff > 24) {
+          handleLogout();
+          return;
+        }
+
+        setLoginTime(loginDate.toLocaleString("id-ID"));
+      }
+
+      setIsAuthenticated(true);
+    };
+
+    checkAuth();
+  }, [router]);
+
+  const handleLogout = () => {
+    localStorage.removeItem("isAdminLoggedIn");
+    localStorage.removeItem("adminLoginTime");
+    router.push("/login");
+  };
 
   // Load data from localStorage
   useEffect(() => {
@@ -98,7 +147,16 @@ export default function AdminPage() {
     setPenduduk(updated);
     saveToStorage("desa-penduduk", updated);
   };
-
+  if (!isAuthenticated) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-yellow-50 via-amber-50 to-orange-50 flex items-center justify-center">
+        <div className="text-center">
+          <div className="w-16 h-16 bg-yellow-300 rounded-full animate-pulse mx-auto mb-4"></div>
+          <p className="text-yellow-600">Memverifikasi akses admin...</p>
+        </div>
+      </div>
+    );
+  }
   // CRUD Functions for Berita
   const addBerita = () => {
     if (!formBerita.judul || !formBerita.konten) return;
