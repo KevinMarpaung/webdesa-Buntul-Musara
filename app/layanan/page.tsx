@@ -219,7 +219,7 @@ export default function LayananPage() {
         {/* Services by Category */}
         <section>
           <Tabs defaultValue="administrasi" className="w-full">
-            <TabsList className="grid w-full grid-cols-2 lg:grid-cols-3 bg-white shadow-md border border-yellow-200 mb-8">
+            <TabsList className="grid w-full grid-cols-3 lg:grid-cols-3 bg-white shadow-md border border-yellow-200 mb-8">
               {layananKategori.map((kategori) => (
                 <TabsTrigger
                   key={kategori.id}

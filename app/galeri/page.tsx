@@ -62,7 +62,7 @@ export default function GaleriPage() {
       id: 8,
       title: "Masjid",
       category: "Fasilitas",
-      image: "masjid.jpeg",
+      image: "Masjid.jpeg",
       description: "Masjid Yang Sangat Indah Di Kampung Kuning",
     },
     {
@@ -77,7 +77,7 @@ export default function GaleriPage() {
       id: 12,
       title: "Sunset Di Bukit Kampung Kuning",
       category: "Pemandangan",
-      image: "Sunset.jpeg",
+      image: "sunset.jpeg",
       description:
         "Pemandangan Sunset Yang Sangat Indah Di Antara Bukit Kampung Kuning",
     },
