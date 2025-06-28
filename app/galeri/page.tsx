@@ -93,7 +93,7 @@ export default function GaleriPage() {
       title: "Proses adat pernikahan",
       category: "Kegiatan",
       image: "pernikahan.jpeg",
-      description: "Melakukan kegiatan Pengembangan UMKN",
+      description: "Melakukan kegiatan prosesi adat pernikahan",
     },
   ];
 
