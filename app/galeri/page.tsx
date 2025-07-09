@@ -46,10 +46,11 @@ export default function GaleriPage() {
     },
     {
       id: 6,
-      title: " Meunasah ",
+      title: " peukan ",
       category: "Pemandangan",
       image: "mushola.JPG",
-      description: "Foto Meunasah Yang Begitu Indah Dibawah Bukit",
+      description:
+        "berada di desa buntul musara yang di adakan setiap hari rabu jadi kek pusat perbelanjaan di kecamatan tripe jaya",
     },
     {
       id: 7,
@@ -74,13 +75,7 @@ export default function GaleriPage() {
       image: "Foto bersama Kepsek SMPN 1 TRIPE Jaya.jpg",
       description: "Foto bersama Kepsek SMPN 1 TRIPE Jaya",
     },
-    {
-      id: 14,
-      title: "Foto bersama pemuda_pemudi",
-      category: "Kegiatan",
-      image: "Foto bersama pemuda_pemudi.jpg",
-      description: "Foto bersama pemuda_pemudi",
-    },
+
     {
       id: 15,
       title: "Kegiatan Posyandu",

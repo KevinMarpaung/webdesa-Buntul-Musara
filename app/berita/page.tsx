@@ -15,7 +15,33 @@ interface Berita {
   tanggal: string;
   penulis: string;
   gambar?: string;
+  link?: string;
 }
+
+const dummyBerita: Berita[] = [
+  {
+    id: "1",
+    judul:
+      "Pemerintahan Kampung Buntul Musara Salurkan Bantuan Langsung Tunai (BLT) Tahap 4",
+    konten:
+      "Program ini bertujuan untuk membantu Keluarga Penerima Manfaat (KPM) yang terdaftar dalam Data Terpadu Kesejahteraan Sosial (DTKS) dan memenuhi syarat-syarat yang ditentukan.acara penyaluran BLT berlangsung di Kantor Pengulu Kampung Buntul",
+    tanggal: "23/12/2024",
+    penulis: "Admin Desa",
+    gambar: "blt.jpg",
+    link: "https://a1news.co.id/index.php/2024/12/23/pemerintahan-kampung-buntul-musara-salurkan-bantuan-langsung-tunai-blt-tahap-4/",
+  },
+  {
+    id: "2",
+    judul:
+      "Desa Buntul Musara Meriahkan HUT RI Ke- 79 Dengan Beragam Perlombaan Semangat Kebersamaan",
+    konten:
+      "emperingati Hari semarak Kemerdekaan Republik Indonesia ke-79 pada tahun 2024 dengan mengusung tema Nusantara Baru, Indonesia Maju",
+    tanggal: "2024-07-05",
+    penulis: "Admin Desa",
+    gambar: "hut.jpg",
+    link: "https://a1news.co.id/index.php/2024/08/17/desa-buntul-musara-meriahkan-hut-ri-ke-79-dengan-beragam-perlombaan-semangat-kebersamaan/",
+  },
+];
 
 export default function BeritaPage() {
   const [berita, setBerita] = useState<Berita[]>([]);
@@ -28,6 +54,10 @@ export default function BeritaPage() {
       const data = JSON.parse(savedBerita);
       setBerita(data);
       setFilteredBerita(data);
+    } else {
+      // Fallback ke dummy kalau localStorage kosong
+      setBerita(dummyBerita);
+      setFilteredBerita(dummyBerita);
     }
   }, []);
 
@@ -83,20 +113,20 @@ export default function BeritaPage() {
         {/* Berita Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredBerita.map((article) => (
-            <Link
+            <a
               key={article.id}
-              href={`/berita/${article.id}`}
+              href={article.link}
+              target="_blank"
+              rel="noopener noreferrer"
               className="group"
             >
               <Card className="bg-white shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border-yellow-200 overflow-hidden h-full">
                 <div className="h-48 relative overflow-hidden">
-                  {
-                    <img
-                      src="kegiatan 2.jpeg"
-                      alt={article.judul}
-                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                    />
-                  }
+                  <img
+                    src={article.gambar}
+                    alt={article.judul}
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300" />
                   <div className="absolute top-4 left-4">
                     <Badge className="bg-white/90 text-yellow-800">
@@ -132,7 +162,7 @@ export default function BeritaPage() {
                   </div>
                 </CardContent>
               </Card>
-            </Link>
+            </a>
           ))}
         </div>
 

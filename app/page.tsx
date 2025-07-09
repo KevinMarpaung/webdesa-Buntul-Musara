@@ -61,7 +61,7 @@ export default function HomePage() {
   const [penduduk, setPenduduk] = useState([]);
 
   // Hero images carousel
-  const heroImages = ["kantor.jpg", "potorame.jpg", "pemandangan.jpg"];
+  const heroImages = ["pemandangan3.JPG", "potorame.jpg", "pemandangan.JPG"];
 
   // Load data from localStorage
   useEffect(() => {
