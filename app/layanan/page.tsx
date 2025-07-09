@@ -107,7 +107,7 @@ export default function LayananPage() {
           ],
           duration: "1-2 hari kerja",
           cost: "Gratis",
-          image: "SKPWNI.PNG",
+          image: "SKPWNI.png",
         },
       ],
     },
@@ -188,7 +188,8 @@ export default function LayananPage() {
           </h1>
           <p className="text-xl text-black max-w-3xl mx-auto leading-relaxed">
             Kami berkomitmen memberikan pelayanan terbaik untuk memenuhi
-            kebutuhan administrasi dan pelayanan publik masyarakat Desa Buntul Musara
+            kebutuhan administrasi dan pelayanan publik masyarakat Desa Buntul
+            Musara
           </p>
         </section>
 
@@ -282,9 +283,7 @@ export default function LayananPage() {
                         <h3 className="text-xl font-bold text-blue-800 mb-3 group-hover:text-blue-600 transition-colors duration-300">
                           {service.name}
                         </h3>
-                        <p className="text-black mb-4">
-                          {service.description}
-                        </p>
+                        <p className="text-black mb-4">{service.description}</p>
 
                         <div className="space-y-3">
                           <div className="flex items-center space-x-2 text-sm text-blue-700">

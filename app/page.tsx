@@ -336,7 +336,7 @@ export default function HomePage() {
               <Card className="bg-white shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border-blue-200 h-full overflow-hidden">
                 <div className="h-48 relative overflow-hidden">
                   <img
-                    src="profil1.jpg"
+                    src="profil1.JPG"
                     alt="Profil Desa"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     crossOrigin="anonymous"
@@ -399,7 +399,7 @@ export default function HomePage() {
               <Card className="bg-white shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border-blue-200 h-full overflow-hidden">
                 <div className="h-48 relative overflow-hidden">
                   <img
-                    src="kantor.jpg"
+                    src="kantor.JPG"
                     alt="Layanan Desa"
                     className="  w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     crossOrigin="anonymous"
@@ -461,7 +461,7 @@ export default function HomePage() {
               <Card className="bg-white shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border-yellow-200 h-full overflow-hidden">
                 <div className="h-48 relative overflow-hidden">
                   <img
-                    src="galeri1.jpg"
+                    src="galeri1.JPG"
                     alt="Galeri Desa"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     crossOrigin="anonymous"

@@ -26,23 +26,23 @@ export default function GaleriPage() {
       id: 1,
       title: "Pemukiman Warga Desa",
       category: "Pemandangan",
-      image: "pemukiman.jpg",
-      description: "Pesona Pemukiman Warga Desa Buntul Musara Yang Dilihat Dari Atas Bukit",
+      image: "pemukiman.JPG",
+      description:
+        "Pesona Pemukiman Warga Desa Buntul Musara Yang Dilihat Dari Atas Bukit",
     },
     {
       id: 2,
       title: "Air Terjun",
       category: "Pemandangan",
-      image: "pemandangan2.jpg",
+      image: "pemandangan2.JPG",
       description: " Pesona Air Terjun Di Kampung Yang Begitu Indah ",
     },
     {
       id: 3,
       title: "Kolam Biru",
       category: "Pemandangan",
-      image: "kolabiru.jpg",
-      description:
-        "Pesona Kolam Biru Di Kampung Yang Begitu Indah",
+      image: "kolabiru.JPG",
+      description: "Pesona Kolam Biru Di Kampung Yang Begitu Indah",
     },
     {
       id: 6,
@@ -58,16 +58,15 @@ export default function GaleriPage() {
       image: "sawah.jpg",
       description: "Pemandangan Sawah Yang Sangat Indah Di Kampung Kuning",
     },
-   
+
     {
       id: 11,
       title: "Mengajar Disekolah",
       category: "Kegiatan",
       image: "kegiatan1.jpg",
-      description:
-        "Mengajar Disekolah Anak Sd",
+      description: "Mengajar Disekolah Anak Sd",
     },
-    
+
     {
       id: 13,
       title: "Foto bersama Kepsek SMPN 1 TRIPE Jaya",
@@ -124,7 +123,7 @@ export default function GaleriPage() {
       image: "sd.jpg",
       description: "Foto Sekola SD",
     },
-    
+
     {
       id: 22,
       title: "SMP Negeri 1 Tripe Jaya",
@@ -207,8 +206,8 @@ export default function GaleriPage() {
             Galeri Desa Buntul Musara
           </h1>
           <p className="text-xl text-black max-w-3xl mx-auto leading-relaxed">
-            Melihat keindahan dan aktivitas Desa Buntul Musara melalui dokumentasi
-            foto yang menginspirasi
+            Melihat keindahan dan aktivitas Desa Buntul Musara melalui
+            dokumentasi foto yang menginspirasi
           </p>
         </section>
 
