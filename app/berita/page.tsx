@@ -44,21 +44,21 @@ export default function BeritaPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-yellow-50 via-amber-50 to-orange-50">
       {/* Header */}
-      <header className="bg-gradient-to-r from-yellow-400 via-amber-400 to-yellow-500 shadow-lg">
+      <header className="bg-gradient-to-br from-sky-400 to-sky-500 shadow-lg">
         <div className="container mx-auto px-4 py-6">
           <div className="flex items-center space-x-4">
             <Link
               href="/"
               className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md hover:scale-110 transition-transform duration-300"
             >
-              <ArrowLeft className="w-6 h-6 text-yellow-600" />
+              <ArrowLeft className="w-6 h-6 text-blue-600" />
             </Link>
             <div>
               <h1 className="text-2xl font-bold text-white drop-shadow-md">
                 Berita & Pengumuman
               </h1>
-              <p className="text-yellow-100">
-                Informasi terkini dari Desa Maju Bersama
+              <p className="text-white">
+                Informasi terkini dari Desa Buntul Musara
               </p>
             </div>
           </div>
@@ -69,13 +69,13 @@ export default function BeritaPage() {
         {/* Search Section */}
         <div className="mb-8">
           <div className="max-w-md mx-auto relative">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-yellow-500 w-5 h-5" />
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-blue-500 w-5 h-5" />
             <Input
               type="text"
               placeholder="Cari berita..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="pl-10 border-yellow-300 focus:border-yellow-500 bg-white shadow-md"
+              className="pl-10 border-blue-300 focus:border-yellow-500 bg-white shadow-md"
             />
           </div>
         </div>
@@ -105,7 +105,7 @@ export default function BeritaPage() {
                   </div>
                   <div className="absolute bottom-4 right-4">
                     <div className="w-10 h-10 bg-white/90 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <FileText className="w-5 h-5 text-yellow-600" />
+                      <FileText className="w-5 h-5 text-blue-600" />
                     </div>
                   </div>
                 </div>
@@ -147,12 +147,12 @@ export default function BeritaPage() {
 
         {berita.length === 0 && (
           <div className="text-center py-12">
-            <FileText className="w-16 h-16 text-yellow-300 mx-auto mb-4" />
-            <p className="text-yellow-600 text-lg">
+            <FileText className="w-16 h-16 text-blue-300 mx-auto mb-4" />
+            <p className="text-black text-lg">
               Belum ada berita yang dipublikasi
             </p>
             <Link href="/admin">
-              <Button className="mt-4 bg-yellow-500 hover:bg-yellow-600 text-white">
+              <Button className="mt-4 bg-blue-500 hover:bg-blue-600 text-white">
                 Kelola Berita
               </Button>
             </Link>

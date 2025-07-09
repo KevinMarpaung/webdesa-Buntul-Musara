@@ -67,18 +67,18 @@ export default function KegiatanPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-yellow-50 via-amber-50 to-orange-50">
       {/* Header */}
-      <header className="bg-gradient-to-r from-yellow-400 via-amber-400 to-yellow-500 shadow-lg">
+      <header className="bg-gradient-to-br from-sky-400 to-sky-500 shadow-lg">
         <div className="container mx-auto px-4 py-6">
           <div className="flex items-center space-x-4">
             <Link
               href="/"
               className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md hover:scale-110 transition-transform duration-300"
             >
-              <ArrowLeft className="w-6 h-6 text-yellow-600" />
+              <ArrowLeft className="w-6 h-6 text-blue-600" />
             </Link>
             <div>
               <h1 className="text-2xl font-bold text-white drop-shadow-md">Kegiatan Desa</h1>
-              <p className="text-yellow-100">Agenda dan kegiatan Desa Maju Bersama</p>
+              <p className="text-blue-100">Agenda dan kegiatan Desa Maju Bersama</p>
             </div>
           </div>
         </div>
@@ -89,21 +89,21 @@ export default function KegiatanPage() {
         <div className="mb-8 space-y-4">
           <div className="flex flex-col md:flex-row gap-4">
             <div className="flex-1 relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-yellow-500 w-5 h-5" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-blue-500 w-5 h-5" />
               <Input
                 type="text"
                 placeholder="Cari kegiatan..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="pl-10 border-yellow-300 focus:border-yellow-500 bg-white shadow-md"
+                className="pl-10 border-blue-300 focus:border-blue-500 bg-white shadow-md"
               />
             </div>
             <div className="flex items-center space-x-2">
-              <Filter className="w-5 h-5 text-yellow-600" />
+              <Filter className="w-5 h-5 text-blue-600" />
               <select
                 value={statusFilter}
                 onChange={(e) => setStatusFilter(e.target.value)}
-                className="border border-yellow-300 rounded-md px-3 py-2 focus:border-yellow-500 focus:outline-none bg-white shadow-md"
+                className="border border-blue-300 rounded-md px-3 py-2 focus:border-blue-500 focus:outline-none bg-white shadow-md"
               >
                 {statusOptions.map((status) => (
                   <option key={status} value={status}>
@@ -183,17 +183,17 @@ export default function KegiatanPage() {
 
         {filteredKegiatan.length === 0 && kegiatan.length > 0 && (
           <div className="text-center py-12">
-            <Search className="w-16 h-16 text-yellow-300 mx-auto mb-4" />
-            <p className="text-yellow-600 text-lg">Tidak ada kegiatan yang sesuai dengan pencarian</p>
+            <Search className="w-16 h-16 text-blue-300 mx-auto mb-4" />
+            <p className="text-blue-600 text-lg">Tidak ada kegiatan yang sesuai dengan pencarian</p>
           </div>
         )}
 
         {kegiatan.length === 0 && (
           <div className="text-center py-12">
-            <Calendar className="w-16 h-16 text-yellow-300 mx-auto mb-4" />
-            <p className="text-yellow-600 text-lg">Belum ada kegiatan yang dijadwalkan</p>
+            <Calendar className="w-16 h-16 text-blue-300 mx-auto mb-4" />
+            <p className="text-black text-lg">Belum ada kegiatan yang dijadwalkan</p>
             <Link href="/admin">
-              <Button className="mt-4 bg-yellow-500 hover:bg-yellow-600 text-white">Kelola Kegiatan</Button>
+              <Button className="mt-4 bg-blue-500 hover:bg-blue-600 text-white">Kelola Kegiatan</Button>
             </Link>
           </div>
         )}

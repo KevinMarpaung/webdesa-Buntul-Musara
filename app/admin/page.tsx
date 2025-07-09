@@ -9,13 +9,9 @@ import {
   Calendar,
   Home,
   ArrowLeft,
-  LogOut,
-  Clock,
-  User,
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Button } from "@/components/ui/button";
 interface Penduduk {
   id: string;
   nama: string;
@@ -149,9 +145,9 @@ export default function AdminPage() {
   };
   if (!isAuthenticated) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-yellow-50 via-amber-50 to-orange-50 flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-sky-50 to-sky-50 flex items-center justify-center">
         <div className="text-center">
-          <div className="w-16 h-16 bg-yellow-300 rounded-full animate-pulse mx-auto mb-4"></div>
+          <div className="w-16 h-16 bg-blue-300 rounded-full animate-pulse mx-auto mb-4"></div>
           <p className="text-yellow-600">Memverifikasi akses admin...</p>
         </div>
       </div>
@@ -231,9 +227,9 @@ export default function AdminPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-yellow-50 via-amber-50 to-orange-50">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-sky-50 to-sky-50">
       {/* Header */}
-      <header className="bg-gradient-to-r from-yellow-400 via-amber-400 to-yellow-500 shadow-lg">
+      <header className="bg-gradient-to-r from-blue-400 via-sky-400 to-sky-500 shadow-lg">
         <div className="container mx-auto px-4 py-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
@@ -241,14 +237,14 @@ export default function AdminPage() {
                 href="/"
                 className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md hover:scale-110 transition-transform duration-300"
               >
-                <ArrowLeft className="w-6 h-6 text-yellow-600" />
+                <ArrowLeft className="w-6 h-6 text-blue-600" />
               </Link>
               <div>
                 <h1 className="text-2xl font-bold text-white drop-shadow-md">
                   Admin Panel
                 </h1>
-                <p className="text-yellow-100">
-                  Sistem Informasi Kampung Kuning
+                <p className="text-blue-100">
+                  Sistem Informasi Buntul Musara
                 </p>
               </div>
             </div>
@@ -262,31 +258,31 @@ export default function AdminPage() {
 
       <div className="container mx-auto px-4 py-8">
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-          <TabsList className="grid w-full grid-cols-4 bg-white shadow-md border border-yellow-200">
+          <TabsList className="grid w-full grid-cols-4 bg-white shadow-md border border-blue-200">
             <TabsTrigger
               value="dashboard"
-              className="data-[state=active]:bg-yellow-400 data-[state=active]:text-white transition-all duration-300 hover:bg-yellow-100"
+              className="data-[state=active]:bg-blue-400 data-[state=active]:text-white transition-all duration-300 hover:bg-blue-100"
             >
               <Home className="w-4 h-4 mr-2" />
               Dashboard
             </TabsTrigger>
             <TabsTrigger
               value="penduduk"
-              className="data-[state=active]:bg-yellow-400 data-[state=active]:text-white transition-all duration-300 hover:bg-yellow-100"
+              className="data-[state=active]:bg-blue-400 data-[state=active]:text-white transition-all duration-300 hover:bg-blue-100"
             >
               <Users className="w-4 h-4 mr-2" />
               Penduduk
             </TabsTrigger>
             <TabsTrigger
               value="berita"
-              className="data-[state=active]:bg-yellow-400 data-[state=active]:text-white transition-all duration-300 hover:bg-yellow-100"
+              className="data-[state=active]:bg-blue-400 data-[state=active]:text-white transition-all duration-300 hover:bg-blue-100"
             >
               <FileText className="w-4 h-4 mr-2" />
               Berita
             </TabsTrigger>
             <TabsTrigger
               value="kegiatan"
-              className="data-[state=active]:bg-yellow-400 data-[state=active]:text-white transition-all duration-300 hover:bg-yellow-100"
+              className="data-[state=active]:bg-blue-400 data-[state=active]:text-white transition-all duration-300 hover:bg-blue-100"
             >
               <Calendar className="w-4 h-4 mr-2" />
               Kegiatan
@@ -296,7 +292,7 @@ export default function AdminPage() {
           {/* Dashboard */}
           <TabsContent value="dashboard" className="mt-8">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-              <Card className="bg-gradient-to-br from-yellow-400 to-amber-500 text-white shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+              <Card className="bg-gradient-to-br from-blue-400 to-sky-500 text-white shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
                 <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                   <CardTitle className="text-sm font-medium">
                     Total Penduduk
@@ -305,11 +301,11 @@ export default function AdminPage() {
                 </CardHeader>
                 <CardContent>
                   <div className="text-2xl font-bold">{penduduk.length}</div>
-                  <p className="text-xs text-yellow-100">Jiwa terdaftar</p>
+                  <p className="text-xs text-blue-100">Jiwa terdaftar</p>
                 </CardContent>
               </Card>
 
-              <Card className="bg-gradient-to-br from-amber-400 to-orange-500 text-white shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+              <Card className="bg-gradient-to-br from-blue-400 to-sky-500 text-white shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
                 <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                   <CardTitle className="text-sm font-medium">
                     Total Berita
@@ -322,7 +318,7 @@ export default function AdminPage() {
                 </CardContent>
               </Card>
 
-              <Card className="bg-gradient-to-br from-orange-400 to-yellow-500 text-white shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+              <Card className="bg-gradient-to-br from-blue-400 to-sky-500 text-white shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
                 <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                   <CardTitle className="text-sm font-medium">
                     Total Kegiatan
@@ -337,9 +333,9 @@ export default function AdminPage() {
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              <Card className="shadow-lg border-yellow-200 hover:shadow-xl transition-shadow duration-300">
+              <Card className="shadow-lg border-blue-200 hover:shadow-xl transition-shadow duration-300">
                 <CardHeader>
-                  <CardTitle className="text-yellow-800">
+                  <CardTitle className="text-black-800">
                     Berita Terbaru
                   </CardTitle>
                 </CardHeader>
@@ -347,15 +343,15 @@ export default function AdminPage() {
                   {berita.slice(0, 3).map((item) => (
                     <div
                       key={item.id}
-                      className="mb-4 p-3 bg-yellow-50 rounded-lg hover:bg-yellow-100 transition-colors duration-200"
+                      className="mb-4 p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors duration-200"
                     >
-                      <h4 className="font-semibold text-yellow-900">
+                      <h4 className="font-semibold text-black">
                         {item.judul}
                       </h4>
                       <p className="text-sm text-yellow-700 mt-1">
                         {item.konten.substring(0, 100)}...
                       </p>
-                      <p className="text-xs text-yellow-600 mt-2">
+                      <p className="text-xs text-black-600 mt-2">
                         {item.tanggal}
                       </p>
                     </div>
@@ -363,9 +359,9 @@ export default function AdminPage() {
                 </CardContent>
               </Card>
 
-              <Card className="shadow-lg border-yellow-200 hover:shadow-xl transition-shadow duration-300">
+              <Card className="shadow-lg border-blue-200 hover:shadow-xl transition-shadow duration-300">
                 <CardHeader>
-                  <CardTitle className="text-yellow-800">
+                  <CardTitle className="text-black">
                     Kegiatan Mendatang
                   </CardTitle>
                 </CardHeader>
@@ -378,12 +374,12 @@ export default function AdminPage() {
                       <h4 className="font-semibold text-amber-900">
                         {item.nama}
                       </h4>
-                      <p className="text-sm text-amber-700 mt-1">
+                      <p className="text-sm text-black mt-1">
                         {item.deskripsi}
                       </p>
                       <div className="flex justify-between items-center mt-2">
                         <p className="text-xs text-amber-600">{item.tanggal}</p>
-                        <span className="px-2 py-1 bg-yellow-200 text-yellow-800 text-xs rounded-full">
+                        <span className="px-2 py-1 bg-black-200 text-yellow-800 text-xs rounded-full">
                           {item.status}
                         </span>
                       </div>
@@ -398,15 +394,15 @@ export default function AdminPage() {
           <TabsContent value="penduduk" className="mt-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {/* Form Section */}
-              <Card className="shadow-lg border-yellow-200">
+              <Card className="shadow-lg border-blue-200">
                 <CardHeader>
-                  <CardTitle className="text-yellow-800">
+                  <CardTitle className="text-black">
                     {editingId ? "Edit Data Penduduk" : "Tambah Data Penduduk"}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div>
-                    <label className="block text-sm font-medium text-yellow-700 mb-1">
+                    <label className="block text-sm font-medium text-black mb-1">
                       Nama Lengkap
                     </label>
                     <input
@@ -418,12 +414,12 @@ export default function AdminPage() {
                           nama: e.target.value,
                         })
                       }
-                      className="w-full p-2 border border-yellow-300 rounded-md focus:border-yellow-500 focus:outline-none"
+                      className="w-full p-2 border border-blue-300 rounded-md focus:border-blue-500 focus:outline-none"
                       placeholder="Masukkan nama lengkap"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-yellow-700 mb-1">
+                    <label className="block text-sm font-medium text-black-700 mb-1">
                       NIK
                     </label>
                     <input
@@ -435,12 +431,12 @@ export default function AdminPage() {
                           nik: e.target.value,
                         })
                       }
-                      className="w-full p-2 border border-yellow-300 rounded-md focus:border-yellow-500 focus:outline-none"
+                      className="w-full p-2 border border-blue-300 rounded-md focus:border-blue-500 focus:outline-none"
                       placeholder="Masukkan NIK"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-yellow-700 mb-1">
+                    <label className="block text-sm font-medium text-black-700 mb-1">
                       Alamat
                     </label>
                     <input
@@ -452,12 +448,12 @@ export default function AdminPage() {
                           alamat: e.target.value,
                         })
                       }
-                      className="w-full p-2 border border-yellow-300 rounded-md focus:border-yellow-500 focus:outline-none"
+                      className="w-full p-2 border border-blue-200 rounded-md focus:border-blue-500 focus:outline-none"
                       placeholder="Masukkan alamat"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-yellow-700 mb-1">
+                    <label className="block text-sm font-medium text-black mb-1">
                       Pekerjaan
                     </label>
                     <input
@@ -469,12 +465,12 @@ export default function AdminPage() {
                           pekerjaan: e.target.value,
                         })
                       }
-                      className="w-full p-2 border border-yellow-300 rounded-md focus:border-yellow-500 focus:outline-none"
+                      className="w-full p-2 border border-blue-300 rounded-md focus:border-blue-500 focus:outline-none"
                       placeholder="Masukkan pekerjaan"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-yellow-700 mb-1">
+                    <label className="block text-sm font-medium text-black mb-1">
                       Umur
                     </label>
                     <input
@@ -486,13 +482,13 @@ export default function AdminPage() {
                           umur: Number.parseInt(e.target.value) || 0,
                         })
                       }
-                      className="w-full p-2 border border-yellow-300 rounded-md focus:border-yellow-500 focus:outline-none"
+                      className="w-full p-2 border border-blue-300 rounded-md focus:border-blue-500 focus:outline-none"
                       placeholder="Masukkan umur"
                     />
                   </div>
                   <button
                     onClick={editingId ? updatePenduduk : addPenduduk}
-                    className="w-full bg-yellow-500 text-white py-2 px-4 rounded-md hover:bg-yellow-600 transition-colors duration-200"
+                    className="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition-colors duration-200"
                   >
                     {editingId ? "Update Data" : "Tambah Data"}
                   </button>
@@ -513,7 +509,7 @@ export default function AdminPage() {
               {/* Data List */}
               <Card className="shadow-lg border-yellow-200">
                 <CardHeader>
-                  <CardTitle className="text-yellow-800">
+                  <CardTitle className="text-black">
                     Data Penduduk ({penduduk.length})
                   </CardTitle>
                 </CardHeader>
@@ -572,15 +568,15 @@ export default function AdminPage() {
           <TabsContent value="berita" className="mt-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {/* Form Section */}
-              <Card className="shadow-lg border-yellow-200">
+              <Card className="shadow-lg border-blue-200">
                 <CardHeader>
-                  <CardTitle className="text-yellow-800">
+                  <CardTitle className="text-black">
                     {editingId ? "Edit Berita" : "Tambah Berita Baru"}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div>
-                    <label className="block text-sm font-medium text-yellow-700 mb-1">
+                    <label className="block text-sm font-medium text-black mb-1">
                       Judul Berita
                     </label>
                     <input
@@ -589,12 +585,12 @@ export default function AdminPage() {
                       onChange={(e) =>
                         setFormBerita({ ...formBerita, judul: e.target.value })
                       }
-                      className="w-full p-2 border border-yellow-300 rounded-md focus:border-yellow-500 focus:outline-none"
+                      className="w-full p-2 border border-blue-300 rounded-md focus:border-blue-500 focus:outline-none"
                       placeholder="Masukkan judul berita"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-yellow-700 mb-1">
+                    <label className="block text-sm font-medium text-black mb-1">
                       Konten Berita
                     </label>
                     <textarea
@@ -603,12 +599,12 @@ export default function AdminPage() {
                         setFormBerita({ ...formBerita, konten: e.target.value })
                       }
                       rows={6}
-                      className="w-full p-2 border border-yellow-300 rounded-md focus:border-yellow-500 focus:outline-none"
+                      className="w-full p-2 border border-blue-300 rounded-md focus:border-blue-500 focus:outline-none"
                       placeholder="Tulis konten berita..."
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-yellow-700 mb-1">
+                    <label className="block text-sm font-medium text-black mb-1">
                       Penulis
                     </label>
                     <input
@@ -620,14 +616,14 @@ export default function AdminPage() {
                           penulis: e.target.value,
                         })
                       }
-                      className="w-full p-2 border border-yellow-300 rounded-md focus:border-yellow-500 focus:outline-none"
+                      className="w-full p-2 border border-blue-300 rounded-md focus:border-blue-500 focus:outline-none"
                       placeholder="Nama penulis"
                     />
                   </div>
 
                   <button
                     onClick={editingId ? updateBerita : addBerita}
-                    className="w-full bg-yellow-500 text-white py-2 px-4 rounded-md hover:bg-yellow-600 transition-colors duration-200"
+                    className="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition-colors duration-200"
                   >
                     {editingId ? "Update Berita" : "Publikasikan Berita"}
                   </button>
@@ -646,9 +642,9 @@ export default function AdminPage() {
               </Card>
 
               {/* Data List */}
-              <Card className="shadow-lg border-yellow-200">
+              <Card className="shadow-lg border-blue-200">
                 <CardHeader>
-                  <CardTitle className="text-yellow-800">
+                  <CardTitle className="text-black-800">
                     Daftar Berita ({berita.length})
                   </CardTitle>
                 </CardHeader>
@@ -706,15 +702,15 @@ export default function AdminPage() {
           <TabsContent value="kegiatan" className="mt-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {/* Form Section */}
-              <Card className="shadow-lg border-yellow-200">
+              <Card className="shadow-lg border-blue-200">
                 <CardHeader>
-                  <CardTitle className="text-yellow-800">
+                  <CardTitle className="text-black">
                     {editingId ? "Edit Kegiatan" : "Tambah Kegiatan Baru"}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div>
-                    <label className="block text-sm font-medium text-yellow-700 mb-1">
+                    <label className="block text-sm font-medium text-black mb-1">
                       Nama Kegiatan
                     </label>
                     <input
@@ -726,12 +722,12 @@ export default function AdminPage() {
                           nama: e.target.value,
                         })
                       }
-                      className="w-full p-2 border border-yellow-300 rounded-md focus:border-yellow-500 focus:outline-none"
+                      className="w-full p-2 border border-blue-300 rounded-md focus:border-blue-500 focus:outline-none"
                       placeholder="Masukkan nama kegiatan"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-yellow-700 mb-1">
+                    <label className="block text-sm font-medium  text-black mb-1">
                       Deskripsi
                     </label>
                     <textarea
@@ -743,12 +739,12 @@ export default function AdminPage() {
                         })
                       }
                       rows={4}
-                      className="w-full p-2 border border-yellow-300 rounded-md focus:border-yellow-500 focus:outline-none"
+                      className="w-full p-2 border border-blue-300 rounded-md focus:border-blue-500 focus:outline-none"
                       placeholder="Deskripsi kegiatan..."
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-yellow-700 mb-1">
+                    <label className="block text-sm font-medium  text-black mb-1">
                       Tanggal
                     </label>
                     <input
@@ -760,11 +756,11 @@ export default function AdminPage() {
                           tanggal: e.target.value,
                         })
                       }
-                      className="w-full p-2 border border-yellow-300 rounded-md focus:border-yellow-500 focus:outline-none"
+                      className="w-full p-2 border border-blue-300 rounded-md focus:border-blue-500 focus:outline-none"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-yellow-700 mb-1">
+                    <label className="block text-sm font-medium  text-black mb-1">
                       Lokasi
                     </label>
                     <input
@@ -776,12 +772,12 @@ export default function AdminPage() {
                           lokasi: e.target.value,
                         })
                       }
-                      className="w-full p-2 border border-yellow-300 rounded-md focus:border-yellow-500 focus:outline-none"
+                      className="w-full p-2 border border-blue-300 rounded-md focus:border-blue-500 focus:outline-none"
                       placeholder="Lokasi kegiatan"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-yellow-700 mb-1">
+                    <label className="block text-sm font-medium  text-black mb-1">
                       Status
                     </label>
                     <select
@@ -792,7 +788,7 @@ export default function AdminPage() {
                           status: e.target.value,
                         })
                       }
-                      className="w-full p-2 border border-yellow-300 rounded-md focus:border-yellow-500 focus:outline-none"
+                      className="w-full p-2 border border-blue-300 rounded-md focus:border-blue-500 focus:outline-none"
                     >
                       <option value="Direncanakan">Direncanakan</option>
                       <option value="Berlangsung">Berlangsung</option>
@@ -802,7 +798,7 @@ export default function AdminPage() {
                   </div>
                   <button
                     onClick={editingId ? updateKegiatan : addKegiatan}
-                    className="w-full bg-yellow-500 text-white py-2 px-4 rounded-md hover:bg-yellow-600 transition-colors duration-200"
+                    className="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition-colors duration-200"
                   >
                     {editingId ? "Update Kegiatan" : "Tambah Kegiatan"}
                   </button>
@@ -821,9 +817,9 @@ export default function AdminPage() {
               </Card>
 
               {/* Data List */}
-              <Card className="shadow-lg border-yellow-200">
+              <Card className="shadow-lg border-blue-200">
                 <CardHeader>
-                  <CardTitle className="text-yellow-800">
+                  <CardTitle className="text-black">
                     Daftar Kegiatan ({kegiatan.length})
                   </CardTitle>
                 </CardHeader>

@@ -24,32 +24,32 @@ export default function GaleriPage() {
   const galeriData = [
     {
       id: 1,
-      title: "Kunjungan Ke Sekolah",
-      category: "Kegiatan",
-      image: "kegiatan 3.jpeg",
-      description: "Kunjungan Ke Sekolah Untuk Sosialisasi",
+      title: "Pemukiman Warga Desa",
+      category: "Pemandangan",
+      image: "pemukiman.jpg",
+      description: "Pesona Pemukiman Warga Desa Buntul Musara Yang Dilihat Dari Atas Bukit",
     },
     {
       id: 2,
-      title: "Bukit Kampung Kuning",
+      title: "Air Terjun",
       category: "Pemandangan",
-      image: "bukit_kampung_kuning.jpeg",
-      description: " Pesona Bukit Di Kampung Yang Begitu Indah ",
+      image: "pemandangan2.jpg",
+      description: " Pesona Air Terjun Di Kampung Yang Begitu Indah ",
     },
     {
       id: 3,
-      title: "Kantor Kampung Kuning",
-      category: "Fasilitas",
-      image: "kantor.jpeg",
+      title: "Kolam Biru",
+      category: "Pemandangan",
+      image: "kolabiru.jpg",
       description:
-        "Kantor Kampung yang telah direnovasi dan di Cat Kembali Agar Terlihat Indah",
+        "Pesona Kolam Biru Di Kampung Yang Begitu Indah",
     },
     {
       id: 6,
-      title: "Silaturahmi Dengan Warga Kampung",
-      category: "Kegiatan",
-      image: "kegiatan 2.jpeg",
-      description: "Bersilaturahmi Dengan Warga Yang Ada Di Kampung Kuning",
+      title: " Meunasah ",
+      category: "Pemandangan",
+      image: "mushola.JPG",
+      description: "Foto Meunasah Yang Begitu Indah Dibawah Bukit",
     },
     {
       id: 7,
@@ -58,42 +58,86 @@ export default function GaleriPage() {
       image: "sawah.jpg",
       description: "Pemandangan Sawah Yang Sangat Indah Di Kampung Kuning",
     },
-    {
-      id: 8,
-      title: "Masjid",
-      category: "Fasilitas",
-      image: "Masjid.jpeg",
-      description: "Masjid Yang Sangat Indah Di Kampung Kuning",
-    },
+   
     {
       id: 11,
-      title: "Belajar Membuat Tikar Menggunakan Daun Bengkuang",
+      title: "Mengajar Disekolah",
       category: "Kegiatan",
-      image: "kegiatan 1.jpeg",
+      image: "kegiatan1.jpg",
       description:
-        "Menjemur Daun Bengkuang Untuk Proses Pembuatan Tikar Yang Sangat Khas Di Kampung Kuning",
+        "Mengajar Disekolah Anak Sd",
     },
-    {
-      id: 12,
-      title: "Sunset Di Bukit Kampung Kuning",
-      category: "Pemandangan",
-      image: "sunset.jpeg",
-      description:
-        "Pemandangan Sunset Yang Sangat Indah Di Antara Bukit Kampung Kuning",
-    },
+    
     {
       id: 13,
-      title: "pelatihan pengembangan UMKM",
+      title: "Foto bersama Kepsek SMPN 1 TRIPE Jaya",
       category: "Kegiatan",
-      image: "pelatihan-umkm.jpeg",
-      description: "Melakukan kegiatan Pengembangan UMKN",
+      image: "Foto bersama Kepsek SMPN 1 TRIPE Jaya.jpg",
+      description: "Foto bersama Kepsek SMPN 1 TRIPE Jaya",
     },
     {
       id: 14,
-      title: "Proses adat pernikahan",
+      title: "Foto bersama pemuda_pemudi",
       category: "Kegiatan",
-      image: "pernikahan.jpeg",
-      description: "Melakukan kegiatan prosesi adat pernikahan",
+      image: "Foto bersama pemuda_pemudi.jpg",
+      description: "Foto bersama pemuda_pemudi",
+    },
+    {
+      id: 15,
+      title: "Kegiatan Posyandu",
+      category: "Kegiatan",
+      image: "Kegiatan Posyandu.jpg",
+      description: "Foto bersama pemuda_pemudi",
+    },
+    {
+      id: 16,
+      title: "Kegiatan sosialisasi proker mandiri ",
+      category: "Kegiatan",
+      image: "Kegiatan sosialisasi proker mandiri .jpg",
+      description: "Kegiatan sosialisasi proker mandir",
+    },
+    {
+      id: 17,
+      title: "Pemberian apresiasi di SMP Negeri 1 Tripe Jaya",
+      category: "Kegiatan",
+      image: "gemoyyy.jpg",
+      description: "Pemberian apresiasi di SMP Negeri 1 Tripe Jaya",
+    },
+    {
+      id: 18,
+      title: "Rewang dirumah pengulu ",
+      category: "Kegiatan",
+      image: "Rewang dirumah pengulu.jpg",
+      description: "Rewang dirumah pengulu",
+    },
+    {
+      id: 19,
+      title: "Taman Kanak-kanak Negeri",
+      category: "Fasilitas",
+      image: "tkn.jpg",
+      description: "Rewang dirumah pengulu",
+    },
+    {
+      id: 20,
+      title: "SD Negeri 1 Tripe Jaya",
+      category: "Fasilitas",
+      image: "sd.jpg",
+      description: "Foto Sekola SD",
+    },
+    
+    {
+      id: 22,
+      title: "SMP Negeri 1 Tripe Jaya",
+      category: "Fasilitas",
+      image: "smp.jpg",
+      description: "Rewang dirumah pengulu",
+    },
+    {
+      id: 21,
+      title: "SMA Negeri 1 Tripe Jaya",
+      category: "Fasilitas",
+      image: "sma.jpg",
+      description: "Foto Sekola SMA",
     },
   ];
 
@@ -130,21 +174,21 @@ export default function GaleriPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-yellow-50 via-amber-50 to-orange-50">
       {/* Header */}
-      <header className="bg-gradient-to-r from-yellow-400 via-amber-400 to-yellow-500 shadow-lg">
+      <header className="bg-gradient-to-br from-sky-400 to-sky-500 shadow-lg">
         <div className="container mx-auto px-4 py-6">
           <div className="flex items-center space-x-4">
             <Link
               href="/"
               className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md hover:scale-110 transition-transform duration-300"
             >
-              <ArrowLeft className="w-6 h-6 text-yellow-600" />
+              <ArrowLeft className="w-6 h-6 text-blue-600" />
             </Link>
             <div>
               <h1 className="text-2xl font-bold text-white drop-shadow-md">
                 Galeri Foto
               </h1>
-              <p className="text-yellow-100">
-                Dokumentasi kegiatan dan keindahan kampung Kuning
+              <p className="text-blue-100">
+                Dokumentasi kegiatan dan keindahan Desa Buntul Musara
               </p>
             </div>
           </div>
@@ -155,15 +199,15 @@ export default function GaleriPage() {
         {/* Hero Section */}
         <section className="text-center mb-16">
           <div className="inline-block mb-6">
-            <div className="w-20 h-20 bg-gradient-to-r from-yellow-400 to-amber-500 rounded-full flex items-center justify-center shadow-2xl mx-auto transform hover:scale-110 transition-transform duration-500">
+            <div className="w-20 h-20 bg-gradient-to-r from-blue-400 to-sky-500 rounded-full flex items-center justify-center shadow-2xl mx-auto transform hover:scale-110 transition-transform duration-500">
               <Camera className="w-10 h-10 text-white" />
             </div>
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-yellow-800 mb-6">
-            Galeri Kampung Kuning
+          <h1 className="text-4xl md:text-6xl font-bold text-blue-800 mb-6">
+            Galeri Desa Buntul Musara
           </h1>
-          <p className="text-xl text-yellow-600 max-w-3xl mx-auto leading-relaxed">
-            Melihat keindahan dan aktivitas kampung kuning melalui dokumentasi
+          <p className="text-xl text-black max-w-3xl mx-auto leading-relaxed">
+            Melihat keindahan dan aktivitas Desa Buntul Musara melalui dokumentasi
             foto yang menginspirasi
           </p>
         </section>
@@ -177,8 +221,8 @@ export default function GaleriPage() {
               variant={selectedCategory === category ? "default" : "outline"}
               className={`${
                 selectedCategory === category
-                  ? "bg-yellow-500 text-white hover:bg-yellow-600"
-                  : "border-yellow-300 text-yellow-700 hover:bg-yellow-100"
+                  ? "bg-blue-500 text-white hover:bg-blue-600"
+                  : "border-white text-white-700 hover:bg-blue-100"
               } transition-all duration-300 transform hover:scale-105`}
             >
               {category}
@@ -191,7 +235,7 @@ export default function GaleriPage() {
           {filteredImages.map((item, index) => (
             <Card
               key={item.id}
-              className="bg-white shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border-yellow-200 overflow-hidden group cursor-pointer"
+              className="bg-white shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border-sky-200 overflow-hidden group cursor-pointer"
               onClick={() => setSelectedImage(index)}
             >
               <div className="relative overflow-hidden">
@@ -209,15 +253,15 @@ export default function GaleriPage() {
                 </div>
                 <div className="absolute bottom-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="w-8 h-8 bg-white/90 rounded-full flex items-center justify-center">
-                    <Camera className="w-4 h-4 text-yellow-600" />
+                    <Camera className="w-4 h-4 text-blue-600" />
                   </div>
                 </div>
               </div>
               <CardContent className="p-4">
-                <h3 className="font-bold text-yellow-800 mb-2 line-clamp-2 group-hover:text-yellow-600 transition-colors duration-300">
+                <h3 className="font-bold text-blue-800 mb-2 line-clamp-2 group-hover:text-blue-600 transition-colors duration-300">
                   {item.title}
                 </h3>
-                <p className="text-sm text-yellow-600 mb-2 line-clamp-2">
+                <p className="text-sm text-black mb-2 line-clamp-2">
                   {item.description}
                 </p>
               </CardContent>
@@ -307,7 +351,7 @@ export default function GaleriPage() {
 
         {/* Statistics */}
         <section className="mt-16">
-          <Card className="bg-gradient-to-r from-yellow-400 to-amber-500 text-white shadow-xl">
+          <Card className="bg-gradient-to-r from-blue-400 to-sky-500 text-white shadow-xl">
             <CardContent className="p-8 text-center">
               <h2 className="text-3xl font-bold mb-6">Statistik Galeri</h2>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">

@@ -84,19 +84,19 @@ export default function LoginPage() {
             href="/"
             className="inline-flex items-center justify-center w-12 h-12 bg-white rounded-full shadow-md hover:scale-110 transition-transform duration-300 mb-6"
           >
-            <ArrowLeft className="w-6 h-6 text-yellow-600" />
+            <ArrowLeft className="w-6 h-6 text-blue-600" />
           </Link>
 
           <div className="inline-block mb-6">
-            <div className="w-20 h-20 bg-gradient-to-r from-yellow-400 to-amber-500 rounded-full flex items-center justify-center shadow-2xl mx-auto transform hover:scale-110 transition-transform duration-500">
+            <div className="w-20 h-20 bg-gradient-to-r from-blue-800 via-sky-400 to-sky-500  rounded-full flex items-center justify-center shadow-2xl mx-auto transform hover:scale-110 transition-transform duration-500">
               <Shield className="w-10 h-10 text-white" />
             </div>
           </div>
 
-          <h1 className="text-3xl font-bold text-yellow-800 mb-2">
+          <h1 className="text-3xl font-bold text-blue-800 mb-2">
             Login Admin
           </h1>
-          <p className="text-yellow-600">
+          <p className="text-black">
             Masuk ke panel administrasi Kampung Kuning
           </p>
         </div>
@@ -104,7 +104,7 @@ export default function LoginPage() {
         {/* Login Card */}
         <Card className="bg-white/95 backdrop-blur-sm shadow-2xl border-yellow-200">
           <CardHeader className="text-center pb-4">
-            <CardTitle className="text-yellow-800 flex items-center justify-center">
+            <CardTitle className="text-blue-800 flex items-center justify-center">
               <Lock className="w-5 h-5 mr-2" />
               Autentikasi Admin
             </CardTitle>
@@ -123,12 +123,12 @@ export default function LoginPage() {
               <div className="space-y-2">
                 <Label
                   htmlFor="username"
-                  className="text-yellow-800 font-medium"
+                  className="text-black font-medium"
                 >
                   Username
                 </Label>
                 <div className="relative">
-                  <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-yellow-500 w-5 h-5" />
+                  <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-blue-500 w-5 h-5" />
                   <Input
                     id="username"
                     name="username"
@@ -136,7 +136,7 @@ export default function LoginPage() {
                     value={formData.username}
                     onChange={handleChange}
                     required
-                    className="pl-10 border-yellow-300 focus:border-yellow-500 focus:ring-yellow-500"
+                    className="pl-10 border-blue-300 focus:border-yellow-500 focus:ring-yellow-500"
                     placeholder="Masukkan username"
                     disabled={isLoading}
                   />
@@ -147,12 +147,12 @@ export default function LoginPage() {
               <div className="space-y-2">
                 <Label
                   htmlFor="password"
-                  className="text-yellow-800 font-medium"
+                  className="text-black font-medium"
                 >
                   Password
                 </Label>
                 <div className="relative">
-                  <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-yellow-500 w-5 h-5" />
+                  <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-blue-500 w-5 h-5" />
                   <Input
                     id="password"
                     name="password"
@@ -160,14 +160,14 @@ export default function LoginPage() {
                     value={formData.password}
                     onChange={handleChange}
                     required
-                    className="pl-10 pr-10 border-yellow-300 focus:border-yellow-500 focus:ring-yellow-500"
+                    className="pl-10 pr-10 border-blue-300 focus:border-yellow-500 focus:ring-yellow-500"
                     placeholder="Masukkan password"
                     disabled={isLoading}
                   />
                   <button
                     type="button"
                     onClick={() => setShowPassword(!showPassword)}
-                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-yellow-500 hover:text-yellow-600 transition-colors duration-200"
+                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-blue-500 hover:text-blue-600 transition-colors duration-200"
                     disabled={isLoading}
                   >
                     {showPassword ? (
@@ -183,7 +183,7 @@ export default function LoginPage() {
               <Button
                 type="submit"
                 disabled={isLoading}
-                className="w-full bg-gradient-to-r from-yellow-500 to-amber-500 hover:from-yellow-600 hover:to-amber-600 text-white py-3 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                className="w-full bg-gradient-to-r from-blue-500 to-sky-500 hover:from-blue-600 hover:to-sky-600 text-white py-3 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
               >
                 {isLoading ? (
                   <div className="flex items-center justify-center space-x-2">
@@ -201,7 +201,7 @@ export default function LoginPage() {
 
             {/* Security Note */}
             <div className="mt-4 text-center">
-              <p className="text-xs text-yellow-600">
+              <p className="text-xs text-black">
                 🔒 Sesi login akan berakhir setelah 24 jam untuk keamanan
               </p>
             </div>
@@ -210,8 +210,8 @@ export default function LoginPage() {
 
         {/* Footer */}
         <div className="text-center mt-8">
-          <p className="text-sm text-yellow-600">
-            © 2025 Desa Kampung Kuning. Sistem Admin Panel.
+          <p className="text-sm text-blue-600">
+            © 2025 Desa Buntul Musara. Sistem Admin Panel.
           </p>
         </div>
       </div>

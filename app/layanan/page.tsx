@@ -70,7 +70,7 @@ export default function LayananPage() {
       id: "kependudukan",
       title: "Kependudukan",
       icon: Users,
-      color: "from-green-400 to-green-500",
+      color: "from-blue-400 to-blue-500",
       services: [
         {
           name: "Bantuan Pengurusan KTP",
@@ -154,21 +154,21 @@ export default function LayananPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-yellow-50 via-amber-50 to-orange-50">
       {/* Header */}
-      <header className="bg-gradient-to-r from-yellow-400 via-amber-400 to-yellow-500 shadow-lg">
+      <header className="bg-gradient-to-br from-sky-400 to-sky-500 shadow-lg">
         <div className="container mx-auto px-4 py-6">
           <div className="flex items-center space-x-4">
             <Link
               href="/"
               className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md hover:scale-110 transition-transform duration-300"
             >
-              <ArrowLeft className="w-6 h-6 text-yellow-600" />
+              <ArrowLeft className="w-6 h-6 text-blue-600" />
             </Link>
             <div>
               <h1 className="text-2xl font-bold text-white drop-shadow-md">
                 Layanan Desa
               </h1>
-              <p className="text-yellow-100">
-                Pelayanan terbaik untuk masyarakat
+              <p className="text-blue-100">
+                Pelayanan terbaik untuk masyarakat Buntul Musara
               </p>
             </div>
           </div>
@@ -179,23 +179,22 @@ export default function LayananPage() {
         {/* Hero Section */}
         <section className="text-center mb-16">
           <div className="inline-block mb-6">
-            <div className="w-20 h-20 bg-gradient-to-r from-yellow-400 to-amber-500 rounded-full flex items-center justify-center shadow-2xl mx-auto transform hover:scale-110 transition-transform duration-500">
+            <div className="w-20 h-20 bg-gradient-to-r from-blue-400 to-sky-500 rounded-full flex items-center justify-center shadow-2xl mx-auto transform hover:scale-110 transition-transform duration-500">
               <Shield className="w-10 h-10 text-white" />
             </div>
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-yellow-800 mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold text-blue-800 mb-6">
             Layanan Desa
           </h1>
-          <p className="text-xl text-yellow-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-black max-w-3xl mx-auto leading-relaxed">
             Kami berkomitmen memberikan pelayanan terbaik untuk memenuhi
-            kebutuhan administrasi dan pelayanan publik masyarakat Kampung
-            Kuning
+            kebutuhan administrasi dan pelayanan publik masyarakat Desa Buntul Musara
           </p>
         </section>
 
         {/* Service Hours */}
         <section className="mb-16">
-          <Card className="bg-gradient-to-r from-yellow-400 to-amber-500 text-white shadow-xl">
+          <Card className="bg-gradient-to-r from-blue-400 to-sky-500 text-white shadow-xl">
             <CardContent className="p-8">
               <div className="flex items-center justify-center mb-6">
                 <Clock className="w-8 h-8 mr-3" />
@@ -219,12 +218,12 @@ export default function LayananPage() {
         {/* Services by Category */}
         <section>
           <Tabs defaultValue="administrasi" className="w-full">
-            <TabsList className="grid w-full grid-cols-3 lg:grid-cols-3 bg-white shadow-md border border-yellow-200 mb-8">
+            <TabsList className="grid w-full grid-cols-3 lg:grid-cols-3 bg-white shadow-md border border-blue-200 mb-8">
               {layananKategori.map((kategori) => (
                 <TabsTrigger
                   key={kategori.id}
                   value={kategori.id}
-                  className="data-[state=active]:bg-yellow-400 data-[state=active]:text-white transition-all duration-300 hover:bg-yellow-100"
+                  className="data-[state=active]:bg whitedata-[state=active]:text-white transition-all duration-300 hover:bg-blue-100"
                 >
                   <kategori.icon className="w-4 h-4 mr-2" />
                   {kategori.title}
@@ -235,10 +234,10 @@ export default function LayananPage() {
             {layananKategori.map((kategori) => (
               <TabsContent key={kategori.id} value={kategori.id}>
                 <div className="mb-8">
-                  <h2 className="text-3xl font-bold text-yellow-800 mb-4">
+                  <h2 className="text-3xl font-bold text-blue-800 mb-4">
                     Layanan {kategori.title}
                   </h2>
-                  <p className="text-xl text-yellow-600 mb-8">
+                  <p className="text-xl text-black mb-8">
                     Berbagai layanan {kategori.title.toLowerCase()} yang
                     tersedia untuk masyarakat
                   </p>
@@ -280,15 +279,15 @@ export default function LayananPage() {
                       </div>
 
                       <CardContent className="p-6">
-                        <h3 className="text-xl font-bold text-yellow-800 mb-3 group-hover:text-yellow-600 transition-colors duration-300">
+                        <h3 className="text-xl font-bold text-blue-800 mb-3 group-hover:text-blue-600 transition-colors duration-300">
                           {service.name}
                         </h3>
-                        <p className="text-yellow-600 mb-4">
+                        <p className="text-black mb-4">
                           {service.description}
                         </p>
 
                         <div className="space-y-3">
-                          <div className="flex items-center space-x-2 text-sm text-yellow-700">
+                          <div className="flex items-center space-x-2 text-sm text-blue-700">
                             <Clock className="w-4 h-4" />
                             <span>{service.duration}</span>
                           </div>
@@ -346,17 +345,17 @@ export default function LayananPage() {
         <section className="mt-16">
           <Card className="bg-blue-50 border-blue-200 shadow-lg">
             <CardHeader>
-              <CardTitle className="flex items-center text-blue-800">
+              <CardTitle className="flex items-center text-black">
                 <AlertCircle className="w-6 h-6 mr-2" />
                 Informasi Penting
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-blue-700">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-black">
                 <div>
                   <h3 className="font-bold mb-2">Syarat Umum:</h3>
                   <ul className="space-y-1 text-sm">
-                    <li>• Warga Kampung Kuning</li>
+                    <li>• Warga Desa Buntul Musara</li>
                     <li>• Membawa dokumen asli dan fotokopi</li>
                     <li>• Mengisi formulir dengan lengkap</li>
                     <li>• Datang sesuai jam pelayanan</li>
@@ -378,7 +377,7 @@ export default function LayananPage() {
 
         {/* Contact for Services */}
         <section className="mt-16 text-center">
-          <Card className="bg-gradient-to-r from-yellow-400 to-amber-500 text-white shadow-2xl">
+          <Card className="bg-gradient-to-r from-blue-400 to-sky-500 text-white shadow-2xl">
             <CardContent className="p-8">
               <h2 className="text-3xl font-bold mb-4">Butuh Bantuan?</h2>
               <p className="text-xl mb-6 text-yellow-100">
@@ -386,14 +385,14 @@ export default function LayananPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/kontak">
-                  <Button className="bg-white text-yellow-600 hover:bg-yellow-50 px-8 py-3 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+                  <Button className="bg-white text-blue-600 hover:bg-yellow-50 px-8 py-3 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
                     <Phone className="w-5 h-5 mr-2" />
                     Hubungi Kami
                   </Button>
                 </Link>
                 <Button
                   variant="outline"
-                  className="border-2 border-white text-white hover:bg-white hover:text-yellow-600 px-8 py-3 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+                  className="border-2 border-blue text-blue hover:bg-blue hover:text-blue-600  text-blue-700 px-8 py-3 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
                 >
                   <FileText className="w-5 h-5 mr-2" />
                   Download Panduan

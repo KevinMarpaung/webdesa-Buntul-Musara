@@ -56,16 +56,14 @@ interface Penduduk {
 export default function HomePage() {
   const [berita, setBerita] = useState<Berita[]>([]);
   const [kegiatan, setKegiatan] = useState<Kegiatan[]>([]);
-  const [penduduk, setPenduduk] = useState<Penduduk[]>([]);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   // Hero images carousel
   const heroImages = [
-    "kegiatan 1.jpeg",
-    "sunset.jpeg",
-    "bukit_kampung_kuning.jpeg",
-    "bg.jpeg",
+    "kantor.jpg",
+    "potorame.jpg",
+    "pemandangan.jpg",
   ];
 
   // Load data from localStorage
@@ -223,8 +221,7 @@ export default function HomePage() {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-white mb-8 max-w-3xl mx-auto leading-relaxed animate-fade-in-up-delayed ">
-              Mewujudkan Masyarakat Kampung Kuning Yang Bersih ,Maju ,Adil,
-              Transparansi, Dan Sejahtera
+             Menciptakan Pemerintahan Kampung yang baik, Partisipatif dan transparan.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up-delayed-2">
               <Link href="/profil">
@@ -274,7 +271,7 @@ export default function HomePage() {
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 -mt-10 relative z-10 shadow-lg">
                   <Users className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-black">307</h3>
+                <h3 className="text-2xl font-bold text-black">780</h3>
                 <p className="text-[#567bc1]">Total Penduduk</p>
               </CardContent>
             </Card>
@@ -341,7 +338,7 @@ export default function HomePage() {
               <Card className="bg-white shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border-blue-200 h-full overflow-hidden">
                 <div className="h-48 relative overflow-hidden">
                   <img
-                    src="profildesa.jpeg"
+                    src="profil1.jpg"
                     alt="Profil Desa"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     crossOrigin="anonymous"
@@ -358,7 +355,7 @@ export default function HomePage() {
                     Profil Desa
                   </h3>
                   <p className="text-black mb-4">
-                    Pelajari sejarah, visi, misi, dan potensi Desa Maju Bersama
+                    Pelajari sejarah, visi, misi, dan potensi Desa Buntul Musara
                   </p>
                   <div className="flex items-center text-black group-hover:text-blue-500 transition-colors duration-300">
                     <span className="text-sm font-medium">Selengkapnya</span>
@@ -372,7 +369,7 @@ export default function HomePage() {
               <Card className="bg-white shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border-blue-200 h-full overflow-hidden">
                 <div className="h-48 relative overflow-hidden">
                   <img
-                    src="kegiatan 1.jpeg"
+                    src="berita.jpg"
                     alt="Berita Desa"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     crossOrigin="anonymous"
@@ -404,7 +401,7 @@ export default function HomePage() {
               <Card className="bg-white shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border-blue-200 h-full overflow-hidden">
                 <div className="h-48 relative overflow-hidden">
                   <img
-                    src="kantor.jpeg"
+                    src="kantor.jpg"
                     alt="Layanan Desa"
                     className="  w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     crossOrigin="anonymous"
@@ -435,7 +432,7 @@ export default function HomePage() {
               <Card className="bg-white shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border-blue-200 h-full overflow-hidden">
                 <div className="h-48 relative overflow-hidden">
                   <img
-                    src="kegiatan 2.jpeg"
+                    src="kegiatan1.jpg"
                     alt="Kegiatan Desa"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     crossOrigin="anonymous"
@@ -466,7 +463,7 @@ export default function HomePage() {
               <Card className="bg-white shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border-yellow-200 h-full overflow-hidden">
                 <div className="h-48 relative overflow-hidden">
                   <img
-                    src="sawah.jpg"
+                    src="galeri1.jpg"
                     alt="Galeri Desa"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     crossOrigin="anonymous"
@@ -483,7 +480,7 @@ export default function HomePage() {
                     Galeri Foto
                   </h3>
                   <p className="text-black mb-4">
-                    Lihat dokumentasi kegiatan dan keindahan Desa Maju Bersama
+                    Lihat dokumentasi kegiatan dan keindahan Desa Buntul Musara
                   </p>
                   <div className="flex items-center  text-black group-hover:text-blue-500 transition-colors duration-300">
                     <span className="text-sm font-medium">Lihat Galeri</span>
@@ -537,7 +534,7 @@ export default function HomePage() {
                 Berita Terbaru
               </h2>
               <p className="text-xl text-blue-600">
-                Informasi terkini dari Desa Maju Bersama
+                Informasi terkini dari Desa Buntul Musara
               </p>
             </div>
             <Link href="/berita">
@@ -609,14 +606,14 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-blue-800 mb-4">
-              Keunggulan Kampung Kuning
+              Keunggulan Desa Buntul Musara
             </h2>
             <p className="text-xl text-black max-w-2xl mx-auto">
-              Berbagai keunggulan dan potensi yang dimiliki Kampung Kuning
+              Berbagai keunggulan dan potensi yang dimiliki Desa Buntul Musara
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
             {[
               {
                 title: "Pertanian Organik",
@@ -627,16 +624,11 @@ export default function HomePage() {
               {
                 title: "Wisata Alam",
                 description: "Pemandangan alam yang menawan",
-                image: "bukit.jpg",
+                image: "pemandangan.jpg",
                 icon: "🏞️",
               },
 
-              {
-                title: "UMKM Kreatif",
-                description: "Usaha mikro yang berkembang pesat",
-                image: "kegiatan 1.jpeg",
-                icon: "🏪",
-              },
+            
             ].map((item, index) => (
               <Card
                 key={index}
@@ -676,14 +668,13 @@ export default function HomePage() {
                   <Home className="w-5 h-5 text-yellow-600" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold">Kampung Kuning</h3>
-                  <p className="text-black text-sm">Kecamatan Rikit Gaib</p>
+                  <h3 className="text-xl font-bold">Desa Buntul Musara</h3>
+                  <p className="text-black text-sm">Kecamatan Tripe Jaya</p>
                   <p className="text-black  text-sm">Kabupaten gayo Lues</p>
                 </div>
               </div>
               <p className="text-black  text-sm leading-relaxed">
-                Mewujudkan Masyarakat Kampung Kuning Yang Bersih, Maju, Adil,
-                Transparansi Dan Sejahtera.
+                Menciptakan Pemerintahan Kampung yang baik, Partisipatif dan transparan.
               </p>
             </div>
 
@@ -730,15 +721,15 @@ export default function HomePage() {
               <div className="space-y-2 text-black text-sm">
                 <div className="flex items-center space-x-2 hover:text-white transition-colors duration-200">
                   <MapPin className="w-4 h-4" />
-                  <span>kampung kning, Kec. Rakit Gaib, Kab. Gayo Lues</span>
+                  <span>Desa Buntul Musara, Kec. Rakit Gaib, Kab. Gayo Lues</span>
                 </div>
                 <div className="flex items-center space-x-2 hover:text-white transition-colors duration-200">
                   <Phone className="w-4 h-4" />
-                  <span>(021) 123-4567</span>
+                  <span>+62 822-9927-4713</span>
                 </div>
                 <div className="flex items-center space-x-2 hover:text-white transition-colors duration-200">
                   <Mail className="w-4 h-4" />
-                  <span>info@kampungkuning.id</span>
+                  <span>buntulmusara57@gmail.com </span>
                 </div>
               </div>
             </div>
@@ -746,7 +737,7 @@ export default function HomePage() {
 
           <div className="border-t border-blue-700 mt-8 pt-8 text-center">
             <p className="text-black text-sm">
-              © 2025 Kampung Kuning. Semua hak dilindungi undang-undang.
+              © 2025 Desa Buntul Musara. Semua hak dilindungi undang-undang.
             </p>
           </div>
         </div>

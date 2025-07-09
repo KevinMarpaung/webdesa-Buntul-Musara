@@ -81,26 +81,62 @@ export default function KontakPage() {
 
   const perangkatDesa = [
     {
-      nama: "Rajudin",
-      jabatan: "Pengulu",
+      nama: "Jamaluddin",
+      jabatan: "Pengulu Kampung",
       foto: "/placeholder.svg?height=150&width=150&text=Kepala+Desa",
       icon: Building,
     },
     {
-      nama: "Hari Wibowo",
+      nama: "Mantarudin",
       jabatan: "Sekretaris Kampung",
       foto: "/placeholder.svg?height=150&width=150&text=Sekretaris",
       icon: Users,
     },
     {
-      nama: "Abu Bakar Sidik",
-      jabatan: "Kasi Pemerintahan",
+      nama: "Sayang",
+      jabatan: "Pegawai Kampung",
       foto: "/placeholder.svg?height=150&width=150&text=Kaur+Pemerintahan",
       icon: Shield,
     },
     {
-      nama: "Ismail",
-      jabatan: "Kasi Pelayanan Dan Kesejahteraan",
+      nama: "Suwandi Yoga",
+      jabatan: "Kaur Keuangan",
+      foto: "/placeholder.svg?height=150&width=150&text=Kaur+Kesejahteraan",
+      icon: Heart,
+    },
+    {
+      nama: "Sali Syamsudin",
+      jabatan: "Kaur Umum dan Perencanaan",
+      foto: "/placeholder.svg?height=150&width=150&text=Kaur+Kesejahteraan",
+      icon: Heart,
+    },
+    {
+      nama: "Ali Asah",
+      jabatan: "Kasi Pemerintahan",
+      foto: "/placeholder.svg?height=150&width=150&text=Kaur+Kesejahteraan",
+      icon: Heart,
+    },
+    {
+      nama: "Marwansyah Putra",
+      jabatan: "Kasi Kesejahteraan dan Pelayanan",
+      foto: "/placeholder.svg?height=150&width=150&text=Kaur+Kesejahteraan",
+      icon: Heart,
+    },
+    {
+      nama: "Jalam",
+      jabatan: "Kadus Kantor",
+      foto: "/placeholder.svg?height=150&width=150&text=Kaur+Kesejahteraan",
+      icon: Heart,
+    },
+    {
+      nama: "Jafaruddin",
+      jabatan: "Kadus Ume Paya",
+      foto: "/placeholder.svg?height=150&width=150&text=Kaur+Kesejahteraan",
+      icon: Heart,
+    },
+    {
+      nama: "Kalim",
+      jabatan: "Kadus Umah Paluh",
       foto: "/placeholder.svg?height=150&width=150&text=Kaur+Kesejahteraan",
       icon: Heart,
     },
@@ -109,21 +145,21 @@ export default function KontakPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-yellow-50 via-amber-50 to-orange-50">
       {/* Header */}
-      <header className="bg-gradient-to-r from-yellow-400 via-amber-400 to-yellow-500 shadow-lg">
+      <header className="bg-gradient-to-br from-sky-400 to-sky-500 shadow-lg">
         <div className="container mx-auto px-4 py-6">
           <div className="flex items-center space-x-4">
             <Link
               href="/"
               className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md hover:scale-110 transition-transform duration-300"
             >
-              <ArrowLeft className="w-6 h-6 text-yellow-600" />
+              <ArrowLeft className="w-6 h-6 text-black" />
             </Link>
             <div>
               <h1 className="text-2xl font-bold text-white drop-shadow-md">
                 Hubungi Kami
               </h1>
-              <p className="text-yellow-100">
-                Kontak dan informasi Kampung Kuning
+              <p className="text-white">
+                Kontak dan informasi Desa Buntul Musara
               </p>
             </div>
           </div>
@@ -134,14 +170,14 @@ export default function KontakPage() {
         {/* Hero Section */}
         <section className="text-center mb-16">
           <div className="inline-block mb-6">
-            <div className="w-20 h-20 bg-gradient-to-r from-yellow-400 to-amber-500 rounded-full flex items-center justify-center shadow-2xl mx-auto transform hover:scale-110 transition-transform duration-500">
+            <div className="w-20 h-20 bg-gradient-to-r from-blue-400 to-sky-500 rounded-full flex items-center justify-center shadow-2xl mx-auto transform hover:scale-110 transition-transform duration-500">
               <Phone className="w-10 h-10 text-white" />
             </div>
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-yellow-800 mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold text-blue-800 mb-6">
             Hubungi Kami
           </h1>
-          <p className="text-xl text-yellow-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-black max-w-3xl mx-auto leading-relaxed">
             Kami siap melayani dan membantu kebutuhan masyarakat Desa Maju
             Bersama dengan sepenuh hati
           </p>
@@ -153,7 +189,7 @@ export default function KontakPage() {
             {kontakInfo.map((item, index) => (
               <Card
                 key={index}
-                className="bg-white shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 border-yellow-200 text-center group"
+                className="bg-white shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 border-blue-200 text-center group"
               >
                 <CardContent className="p-6">
                   <div
@@ -164,10 +200,10 @@ export default function KontakPage() {
                   <h3 className="text-xl font-bold text-yellow-800 mb-2">
                     {item.title}
                   </h3>
-                  <p className="text-yellow-600 font-medium mb-1">
+                  <p className="text-blue-600 font-medium mb-1">
                     {item.info}
                   </p>
-                  <p className="text-yellow-500 text-sm">{item.detail}</p>
+                  <p className="text-black text-sm">{item.detail}</p>
                 </CardContent>
               </Card>
             ))}
@@ -178,9 +214,9 @@ export default function KontakPage() {
         <section className="mb-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <Card className="bg-white shadow-xl border-yellow-200">
+            <Card className="bg-white shadow-xl border-blue-200">
               <CardHeader>
-                <CardTitle className="flex items-center text-yellow-800">
+                <CardTitle className="flex items-center text-blue-800">
                   <MessageSquare className="w-6 h-6 mr-2" />
                   Kirim Pesan
                 </CardTitle>
@@ -189,7 +225,7 @@ export default function KontakPage() {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <Label htmlFor="nama" className="text-yellow-800">
+                      <Label htmlFor="nama" className="text-blue-800">
                         Nama Lengkap
                       </Label>
                       <Input
@@ -199,12 +235,12 @@ export default function KontakPage() {
                         value={formData.nama}
                         onChange={handleChange}
                         required
-                        className="border-yellow-300 focus:border-yellow-500"
+                        className="border-blue-300 focus:border-blue-500"
                         placeholder="Masukkan nama lengkap"
                       />
                     </div>
                     <div>
-                      <Label htmlFor="telepon" className="text-yellow-800">
+                      <Label htmlFor="telepon" className="text-blue-800">
                         Nomor Telepon
                       </Label>
                       <Input
@@ -213,14 +249,14 @@ export default function KontakPage() {
                         type="tel"
                         value={formData.telepon}
                         onChange={handleChange}
-                        className="border-yellow-300 focus:border-yellow-500"
+                        className="border-blue-300 focus:border-blue-500"
                         placeholder="Masukkan nomor telepon"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <Label htmlFor="email" className="text-yellow-800">
+                    <Label htmlFor="email" className="text-blue-800">
                       Email
                     </Label>
                     <Input
@@ -230,13 +266,13 @@ export default function KontakPage() {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="border-yellow-300 focus:border-yellow-500"
+                      className="border-blue-300 focus:border-yblue-500"
                       placeholder="Masukkan alamat email"
                     />
                   </div>
 
                   <div>
-                    <Label htmlFor="subjek" className="text-yellow-800">
+                    <Label htmlFor="subjek" className="text-blue-800">
                       Subjek
                     </Label>
                     <Input
@@ -246,13 +282,13 @@ export default function KontakPage() {
                       value={formData.subjek}
                       onChange={handleChange}
                       required
-                      className="border-yellow-300 focus:border-yellow-500"
+                      className="border-blue-300 focus:border-blue-500"
                       placeholder="Masukkan subjek pesan"
                     />
                   </div>
 
                   <div>
-                    <Label htmlFor="pesan" className="text-yellow-800">
+                    <Label htmlFor="pesan" className="text-blue-800">
                       Pesan
                     </Label>
                     <Textarea
@@ -262,14 +298,14 @@ export default function KontakPage() {
                       onChange={handleChange}
                       required
                       rows={5}
-                      className="border-yellow-300 focus:border-yellow-500"
+                      className="border-blue-300 focus:border-blue-500"
                       placeholder="Tulis pesan Anda di sini..."
                     />
                   </div>
 
                   <Button
                     type="submit"
-                    className="w-full bg-yellow-500 hover:bg-yellow-600 text-white py-3 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+                    className="w-full bg-blue-500 hover:bg-blue-600 text-white py-3 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
                   >
                     <Send className="w-5 h-5 mr-2" />
                     Kirim Pesan
@@ -281,9 +317,9 @@ export default function KontakPage() {
             {/* Map Placeholder */}
             <Card className="bg-white shadow-xl border-yellow-200 overflow-hidden">
               <CardHeader>
-                <CardTitle className="flex items-center text-yellow-800">
+                <CardTitle className="flex items-center text-blue-800">
                   <MapPin className="w-6 h-6 mr-2" />
-                  Lokasi Kantor Kampung Kuning
+                  Lokasi Kantor Desa Buntul Musara
                 </CardTitle>
               </CardHeader>
               <CardContent className="p-0">
@@ -302,15 +338,15 @@ export default function KontakPage() {
 
                   <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
                   <div className="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-sm rounded-lg p-4">
-                    <h3 className="font-bold text-yellow-800 mb-2">
-                      Kantor Kampung kuning
+                    <h3 className="font-bold text-blue-800 mb-2">
+                      Kantor Desa Buntul Musara
                     </h3>
-                    <p className="text-yellow-600 text-sm mb-2">
-                      Kampung Kuning, Kec.Rikit Gaib, Kab. Gayo Lues
+                    <p className="text-black text-sm mb-2">
+                      Desa Buntul Musara, Kec.Tripe Jaya, Kab. Gayo Lues
                     </p>
                     <Button
                       size="sm"
-                      className="bg-yellow-500 hover:bg-yellow-600 text-white"
+                      className="bg-blue-500 hover:bg-blue-600 text-white"
                       onClick={() =>
                         window.open(
                           "https://maps.google.com/?q=Kampung+Kuning,+Rikit+Gaib,+Gayo+Lues",
@@ -327,49 +363,11 @@ export default function KontakPage() {
           </div>
         </section>
 
-        <section className="mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-yellow-800 mb-4">
-              Perangkat Desa
-            </h2>
-            <p className="text-xl text-yellow-600 max-w-2xl mx-auto">
-              Tim perangkat desa yang siap melayani masyarakat dengan dedikasi
-              tinggi
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {perangkatDesa.map((person, index) => (
-              <Card
-                key={index}
-                className="bg-white shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 border-yellow-200 text-center group"
-              >
-                <CardContent className="p-6">
-                  <div className="relative mb-4">
-                    <img
-                      src={person.foto}
-                      className="w-24 h-24 rounded-full mx-auto object-cover border-4 border-yellow-200 group-hover:border-yellow-400 transition-colors duration-300"
-                      crossOrigin="anonymous"
-                    />
-                    <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center">
-                      <person.icon className="w-4 h-4 text-white" />
-                    </div>
-                  </div>
-                  <h3 className="text-xl font-bold text-yellow-800 mb-1 group-hover:text-yellow-600 transition-colors duration-300">
-                    {person.nama}
-                  </h3>
-                  <p className="text-yellow-600 font-medium mb-3">
-                    {person.jabatan}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </section>
+        
 
         {/* Emergency Contacts */}
         <section className="mb-16">
-          <Card className="bg-red-50 border-red-200 shadow-lg">
+          <Card className="bg-blue-50 border-blue-200 shadow-lg">
             <CardHeader>
               <CardTitle className="flex items-center text-red-800">
                 <Phone className="w-6 h-6 mr-2" />
@@ -379,25 +377,25 @@ export default function KontakPage() {
             <CardContent>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="text-center">
-                  <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <div className="w-12 h-12 bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-3">
                     <Phone className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="font-bold text-red-800 mb-1">Pos Kamling</h3>
-                  <p className="text-red-600">0822-312-421</p>
+                  <h3 className="font-bold text-blue-800 mb-1">Pos Kamling</h3>
+                  <p className="text-black">0822-312-421</p>
                 </div>
                 <div className="text-center">
-                  <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <div className="w-12 h-12 bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-3">
                     <Heart className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="font-bold text-red-800 mb-1">Poskesdes</h3>
-                  <p className="text-red-600">0831-2412-4121</p>
+                  <h3 className="font-bold text-blue-800 mb-1">Poskesdes</h3>
+                  <p className="text-black">0831-2412-4121</p>
                 </div>
                 <div className="text-center">
-                  <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <div className="w-12 h-12 bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-3">
                     <Shield className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="font-bold text-red-800 mb-1">Kantor Desa</h3>
-                  <p className="text-red-600">0822-7550-4940</p>
+                  <h3 className="font-bold text-blue-800 mb-1">Kantor Desa</h3>
+                  <p className="text-black">0822-7550-4940</p>
                 </div>
               </div>
             </CardContent>
@@ -406,7 +404,7 @@ export default function KontakPage() {
 
         {/* Call to Action */}
         <section className="text-center">
-          <Card className="bg-gradient-to-r from-yellow-400 to-amber-500 text-white shadow-2xl">
+          <Card className="bg-gradient-to-br from-sky-400 to-sky-500 text-white shadow-2xl">
             <CardContent className="p-8">
               <h2 className="text-3xl font-bold mb-4">Kunjungi Kantor Desa</h2>
               <p className="text-xl mb-6 text-yellow-100">
@@ -414,14 +412,13 @@ export default function KontakPage() {
                 personal dan cepat
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button className="bg-white text-yellow-600 hover:bg-yellow-50 px-8 py-3 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+                <Button className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-3 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
                   <MapPin className="w-5 h-5 mr-2" />
                   Lihat Lokasi
                 </Button>
                 <Button
                   variant="outline"
-                  className="border-2 border-white text-white hover:bg-white hover:text-yellow-600 px-8 py-3 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
-                >
+                  className="bg-white text-blue-600  hover:text-blue-600 hover:bg-blue-50 px-8 py-3 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
                   <Clock className="w-5 h-5 mr-2" />
                   Jam Operasional
                 </Button>
