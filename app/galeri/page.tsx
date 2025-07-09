@@ -54,7 +54,7 @@ export default function GaleriPage() {
     },
     {
       id: 7,
-      title: "Sawah Kampung Kuning",
+      title: "Sawah Kampung Buntul Musara",
       category: "Pemandangan",
       image: "sawah.jpg",
       description: "Pemandangan Sawah Yang Sangat Indah Di Kampung Kuning",
