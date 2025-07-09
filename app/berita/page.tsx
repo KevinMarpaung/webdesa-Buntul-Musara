@@ -41,6 +41,28 @@ const dummyBerita: Berita[] = [
     gambar: "hut.jpg",
     link: "https://a1news.co.id/index.php/2024/08/17/desa-buntul-musara-meriahkan-hut-ri-ke-79-dengan-beragam-perlombaan-semangat-kebersamaan/",
   },
+  {
+    id: "3",
+    judul:
+      "Rumah Ludes Terbakar, Warga Buntul Musara Terima Bantuan Sembako dari Polres Gayo Lues",
+    konten:
+      "Kepolisian Resor (Polres) Gayo Lues menunjukkan kepeduliannya terhadap warga yang tertimpa musibah dengan menyerahkan bantuan sosial kepada korban kebakaran di Kampung Buntul Musara, Kecamatan Tripe Jaya, Kabupaten Gayo Lues.",
+    tanggal: "2024-06-11",
+    penulis: "Admin Desa",
+    gambar: "kebakaran.jpeg",
+    link: "https://detikpublik.com/2025/06/11/rumah-ludes-terbakar-warga-buntul-musara-terima-bantuan-sembako-dari-polres-gayo-lues/",
+  },
+  {
+    id: "4",
+    judul:
+      "Pengulu Buntul Musara Jamaluddin Menghadiri Acara Penyaluran Gaji Aparatur Kampung",
+    konten:
+      "Pengulu kampung Buntul Musara, Bendahara Desa, dan didampingi Ketua BPK(Urang Tue) Menghadiri acara penyaluran gaji yang bersumber dari Dana Desa (DDS) di kantor pengulu Sabtu 21 Desember 2024.",
+    tanggal: "2024-12-22",
+    penulis: "Admin Desa",
+    gambar: "berita4.jpg",
+    link: "https://a1news.co.id/index.php/2024/12/22/pengulu-buntul-musara-jamaluddin-menghadiri-acara-penyaluran-gaji-aparatur-kampung//",
+  },
 ];
 
 export default function BeritaPage() {

@@ -62,18 +62,20 @@ export default function GaleriPage() {
 
     {
       id: 11,
-      title: "Mengajar Disekolah",
+      title: "Festival Saman Roa Lo Roa Ingi ",
       category: "Kegiatan",
-      image: "kegiatan1.jpg",
-      description: "Mengajar Disekolah Anak Sd",
+      image: "festival1.jpg",
+      description: "Festival Saman Roa Lo Roa Ingi",
     },
 
     {
       id: 13,
-      title: "Foto bersama Kepsek SMPN 1 TRIPE Jaya",
+      title:
+        "Festival saman-Agenda Sanggar Tari Saman Pemuda Kampung Buntul Musara, Tingkat Kabupaten ",
       category: "Kegiatan",
-      image: "Foto bersama Kepsek SMPN 1 TRIPE Jaya.jpg",
-      description: "Foto bersama Kepsek SMPN 1 TRIPE Jaya",
+      image: "festival2.jpg",
+      description:
+        "Festival saman-Agenda Sanggar Tari Saman Pemuda Kampung Buntul Musara, Tingkat Kabupaten",
     },
 
     {
@@ -85,17 +87,17 @@ export default function GaleriPage() {
     },
     {
       id: 16,
-      title: "Kegiatan sosialisasi proker mandiri ",
+      title: "Gotong royong para pemuda dan warga Buntul Musara ",
       category: "Kegiatan",
-      image: "Kegiatan sosialisasi proker mandiri .jpg",
-      description: "Kegiatan sosialisasi proker mandir",
+      image: "gotongroyong.jpg",
+      description: "Gotong royong para pemuda dan warga Buntul Musara ",
     },
     {
       id: 17,
-      title: "Pemberian apresiasi di SMP Negeri 1 Tripe Jaya",
+      title: "Gotong royong para pemuda dan warga Buntul Musara",
       category: "Kegiatan",
-      image: "gemoyyy.jpg",
-      description: "Pemberian apresiasi di SMP Negeri 1 Tripe Jaya",
+      image: "gotongroyong2.jpg",
+      description: "Gotong royong para pemuda dan warga Buntul Musara",
     },
     {
       id: 18,
@@ -132,6 +134,34 @@ export default function GaleriPage() {
       category: "Fasilitas",
       image: "sma.JPG",
       description: "Foto Sekola SMA",
+    },
+    {
+      id: 19,
+      title: "Meugang-Tradisi menyambut hari raya",
+      category: "Kegiatan",
+      image: "meugang.jpg",
+      description: "Meugang-Tradisi menyambut hari raya",
+    },
+    {
+      id: 20,
+      title: "Penampilan Tari Bines Pemudi Buntul Musara",
+      category: "Kegiatan",
+      image: "tari.jpg",
+      description: "Penampilan Tari Bines Pemudi Buntul Musara",
+    },
+    {
+      id: 21,
+      title: "Trija FC-Turnamen Sepakbola ",
+      category: "Kegiatan",
+      image: "turnamen.jpg",
+      description: "Trija FC-Turnamen Sepakbola",
+    },
+    {
+      id: 22,
+      title: "penyambutan bejamu Saman",
+      category: "Kegiatan",
+      image: "sambut.jpg",
+      description: "penyambutan bejamu Saman",
     },
   ];
 
