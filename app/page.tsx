@@ -132,7 +132,7 @@ export default function HomePage() {
               <div className="hidden w-12 h-15 rounded-full lg:flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300">
                 <img src="unsam.png" />
               </div>
-              <div className="hidden w-14 h-15 rounded-full lg:flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300">
+              <div className="hidden w-16 h-15 rounded-full lg:flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300">
                 <img src="logo-kkn.png" />
               </div>
             </div>
