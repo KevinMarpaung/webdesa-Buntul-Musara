@@ -282,7 +282,7 @@ export default function KontakPage() {
                       className="bg-blue-500 hover:bg-blue-600 text-white"
                       onClick={() =>
                         window.open(
-                          "https://maps.google.com/?q=Kampung+Kuning,+Rikit+Gaib,+Gayo+Lues",
+                          "https://www.google.com/maps/place/Buntul+Musara,+Kec.+Tripe+Jaya,+Kabupaten+Gayo+Lues,+Aceh/@4.1762262,96.9781626,31069m/data=!3m1!1e3!4m6!3m5!1s0x3039085ef6337929:0xbe4739d3ca3d72cc!8m2!3d4.1911732!4d97.0605998!16s%2Fg%2F12h2spgn8?entry=ttu&g_ep=EgoyMDI1MDcwNi4wIKXMDSoASAFQAw%3D%3D",
                           "_blank"
                         )
                       }
