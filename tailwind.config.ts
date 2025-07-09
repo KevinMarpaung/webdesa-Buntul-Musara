@@ -54,7 +54,7 @@ const config: Config = {
           foreground: "hsl(var(--card-foreground))",
         },
         yellow: {
-          50: "#fefce8",
+          50: "#f2e001",
           100: "#fef3c7",
           200: "#fde68a",
           300: "#fcd34d",
@@ -76,6 +76,11 @@ const config: Config = {
           700: "#b45309",
           800: "#92400e",
           900: "#78350f",
+        },
+        biru: {
+          50: "#000958",
+          100: "#344cb8",
+          200: "#567bc1",
         },
       },
       borderRadius: {

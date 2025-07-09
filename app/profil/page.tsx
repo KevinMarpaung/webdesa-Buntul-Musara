@@ -15,7 +15,7 @@ import {
   Eye,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 
 interface Penduduk {
   id: string;
@@ -27,30 +27,23 @@ interface Penduduk {
 }
 
 export default function ProfilPage() {
-  const [penduduk, setPenduduk] = useState<Penduduk[]>([]);
-
-  useEffect(() => {
-    const savedPenduduk = localStorage.getItem("desa-penduduk");
-    if (savedPenduduk) setPenduduk(JSON.parse(savedPenduduk));
-  }, []);
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-yellow-50 via-amber-50 to-orange-50">
+    <div className="min-h-screen bg-gradient-to-br from-sky-200 via-blue-100 to-sky-100">
       {/* Header */}
-      <header className="bg-gradient-to-r from-yellow-400 via-amber-400 to-yellow-500 shadow-lg">
+      <header className="bg-gradient-to-r from-blue-800 via-sky-400 to-sky-500 shadow-lg">
         <div className="container mx-auto px-4 py-6">
           <div className="flex items-center space-x-4">
             <Link
               href="/"
               className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md hover:scale-110 transition-transform duration-300"
             >
-              <ArrowLeft className="w-6 h-6 text-yellow-600" />
+              <ArrowLeft className="w-6 h-6 text-black" />
             </Link>
             <div>
               <h1 className="text-2xl font-bold text-white drop-shadow-md">
                 Profil Desa
               </h1>
-              <p className="text-yellow-100">Mengenal Kampung Kuning</p>
+              <p className="text-blue-100">Mengenal Kampung Kuning</p>
             </div>
           </div>
         </div>
@@ -60,14 +53,14 @@ export default function ProfilPage() {
         {/* Hero Section */}
         <section className="text-center mb-16">
           <div className="inline-block mb-6">
-            <div className="w-20 h-20 bg-gradient-to-r from-yellow-400 to-amber-500 rounded-full flex items-center justify-center shadow-2xl mx-auto transform hover:scale-110 transition-transform duration-500">
+            <div className="w-20 h-20 bg-gradient-to-r from-blue-400 to-sky-500 rounded-full flex items-center justify-center shadow-2xl mx-auto transform hover:scale-110 transition-transform duration-500">
               <Building className="w-10 h-10 text-white" />
             </div>
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-yellow-800 mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold text-blue-800 mb-6">
             Kampung Kuning
           </h1>
-          <p className="text-xl text-yellow-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-black max-w-3xl mx-auto leading-relaxed">
             Sebuah Desa Yang Bertujuan Mewujudkan Masyarakat Kampung Kuning Yang
             Bersih, Maju, Adil, Transparansi, Dan Sejahtera
           </p>
@@ -76,16 +69,14 @@ export default function ProfilPage() {
         {/* Visi Misi */}
         <section className="mb-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <Card className="p-8 bg-gradient-to-br from-yellow-100 to-amber-100 border-yellow-200 shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300">
+            <Card className="p-8 bg-gradient-to-r from-sky-500 to-blue-500 border-white shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300">
               <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-amber-500 rounded-full flex items-center justify-center mr-4">
-                  <Eye className="w-6 h-6 text-white" />
+                <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mr-4">
+                  <Eye className="w-6 h-6 text-black" />
                 </div>
-                <h2 className="text-3xl font-bold text-yellow-800">
-                  Visi Desa
-                </h2>
+                <h2 className="text-3xl font-bold text-white">Visi Desa</h2>
               </div>
-              <p className="text-yellow-700 leading-relaxed text-lg">
+              <p className="text-white leading-relaxed text-lg">
                 Mewujudkan Kampung Kuning sebagai desa yang bersih, maju, adil,
                 transparan, dan sejahtera melalui partisipasi aktif masyarakat,
                 tata kelola pemerintahan yang baik, serta pembangunan yang
@@ -93,14 +84,14 @@ export default function ProfilPage() {
               </p>
             </Card>
 
-            <Card className="p-8 bg-gradient-to-br from-amber-100 to-orange-100 border-amber-200 shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300">
+            <Card className="p-8 bg-gradient-to-r from-sky-500 to-blue-500 border-white shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300">
               <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-gradient-to-r from-amber-500 to-orange-500 rounded-full flex items-center justify-center mr-4">
-                  <Target className="w-6 h-6 text-white" />
+                <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mr-4">
+                  <Target className="w-6 h-6 text-black" />
                 </div>
-                <h2 className="text-3xl font-bold text-amber-800">Misi Desa</h2>
+                <h2 className="text-3xl font-bold text-white">Misi Desa</h2>
               </div>
-              <ul className="space-y-3 text-amber-700 text-lg">
+              <ul className="space-y-3 text-white  text-lg">
                 <li className="flex items-start space-x-3">
                   <Star className="w-6 h-6 text-amber-500 mt-0.5 flex-shrink-0" />
                   <span>
@@ -137,23 +128,23 @@ export default function ProfilPage() {
         {/* Informasi Desa */}
         <section className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-yellow-800 mb-4">
+            <h2 className="text-4xl font-bold text-biru-50 mb-4">
               Informasi Desa
             </h2>
-            <p className="text-xl text-yellow-600">
+            <p className="text-xl text-black">
               Data dan fakta tentang Kampung Kuning
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-            <div className="bg-gradient-to-br from-yellow-400 to-amber-500 rounded-2xl p-8 text-white shadow-2xl transform hover:scale-105 transition-transform duration-300">
+            <div className="bg-gradient-to-br from-sky-400 to-sky-500 rounded-2xl p-8 text-white shadow-2xl transform hover:scale-105 transition-transform duration-300">
               <h3 className="text-2xl font-bold mb-6">Data Geografis</h3>
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <MapPin className="w-6 h-6" />
                   <div>
                     <p className="font-semibold">Alamat</p>
-                    <p className="text-yellow-100">
+                    <p className="text-white">
                       Kampung Kuning Kecamatan Rikit Gaib Kabupaten Gayo Lues
                     </p>
                   </div>
@@ -162,14 +153,14 @@ export default function ProfilPage() {
                   <Leaf className="w-6 h-6" />
                   <div>
                     <p className="font-semibold">Luas Wilayah</p>
-                    <p className="text-yellow-100">-</p>
+                    <p className="text-white">-</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Building className="w-6 h-6" />
                   <div>
                     <p className="font-semibold">Pembagian Wilayah</p>
-                    <p className="text-yellow-100 ">
+                    <p className="text-white ">
                       <div>
                         <p>-Dusun Ulung Kuning</p>
                         <p>-Dusun Nunang</p>
@@ -182,9 +173,9 @@ export default function ProfilPage() {
                   <Users className="w-6 h-6" />
                   <div>
                     <p className="font-semibold">Jumlah Penduduk</p>
-                    <p className="text-yellow-100">307 Jiwa</p>
-                    <p className=" text-yellow-50">-Laki-Laki: 148 Jiwa</p>
-                    <p className=" text-yellow-50">-Perempuan: 159 Jiwa</p>
+                    <p className="text-white">307 Jiwa</p>
+                    <p className=" text-white">-Laki-Laki: 148 Jiwa</p>
+                    <p className=" text-white">-Perempuan: 159 Jiwa</p>
                   </div>
                 </div>
               </div>
@@ -419,7 +410,7 @@ export default function ProfilPage() {
             <h2 className="text-3xl font-bold mb-4">
               Mari Bersama Membangun Desa
             </h2>
-            <p className="text-xl mb-6 text-yellow-100">
+            <p className="text-xl mb-6 text-blue-50">
               Bergabunglah dengan kami dalam membangun masa depan yang lebih
               baik untuk Kampung Kuning
             </p>

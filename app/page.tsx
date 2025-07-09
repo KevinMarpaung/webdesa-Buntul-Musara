@@ -98,7 +98,7 @@ export default function HomePage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-yellow-50 via-amber-50 to-orange-50">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-blue-100 to-blue-200">
       {/* Navigation */}
       <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-md shadow-lg z-50 border-b border-yellow-200">
         <div className="container mx-auto px-1">
@@ -108,8 +108,8 @@ export default function HomePage() {
                 <img src="logo-gayo-lues.png" />
               </div>
               <div>
-                <h1 className="text-sm font-bold text-yellow-800">
-                  Kampung Kuning
+                <h1 className="text-sm  w-15 font-bold text-[#567bc1]">
+                  Desa Buntul Musara
                 </h1>
               </div>
             </Link>
@@ -119,7 +119,7 @@ export default function HomePage() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="px-4 py-2 rounded-lg transition-all duration-300 flex items-center space-x-2 text-yellow-700 hover:bg-yellow-100 hover:text-yellow-800 hover:scale-105"
+                  className="px-4 py-2 rounded-lg transition-all duration-300 flex items-center space-x-2 text-blue-800 hover:bg-blue-100 hover:text-blue-900 hover:scale-105"
                 >
                   <item.icon className="w-4 h-4" />
                   <span className="text-sm font-medium">{item.label}</span>
@@ -127,7 +127,7 @@ export default function HomePage() {
               ))}
               <Link
                 href="/admin"
-                className="px-4 py-2 rounded-lg bg-yellow-500 text-white hover:bg-yellow-600 transition-all duration-300 flex items-center space-x-2 shadow-md hover:shadow-lg hover:scale-105"
+                className="px-4 py-2 rounded-lg bg-blue-800 text-white hover:bg-yellow-600 transition-all duration-300 flex items-center space-x-2 shadow-md hover:shadow-lg hover:scale-105"
               >
                 <Settings className="w-4 h-4" />
                 <span className="text-sm font-medium">Admin</span>
@@ -198,7 +198,7 @@ export default function HomePage() {
               />
             </div>
           ))}
-          <div className="absolute inset-0 bg-gradient-to-r from-yellow-100/40 via-amber-400/30 to-orange-400/40"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from--100/40 blue-400/30 to-blue-400/40"></div>
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
@@ -215,11 +215,11 @@ export default function HomePage() {
             </div>
 
             <div className="inline-block mb-6"> </div>
-            <h1 className="text-5xl md:text-7xl font-bold text-yellow-800 mb-6 animate-fade-in-up">
+            <h1 className="text-5xl md:text-7xl font-bold text-wh mb-6  text-white animate-fade-in-up">
               Selamat Datang di
               <br />
-              <span className="bg-gradient-to-r from-yellow-600 to-amber-600 bg-clip-text text-transparent animate-shimmer">
-                Kampung Kuning
+              <span className="bg-gradient-to-r from-blue-200 to-blue-600 bg-clip-text text-transparent animate-shimmer">
+                Desa Buntul Musara
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-white mb-8 max-w-3xl mx-auto leading-relaxed animate-fade-in-up-delayed ">
@@ -228,7 +228,7 @@ export default function HomePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up-delayed-2">
               <Link href="/profil">
-                <Button className="bg-gradient-to-r from-yellow-500 to-amber-500 hover:from-yellow-600 hover:to-amber-600 text-white px-8 py-4 text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 animate-bounce-gentle">
+                <Button className="bg-gradient-to-r from-blue-500 to-blue-300 hover:from-blue600 hover:to-blue-600 text-white px-8 py-4 text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 animate-bounce-gentle">
                   Jelajahi Desa
                   <ChevronRight className="w-5 h-5 ml-2" />
                 </Button>
@@ -236,14 +236,13 @@ export default function HomePage() {
               <Link href="/layanan">
                 <Button
                   variant="outline"
-                  className="border-2 border-yellow-500 text-yellow-700 hover:bg-yellow-500 hover:text-white px-8 py-4 text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+                  className="border-2 border-blue-500 text-blue-700 hover:bg-blue-500 hover:text-white px-8 py-4 text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
                 >
                   Layanan Desa
                 </Button>
               </Link>
             </div>
 
-            {/* Image Carousel Indicators */}
             <div className="flex justify-center space-x-2 mt-8">
               {heroImages.map((_, index) => (
                 <button
@@ -251,7 +250,7 @@ export default function HomePage() {
                   onClick={() => setCurrentImageIndex(index)}
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${
                     index === currentImageIndex
-                      ? "bg-yellow-400 scale-125"
+                      ? "bg-blue-400 scale-125"
                       : "bg-white/50 hover:bg-white/70"
                   }`}
                 />
@@ -261,7 +260,7 @@ export default function HomePage() {
 
           {/* Quick Stats with Images */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
-            <Card className="bg-white/90 backdrop-blur-sm shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 border-yellow-200 group overflow-hidden">
+            <Card className="bg-white/90 backdrop-blur-sm shadow-lg hover:shadow-xl transform hover:-translate-y-2 text-black transition-all duration-300 border-yellow-200 group overflow-hidden">
               <div className="h-20 bg-gradient-to-r from-blue-400 to-blue-500 relative">
                 <img
                   src="pendudukk.jpg"
@@ -275,50 +274,50 @@ export default function HomePage() {
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 -mt-10 relative z-10 shadow-lg">
                   <Users className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-yellow-800">307</h3>
-                <p className="text-yellow-600">Total Penduduk</p>
+                <h3 className="text-2xl font-bold text-black">307</h3>
+                <p className="text-[#567bc1]">Total Penduduk</p>
               </CardContent>
             </Card>
 
             <Card className="bg-white/90 backdrop-blur-sm shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 border-yellow-200 group overflow-hidden">
-              <div className="h-20 bg-gradient-to-r from-green-400 to-green-500 relative">
+              <div className="h-20 bg-gradient-to-r from-yellow-400 to-yellow-500 relative">
                 <img
                   src="/berita.jpg"
                   alt="Berita"
                   className="w-full h-full object-cover opacity-50"
                   crossOrigin="anonymous"
                 />
-                <div className="absolute inset-0 bg-green-500/70"></div>
+                <div className="absolute inset-0 bg-yellow-200/70"></div>
               </div>
               <CardContent className="p-6 text-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-green-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 -mt-10 relative z-10 shadow-lg">
+                <div className="w-12 h-12 bg-gradient-to-r from-yellow-200 to-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 -mt-10 relative z-10 shadow-lg">
                   <FileText className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-yellow-800 animate-count-up">
+                <h3 className="text-2xl font-bold text-black animate-count-up">
                   {berita.length}
                 </h3>
-                <p className="text-yellow-600">Berita Terbaru</p>
+                <p className="text-[#567bc1]">Berita Terbaru</p>
               </CardContent>
             </Card>
 
             <Card className="bg-white/90 backdrop-blur-sm shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 border-yellow-200 group overflow-hidden">
-              <div className="h-20 bg-gradient-to-r from-purple-400 to-purple-500 relative">
+              <div className="h-20 bg-gradient-to-r from-blue-800 to-blue-900 relative">
                 <img
                   src="kegiatan-aktif.jpg"
                   alt="Kegiatan"
                   className="w-full h-full object-cover opacity-50"
                   crossOrigin="anonymous"
                 />
-                <div className="absolute inset-0 bg-purple-500/70"></div>
+                <div className="absolute inset-0 bg-blue-500/70"></div>
               </div>
               <CardContent className="p-6 text-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 -mt-10 relative z-10 shadow-lg">
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-800 to-blue-900 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 -mt-10 relative z-10 shadow-lg">
                   <Calendar className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-yellow-800 animate-count-up">
                   {kegiatan.length}
                 </h3>
-                <p className="text-yellow-600">Kegiatan Aktif</p>
+                <p className="text-[#567bc1]">Kegiatan Aktif</p>
               </CardContent>
             </Card>
           </div>
@@ -329,17 +328,17 @@ export default function HomePage() {
       <section className="py-20 bg-white/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-yellow-800 mb-4 animate-fade-in">
+            <h2 className="text-4xl font-bold text-[#567bc1] mb-4 animate-fade-in">
               Akses Cepat
             </h2>
-            <p className="text-xl text-yellow-600 max-w-2xl mx-auto animate-fade-in-delayed">
+            <p className="text-xl text-black max-w-2xl mx-auto animate-fade-in-delayed">
               Temukan informasi dan layanan yang Anda butuhkan dengan mudah
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <Link href="/profil" className="group">
-              <Card className="bg-white shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border-yellow-200 h-full overflow-hidden">
+              <Card className="bg-white shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border-blue-200 h-full overflow-hidden">
                 <div className="h-48 relative overflow-hidden">
                   <img
                     src="profildesa.jpeg"
@@ -355,13 +354,13 @@ export default function HomePage() {
                   </div>
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold text-yellow-800 mb-3 group-hover:text-yellow-600 transition-colors duration-300">
+                  <h3 className="text-xl font-bold text-blue-800 mb-3 group-hover:text-blue-600 transition-colors duration-300">
                     Profil Desa
                   </h3>
-                  <p className="text-yellow-600 mb-4">
+                  <p className="text-black mb-4">
                     Pelajari sejarah, visi, misi, dan potensi Desa Maju Bersama
                   </p>
-                  <div className="flex items-center text-yellow-500 group-hover:text-yellow-600 transition-colors duration-300">
+                  <div className="flex items-center text-black group-hover:text-blue-500 transition-colors duration-300">
                     <span className="text-sm font-medium">Selengkapnya</span>
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                   </div>
@@ -370,7 +369,7 @@ export default function HomePage() {
             </Link>
 
             <Link href="/berita" className="group">
-              <Card className="bg-white shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border-yellow-200 h-full overflow-hidden">
+              <Card className="bg-white shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border-blue-200 h-full overflow-hidden">
                 <div className="h-48 relative overflow-hidden">
                   <img
                     src="kegiatan 1.jpeg"
@@ -386,14 +385,14 @@ export default function HomePage() {
                   </div>
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold text-yellow-800 mb-3 group-hover:text-yellow-600 transition-colors duration-300">
+                  <h3 className="text-xl font-bold text-blue-800 mb-3 group-hover:text-blue-600 transition-colors duration-300">
                     Berita & Info
                   </h3>
-                  <p className="text-yellow-600 mb-4">
+                  <p className="text-black mb-4">
                     Dapatkan informasi terkini seputar kegiatan dan perkembangan
                     desa
                   </p>
-                  <div className="flex items-center text-yellow-500 group-hover:text-yellow-600 transition-colors duration-300">
+                  <div className="flex items-center  text-black group-hover:text-blue-500 transition-colors duration-300">
                     <span className="text-sm font-medium">Baca Berita</span>
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                   </div>
@@ -402,7 +401,7 @@ export default function HomePage() {
             </Link>
 
             <Link href="/layanan" className="group">
-              <Card className="bg-white shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border-yellow-200 h-full overflow-hidden">
+              <Card className="bg-white shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border-blue-200 h-full overflow-hidden">
                 <div className="h-48 relative overflow-hidden">
                   <img
                     src="kantor.jpeg"
@@ -418,13 +417,13 @@ export default function HomePage() {
                   </div>
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold text-yellow-800 mb-3 group-hover:text-yellow-600 transition-colors duration-300">
+                  <h3 className="text-xl font-bold text-blue-800 mb-3 group-hover:text-blue-600 transition-colors duration-300">
                     Layanan Desa
                   </h3>
-                  <p className="text-yellow-600 mb-4">
+                  <p className="text-black mb-4">
                     Akses berbagai layanan administrasi dan pelayanan masyarakat
                   </p>
-                  <div className="flex items-center text-yellow-500 group-hover:text-yellow-600 transition-colors duration-300">
+                  <div className="flex items-center text-black group-hover:text-blue-500 transition-colors duration-300">
                     <span className="text-sm font-medium">Lihat Layanan</span>
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                   </div>
@@ -433,7 +432,7 @@ export default function HomePage() {
             </Link>
 
             <Link href="/kegiatan" className="group">
-              <Card className="bg-white shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border-yellow-200 h-full overflow-hidden">
+              <Card className="bg-white shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border-blue-200 h-full overflow-hidden">
                 <div className="h-48 relative overflow-hidden">
                   <img
                     src="kegiatan 2.jpeg"
@@ -441,21 +440,21 @@ export default function HomePage() {
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     crossOrigin="anonymous"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-orange-600/70 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-sky-600/70 to-transparent"></div>
                   <div className="absolute bottom-4 left-4">
                     <div className="w-12 h-12 bg-white/90 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <Calendar className="w-6 h-6 text-orange-600" />
+                      <Calendar className="w-6 h-6 text-blue-600" />
                     </div>
                   </div>
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold text-yellow-800 mb-3 group-hover:text-yellow-600 transition-colors duration-300">
+                  <h3 className="text-xl font-bold  text-blue-800 mb-3 group-hover:text-blue-600 transition-colors duration-300">
                     Kegiatan Desa
                   </h3>
-                  <p className="text-yellow-600 mb-4">
+                  <p className="text-black mb-4">
                     Ikuti agenda dan kegiatan yang sedang berlangsung di desa
                   </p>
-                  <div className="flex items-center text-yellow-500 group-hover:text-yellow-600 transition-colors duration-300">
+                  <div className="flex items-center  text-black group-hover:text-blue-500 transition-colors duration-300">
                     <span className="text-sm font-medium">Lihat Agenda</span>
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                   </div>
@@ -472,7 +471,7 @@ export default function HomePage() {
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     crossOrigin="anonymous"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-pink-600/70 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-sky-600/70 to-transparent"></div>
                   <div className="absolute bottom-4 left-4">
                     <div className="w-12 h-12 bg-white/90 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                       <Camera className="w-6 h-6 text-pink-600" />
@@ -480,13 +479,13 @@ export default function HomePage() {
                   </div>
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold text-yellow-800 mb-3 group-hover:text-yellow-600 transition-colors duration-300">
+                  <h3 className="text-xl font-bold  text-blue-800 mb-3 group-hover:text-blue-600 transition-colors duration-300">
                     Galeri Foto
                   </h3>
-                  <p className="text-yellow-600 mb-4">
+                  <p className="text-black mb-4">
                     Lihat dokumentasi kegiatan dan keindahan Desa Maju Bersama
                   </p>
-                  <div className="flex items-center text-yellow-500 group-hover:text-yellow-600 transition-colors duration-300">
+                  <div className="flex items-center  text-black group-hover:text-blue-500 transition-colors duration-300">
                     <span className="text-sm font-medium">Lihat Galeri</span>
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                   </div>
@@ -495,7 +494,7 @@ export default function HomePage() {
             </Link>
 
             <Link href="/kontak" className="group">
-              <Card className="bg-white shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border-yellow-200 h-full overflow-hidden">
+              <Card className="bg-white shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border-blue-200 h-full overflow-hidden">
                 <div className="h-48 relative overflow-hidden">
                   <img
                     src="kontak.jpg"
@@ -503,22 +502,22 @@ export default function HomePage() {
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     crossOrigin="anonymous"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-red-600/70 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-sky-600/70 to-transparent"></div>
                   <div className="absolute bottom-4 left-4">
                     <div className="w-12 h-12 bg-white/90 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <Phone className="w-6 h-6 text-red-600" />
+                      <Phone className="w-6 h-6 text-yellow-600" />
                     </div>
                   </div>
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold text-yellow-800 mb-3 group-hover:text-yellow-600 transition-colors duration-300">
+                  <h3 className="text-xl font-bold  text-blue-800 mb-3 group-hover:text-blue-600 transition-colors duration-300">
                     Hubungi Kami
                   </h3>
-                  <p className="text-yellow-600 mb-4">
+                  <p className="text-black mb-4">
                     Kontak langsung dengan perangkat desa untuk berbagai
                     keperluan
                   </p>
-                  <div className="flex items-center text-yellow-500 group-hover:text-yellow-600 transition-colors duration-300">
+                  <div className="flex items-center  text-black group-hover:text-blue-500 transition-colors duration-300">
                     <span className="text-sm font-medium">Kontak</span>
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                   </div>
@@ -534,15 +533,15 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center mb-12">
             <div>
-              <h2 className="text-4xl font-bold text-yellow-800 mb-4">
+              <h2 className="text-4xl font-bold text-blue-800 mb-4">
                 Berita Terbaru
               </h2>
-              <p className="text-xl text-yellow-600">
+              <p className="text-xl text-blue-600">
                 Informasi terkini dari Desa Maju Bersama
               </p>
             </div>
             <Link href="/berita">
-              <Button className="bg-yellow-500 hover:bg-yellow-600 text-white shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+              <Button className="bg-blue-500 hover:bg-blue-600 text-white shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300">
                 Lihat Semua
                 <Eye className="w-4 h-4 ml-2" />
               </Button>
@@ -556,7 +555,7 @@ export default function HomePage() {
                 href={`/berita/${article.id}`}
                 className="group"
               >
-                <Card className="bg-white shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border-yellow-200 overflow-hidden h-full">
+                <Card className="bg-white shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border-blue-200 overflow-hidden h-full">
                   <div className="h-48 relative overflow-hidden">
                     <img
                       src={`/placeholder.svg?height=200&width=400&text=Berita+${
@@ -568,13 +567,13 @@ export default function HomePage() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                     <div className="absolute bottom-4 left-4 right-4">
-                      <Badge className="bg-white/90 text-yellow-800">
+                      <Badge className="bg-white/90 text-blue-800">
                         {article.tanggal}
                       </Badge>
                     </div>
                   </div>
                   <CardContent className="p-6">
-                    <h3 className="text-xl font-bold text-yellow-800 mb-3 line-clamp-2 group-hover:text-yellow-600 transition-colors duration-300">
+                    <h3 className="text-xl font-bold text-blue-800 mb-3 line-clamp-2 group-hover:text-yellow-600 transition-colors duration-300">
                       {article.judul}
                     </h3>
                     <p className="text-yellow-600 mb-4 line-clamp-3">
@@ -597,8 +596,8 @@ export default function HomePage() {
 
           {berita.length === 0 && (
             <div className="text-center py-12">
-              <FileText className="w-16 h-16 text-yellow-300 mx-auto mb-4" />
-              <p className="text-yellow-600 text-lg">
+              <FileText className="w-16 h-16 text-black mx-auto mb-4" />
+              <p className="text-black text-lg">
                 Belum ada berita yang dipublikasi
               </p>
             </div>
@@ -606,14 +605,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Village Highlights */}
       <section className="py-20 bg-white/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-yellow-800 mb-4">
+            <h2 className="text-4xl font-bold text-blue-800 mb-4">
               Keunggulan Kampung Kuning
             </h2>
-            <p className="text-xl text-yellow-600 max-w-2xl mx-auto">
+            <p className="text-xl text-black max-w-2xl mx-auto">
               Berbagai keunggulan dan potensi yang dimiliki Kampung Kuning
             </p>
           </div>
@@ -657,10 +655,10 @@ export default function HomePage() {
                   </div>
                 </div>
                 <CardContent className="p-4 text-center">
-                  <h3 className="font-bold text-yellow-800 mb-2 group-hover:text-yellow-600 transition-colors duration-300">
+                  <h3 className="font-bold text-blue-800 mb-2 group-hover:text-blue-600 transition-colors duration-300">
                     {item.title}
                   </h3>
-                  <p className="text-sm text-yellow-600">{item.description}</p>
+                  <p className="text-sm text-black-600">{item.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -669,7 +667,7 @@ export default function HomePage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gradient-to-r from-yellow-800 via-amber-800 to-orange-800 text-white py-12">
+      <footer className="g-gradient-to-t from-sky-600/70 to-transparent  text-blue-800 py-12">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
@@ -679,13 +677,11 @@ export default function HomePage() {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold">Kampung Kuning</h3>
-                  <p className="text-yellow-200 text-sm">
-                    Kecamatan Rikit Gaib
-                  </p>
-                  <p className="text-yellow-200 text-sm">Kabupaten gayo Lues</p>
+                  <p className="text-black text-sm">Kecamatan Rikit Gaib</p>
+                  <p className="text-black  text-sm">Kabupaten gayo Lues</p>
                 </div>
               </div>
-              <p className="text-yellow-200 text-sm leading-relaxed">
+              <p className="text-black  text-sm leading-relaxed">
                 Mewujudkan Masyarakat Kampung Kuning Yang Bersih, Maju, Adil,
                 Transparansi Dan Sejahtera.
               </p>
@@ -693,7 +689,7 @@ export default function HomePage() {
 
             <div>
               <h4 className="font-bold mb-4">Navigasi</h4>
-              <ul className="space-y-2 text-yellow-200">
+              <ul className="space-y-2 text-black">
                 {navItems.map((item) => (
                   <li key={item.href}>
                     <Link
@@ -710,7 +706,7 @@ export default function HomePage() {
 
             <div>
               <h4 className="font-bold mb-4">Layanan</h4>
-              <ul className="space-y-2 text-yellow-200 text-sm">
+              <ul className="space-y-2 text-black text-sm">
                 <li className="hover:text-white transition-colors duration-200 cursor-pointer">
                   Surat Keterangan
                 </li>
@@ -731,7 +727,7 @@ export default function HomePage() {
 
             <div>
               <h4 className="font-bold mb-4">Kontak</h4>
-              <div className="space-y-2 text-yellow-200 text-sm">
+              <div className="space-y-2 text-black text-sm">
                 <div className="flex items-center space-x-2 hover:text-white transition-colors duration-200">
                   <MapPin className="w-4 h-4" />
                   <span>kampung kning, Kec. Rakit Gaib, Kab. Gayo Lues</span>
@@ -748,8 +744,8 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="border-t border-yellow-700 mt-8 pt-8 text-center">
-            <p className="text-yellow-200 text-sm">
+          <div className="border-t border-blue-700 mt-8 pt-8 text-center">
+            <p className="text-black text-sm">
               © 2025 Kampung Kuning. Semua hak dilindungi undang-undang.
             </p>
           </div>
