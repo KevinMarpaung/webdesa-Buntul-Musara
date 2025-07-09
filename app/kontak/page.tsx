@@ -59,15 +59,15 @@ export default function KontakPage() {
     {
       icon: Mail,
       title: "Email",
-      info: "desakuning44@gmail.com",
-      detail: "desakuning44@gmail.com",
+      info: "buntulmusara@gmail.com",
+      detail: "buntulmusara44@gmail.com",
       color: "from-blue-400 to-blue-500",
     },
     {
       icon: MapPin,
       title: "Alamat",
-      info: "Kampung Kuning",
-      detail: "Kec. Rikit Gaib, Kab. Gayo Lues",
+      info: "Desa Buntul Musara",
+      detail: "Kec. Tripe Jaya, Kab. Gayo Lues",
       color: "from-red-400 to-red-500",
     },
     {
@@ -76,69 +76,6 @@ export default function KontakPage() {
       info: "Senin - Jumat: 08:00 - 16:00",
       detail: "Sabtu: 08:00 - 12:00",
       color: "from-purple-400 to-purple-500",
-    },
-  ];
-
-  const perangkatDesa = [
-    {
-      nama: "Jamaluddin",
-      jabatan: "Pengulu Kampung",
-      foto: "/placeholder.svg?height=150&width=150&text=Kepala+Desa",
-      icon: Building,
-    },
-    {
-      nama: "Mantarudin",
-      jabatan: "Sekretaris Kampung",
-      foto: "/placeholder.svg?height=150&width=150&text=Sekretaris",
-      icon: Users,
-    },
-    {
-      nama: "Sayang",
-      jabatan: "Pegawai Kampung",
-      foto: "/placeholder.svg?height=150&width=150&text=Kaur+Pemerintahan",
-      icon: Shield,
-    },
-    {
-      nama: "Suwandi Yoga",
-      jabatan: "Kaur Keuangan",
-      foto: "/placeholder.svg?height=150&width=150&text=Kaur+Kesejahteraan",
-      icon: Heart,
-    },
-    {
-      nama: "Sali Syamsudin",
-      jabatan: "Kaur Umum dan Perencanaan",
-      foto: "/placeholder.svg?height=150&width=150&text=Kaur+Kesejahteraan",
-      icon: Heart,
-    },
-    {
-      nama: "Ali Asah",
-      jabatan: "Kasi Pemerintahan",
-      foto: "/placeholder.svg?height=150&width=150&text=Kaur+Kesejahteraan",
-      icon: Heart,
-    },
-    {
-      nama: "Marwansyah Putra",
-      jabatan: "Kasi Kesejahteraan dan Pelayanan",
-      foto: "/placeholder.svg?height=150&width=150&text=Kaur+Kesejahteraan",
-      icon: Heart,
-    },
-    {
-      nama: "Jalam",
-      jabatan: "Kadus Kantor",
-      foto: "/placeholder.svg?height=150&width=150&text=Kaur+Kesejahteraan",
-      icon: Heart,
-    },
-    {
-      nama: "Jafaruddin",
-      jabatan: "Kadus Ume Paya",
-      foto: "/placeholder.svg?height=150&width=150&text=Kaur+Kesejahteraan",
-      icon: Heart,
-    },
-    {
-      nama: "Kalim",
-      jabatan: "Kadus Umah Paluh",
-      foto: "/placeholder.svg?height=150&width=150&text=Kaur+Kesejahteraan",
-      icon: Heart,
     },
   ];
 
@@ -200,9 +137,7 @@ export default function KontakPage() {
                   <h3 className="text-xl font-bold text-yellow-800 mb-2">
                     {item.title}
                   </h3>
-                  <p className="text-blue-600 font-medium mb-1">
-                    {item.info}
-                  </p>
+                  <p className="text-blue-600 font-medium mb-1">{item.info}</p>
                   <p className="text-black text-sm">{item.detail}</p>
                 </CardContent>
               </Card>
@@ -326,14 +261,12 @@ export default function KontakPage() {
                 <div className="h-96 relative">
                   <div className="w-full h-[400px]">
                     <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d162473.88738541896!2d97.02223512783874!3d4.057965412084607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3039a3ce5c842567%3A0xa001f9cc8f724ddc!2sDesa%20Kuning!5e1!3m2!1sid!2sid!4v1751029333556!5m2!1sid!2sid"
-                      width="100%"
-                      height="100%"
-                      style={{ border: 0 }}
-                      allowFullScreen
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d93843.11003376116!2d96.97080766840378!3d4.178459675841974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3039085ef6337929%3A0xbe4739d3ca3d72cc!2sBuntul%20Musara%2C%20Kec.%20Tripe%20Jaya%2C%20Kabupaten%20Gayo%20Lues%2C%20Aceh!5e1!3m2!1sid!2sid!4v1752064551316!5m2!1sid!2sid"
+                      width="600"
+                      height="450"
                       loading="lazy"
                       referrerPolicy="no-referrer-when-downgrade"
-                    />
+                    ></iframe>
                   </div>
 
                   <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
@@ -362,8 +295,6 @@ export default function KontakPage() {
             </Card>
           </div>
         </section>
-
-        
 
         {/* Emergency Contacts */}
         <section className="mb-16">
@@ -418,7 +349,8 @@ export default function KontakPage() {
                 </Button>
                 <Button
                   variant="outline"
-                  className="bg-white text-blue-600  hover:text-blue-600 hover:bg-blue-50 px-8 py-3 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+                  className="bg-white text-blue-600  hover:text-blue-600 hover:bg-blue-50 px-8 py-3 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+                >
                   <Clock className="w-5 h-5 mr-2" />
                   Jam Operasional
                 </Button>
