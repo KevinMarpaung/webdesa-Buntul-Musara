@@ -58,13 +58,10 @@ export default function HomePage() {
   const [kegiatan, setKegiatan] = useState<Kegiatan[]>([]);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [penduduk, setPenduduk] = useState([]);
 
   // Hero images carousel
-  const heroImages = [
-    "kantor.jpg",
-    "potorame.jpg",
-    "pemandangan.jpg",
-  ];
+  const heroImages = ["kantor.jpg", "potorame.jpg", "pemandangan.jpg"];
 
   // Load data from localStorage
   useEffect(() => {
@@ -221,7 +218,8 @@ export default function HomePage() {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-white mb-8 max-w-3xl mx-auto leading-relaxed animate-fade-in-up-delayed ">
-             Menciptakan Pemerintahan Kampung yang baik, Partisipatif dan transparan.
+              Menciptakan Pemerintahan Kampung yang baik, Partisipatif dan
+              transparan.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up-delayed-2">
               <Link href="/profil">
@@ -627,8 +625,6 @@ export default function HomePage() {
                 image: "pemandangan.jpg",
                 icon: "🏞️",
               },
-
-            
             ].map((item, index) => (
               <Card
                 key={index}
@@ -674,7 +670,8 @@ export default function HomePage() {
                 </div>
               </div>
               <p className="text-black  text-sm leading-relaxed">
-                Menciptakan Pemerintahan Kampung yang baik, Partisipatif dan transparan.
+                Menciptakan Pemerintahan Kampung yang baik, Partisipatif dan
+                transparan.
               </p>
             </div>
 
@@ -721,7 +718,9 @@ export default function HomePage() {
               <div className="space-y-2 text-black text-sm">
                 <div className="flex items-center space-x-2 hover:text-white transition-colors duration-200">
                   <MapPin className="w-4 h-4" />
-                  <span>Desa Buntul Musara, Kec. Rakit Gaib, Kab. Gayo Lues</span>
+                  <span>
+                    Desa Buntul Musara, Kec. Rakit Gaib, Kab. Gayo Lues
+                  </span>
                 </div>
                 <div className="flex items-center space-x-2 hover:text-white transition-colors duration-200">
                   <Phone className="w-4 h-4" />
