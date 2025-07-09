@@ -622,7 +622,7 @@ export default function HomePage() {
               {
                 title: "Wisata Alam",
                 description: "Pemandangan alam yang menawan",
-                image: "pemandangan.jpg",
+                image: "pemandangan.JPG",
                 icon: "🏞️",
               },
             ].map((item, index) => (

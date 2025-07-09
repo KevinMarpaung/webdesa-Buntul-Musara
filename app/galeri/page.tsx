@@ -113,14 +113,14 @@ export default function GaleriPage() {
       id: 19,
       title: "Taman Kanak-kanak Negeri",
       category: "Fasilitas",
-      image: "tkn.jpg",
+      image: "tkn.JPG",
       description: "Rewang dirumah pengulu",
     },
     {
       id: 20,
       title: "SD Negeri 1 Tripe Jaya",
       category: "Fasilitas",
-      image: "sd.jpg",
+      image: "sd.JPG",
       description: "Foto Sekola SD",
     },
 
@@ -128,14 +128,14 @@ export default function GaleriPage() {
       id: 22,
       title: "SMP Negeri 1 Tripe Jaya",
       category: "Fasilitas",
-      image: "smp.jpg",
+      image: "smp.JPG",
       description: "Rewang dirumah pengulu",
     },
     {
       id: 21,
       title: "SMA Negeri 1 Tripe Jaya",
       category: "Fasilitas",
-      image: "sma.jpg",
+      image: "sma.JPG",
       description: "Foto Sekola SMA",
     },
   ];
