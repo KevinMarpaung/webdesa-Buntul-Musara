@@ -45,7 +45,7 @@ export default function GaleriPage() {
       description: "Pesona Kolam Biru Di Kampung Yang Begitu Indah",
     },
     {
-      id: 6,
+      id: 4,
       title: " peukan ",
       category: "Pemandangan",
       image: "mushola.JPG",
@@ -53,7 +53,7 @@ export default function GaleriPage() {
         "berada di desa buntul musara yang di adakan setiap hari rabu jadi kek pusat perbelanjaan di kecamatan tripe jaya",
     },
     {
-      id: 7,
+      id: 5,
       title: "Sawah Kampung Buntul Musara",
       category: "Pemandangan",
       image: "sawah.jpg",
@@ -61,7 +61,7 @@ export default function GaleriPage() {
     },
 
     {
-      id: 11,
+      id: 6,
       title: "Festival Saman Roa Lo Roa Ingi ",
       category: "Kegiatan",
       image: "festival1.jpg",
@@ -69,7 +69,7 @@ export default function GaleriPage() {
     },
 
     {
-      id: 13,
+      id: 7,
       title:
         "Festival saman-Agenda Sanggar Tari Saman Pemuda Kampung Buntul Musara, Tingkat Kabupaten ",
       category: "Kegiatan",
@@ -79,85 +79,57 @@ export default function GaleriPage() {
     },
 
     {
-      id: 15,
+      id: 8,
       title: "Kegiatan Posyandu",
       category: "Kegiatan",
       image: "Kegiatan Posyandu.jpg",
       description: "Foto bersama pemuda_pemudi",
     },
     {
-      id: 16,
+      id: 9,
       title: "Gotong royong para pemuda dan warga Buntul Musara ",
       category: "Kegiatan",
       image: "gotongroyong.jpg",
       description: "Gotong royong para pemuda dan warga Buntul Musara ",
     },
     {
-      id: 17,
+      id: 10,
       title: "Gotong royong para pemuda dan warga Buntul Musara",
       category: "Kegiatan",
       image: "gotongroyong2.jpg",
       description: "Gotong royong para pemuda dan warga Buntul Musara",
     },
     {
-      id: 18,
+      id: 11,
       title: "Rewang dirumah pengulu ",
       category: "Kegiatan",
       image: "Rewang dirumah pengulu.jpg",
       description: "Rewang dirumah pengulu",
     },
-    {
-      id: 19,
-      title: "Taman Kanak-kanak Negeri",
-      category: "Fasilitas",
-      image: "tkn.JPG",
-      description: "Rewang dirumah pengulu",
-    },
-    {
-      id: 20,
-      title: "SD Negeri 1 Tripe Jaya",
-      category: "Fasilitas",
-      image: "sd.JPG",
-      description: "Foto Sekola SD",
-    },
 
     {
-      id: 22,
-      title: "SMP Negeri 1 Tripe Jaya",
-      category: "Fasilitas",
-      image: "smp.JPG",
-      description: "Rewang dirumah pengulu",
-    },
-    {
-      id: 21,
-      title: "SMA Negeri 1 Tripe Jaya",
-      category: "Fasilitas",
-      image: "sma.JPG",
-      description: "Foto Sekola SMA",
-    },
-    {
-      id: 19,
+      id: 16,
       title: "Meugang-Tradisi menyambut hari raya",
       category: "Kegiatan",
       image: "meugang.jpg",
       description: "Meugang-Tradisi menyambut hari raya",
     },
     {
-      id: 20,
+      id: 17,
       title: "Penampilan Tari Bines Pemudi Buntul Musara",
       category: "Kegiatan",
       image: "tari.jpg",
       description: "Penampilan Tari Bines Pemudi Buntul Musara",
     },
     {
-      id: 21,
+      id: 18,
       title: "Trija FC-Turnamen Sepakbola ",
       category: "Kegiatan",
       image: "turnamen.jpg",
       description: "Trija FC-Turnamen Sepakbola",
     },
     {
-      id: 22,
+      id: 19,
       title: "penyambutan bejamu Saman",
       category: "Kegiatan",
       image: "sambut.jpg",

@@ -719,7 +719,7 @@ export default function HomePage() {
                 <div className="flex items-center space-x-2 hover:text-white transition-colors duration-200">
                   <MapPin className="w-4 h-4" />
                   <span>
-                    Desa Buntul Musara, Kec. Rakit Gaib, Kab. Gayo Lues
+                    Desa Buntul Musara, Kec. Tripe Jay, Kab. Gayo Lues
                   </span>
                 </div>
                 <div className="flex items-center space-x-2 hover:text-white transition-colors duration-200">

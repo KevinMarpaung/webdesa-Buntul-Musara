@@ -145,11 +145,7 @@ export default function LayananPage() {
     },
   ];
 
-  const jamLayanan = [
-    { hari: "Senin - Kamis", jam: "08:00 - 20:00 WIB" },
-    { hari: "Jumat", jam: "08:00 - 20:00 WIB" },
-    { hari: "Sabtu - Minggu", jam: "Tutup" },
-  ];
+  const jamLayanan = [{ hari: "Senin - Minggu", jam: "08:00 - 20:00 WIB" }];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-yellow-50 via-amber-50 to-orange-50">
@@ -201,14 +197,14 @@ export default function LayananPage() {
                 <Clock className="w-8 h-8 mr-3" />
                 <h2 className="text-2xl font-bold">Jam Pelayanan</h2>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-1 gap-4">
                 {jamLayanan.map((jadwal, index) => (
                   <div
                     key={index}
                     className="bg-white/20 backdrop-blur-sm rounded-lg p-4 text-center"
                   >
                     <h3 className="font-bold mb-2">{jadwal.hari}</h3>
-                    <p className="text-yellow-100">{jadwal.jam}</p>
+                    <p className="text-black">{jadwal.jam}</p>
                   </div>
                 ))}
               </div>

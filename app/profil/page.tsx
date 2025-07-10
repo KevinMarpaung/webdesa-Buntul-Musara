@@ -353,7 +353,7 @@ export default function ProfilPage() {
                 banyak merupakan Masyarakat suku bangsa (campuran). Didalam
                 Bahasa setempat (Bahasa Gayo) ‘’Bukit’’ bisa disebut Buntul
                 sedangkan Musara sendiri berarti ‘’Bersatu’’ karna itu, desa
-                Buntul Musara ‘’ Bukit Yang Bersatu’’.
+                Buntul Musara berarti ‘’ Bukit Yang Bersatu’’.
               </p>
             </div>
           </Card>
