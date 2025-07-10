@@ -52,15 +52,13 @@ export default function KontakPage() {
     {
       icon: Phone,
       title: "Telepon",
-      info: "0822-7550-4940",
-      detail: "0822-1459-7289",
+      info: "+62 822-9927-4713",
       color: "from-green-400 to-green-500",
     },
     {
       icon: Mail,
       title: "Email",
-      info: "buntulmusara@gmail.com",
-      detail: "buntulmusara44@gmail.com",
+      info: "buntulmusara57@gmail.com",
       color: "from-blue-400 to-blue-500",
     },
     {
@@ -137,7 +135,9 @@ export default function KontakPage() {
                   <h3 className="text-xl font-bold text-yellow-800 mb-2">
                     {item.title}
                   </h3>
-                  <p className="text-blue-600 font-medium mb-1">{item.info}</p>
+                  <p className="text-sm text-blue-600 font-medium mb-1">
+                    {item.info}
+                  </p>
                   <p className="text-black text-sm">{item.detail}</p>
                 </CardContent>
               </Card>
