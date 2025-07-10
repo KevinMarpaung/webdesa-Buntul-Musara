@@ -146,8 +146,8 @@ export default function LayananPage() {
   ];
 
   const jamLayanan = [
-    { hari: "Senin - Kamis", jam: "08:00 - 15:00 WIB" },
-    { hari: "Jumat", jam: "08:00 - 11:00 WIB" },
+    { hari: "Senin - Kamis", jam: "08:00 - 20:00 WIB" },
+    { hari: "Jumat", jam: "08:00 - 20:00 WIB" },
     { hari: "Sabtu - Minggu", jam: "Tutup" },
   ];
 

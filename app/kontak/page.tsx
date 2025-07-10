@@ -12,8 +12,6 @@ import {
   Clock,
   Send,
   MessageSquare,
-  Building,
-  Users,
   Shield,
   Heart,
 } from "lucide-react";
@@ -312,21 +310,21 @@ export default function KontakPage() {
                     <Phone className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="font-bold text-blue-800 mb-1">Pos Kamling</h3>
-                  <p className="text-black">0822-312-421</p>
+                  <p className="text-black">082273356405</p>
                 </div>
                 <div className="text-center">
                   <div className="w-12 h-12 bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-3">
                     <Heart className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="font-bold text-blue-800 mb-1">Poskesdes</h3>
-                  <p className="text-black">0831-2412-4121</p>
+                  <p className="text-black">082273356405</p>
                 </div>
                 <div className="text-center">
                   <div className="w-12 h-12 bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-3">
                     <Shield className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="font-bold text-blue-800 mb-1">Kantor Desa</h3>
-                  <p className="text-black">0822-7550-4940</p>
+                  <p className="text-black">082299274713</p>
                 </div>
               </div>
             </CardContent>
